@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0E554A183E09BE00A78CB7 /* background_test.png */; };
 		DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
 		DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */; };
 		DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE0E554A183E09BE00A78CB7 /* background_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_test.png; sourceTree = "<group>"; };
 		DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterEating_DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB640183DBD2900D78B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE0E5549183E09B700A78CB7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DE0E554A183E09BE00A78CB7 /* background_test.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		DEDDB634183DBD2800D78B84 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		DEDDB647183DBD2900D78B84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DE0E5549183E09B700A78CB7 /* images */,
 				DEDDB648183DBD2900D78B84 /* WaterEating_DDay-Info.plist */,
 				DEDDB649183DBD2900D78B84 /* InfoPlist.strings */,
 				DEDDB64C183DBD2900D78B84 /* main.m */,
@@ -230,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */,
+				DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */,
 				DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */,
 				DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */,
 			);

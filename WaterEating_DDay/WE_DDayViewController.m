@@ -24,6 +24,8 @@
     [ddayTable setDataSource:self];
     [ddayTable setDelegate:self];
     // TableView DataSource, Delegate Setting
+    [ddayTable setBackgroundColor:[UIColor clearColor]];
+
     
     self.navigationItem.title = @"D-Day";    
 }
@@ -102,17 +104,8 @@
 {
     // Cell Delete Action
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSLog(@"Delete Button Click %@",indexPath);
-        
         [tableData removeObjectAtIndex:indexPath.row];
-        
-        NSLog(@"%@",tableData);
-        
-        //[self.ddayTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-        // 이 메소드 오류 있는듯
-        
-        [tableView reloadData];
-        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     }
 }
 

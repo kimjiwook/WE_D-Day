@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
     
+    tableData = [[NSMutableArray alloc] initWithArray:[self topLevelItems]];
+    
     [ddayTable setDataSource:self];
     [ddayTable setDelegate:self];
     // TableView DataSource, Delegate Setting
@@ -31,6 +33,16 @@
     [super didReceiveMemoryWarning];
 }
 
+- (NSArray *)topLevelItems {
+    NSMutableArray *items = [NSMutableArray array];
+    
+    for (int i = 0; i < 20; i++) {
+        [items addObject:[NSString stringWithFormat:@"제목은 %d", i + 1]];
+    }
+    
+    return items;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -38,7 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return [tableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,7 +72,7 @@
     }
     
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 100, 30)];
-    [title setText:[NSString stringWithFormat:@"제목란 : %d",indexPath.row+1]];
+    [title setText:[tableData objectAtIndex:indexPath.row]];
     [title setBackgroundColor:[UIColor clearColor]];
     [title setFont:[UIFont systemFontOfSize:14.0f]];
     [title setTag:1000];
@@ -91,10 +103,17 @@
     // Cell Delete Action
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSLog(@"Delete Button Click %@",indexPath);
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         
+        [tableData removeObjectAtIndex:indexPath.row];
         
-        }
+        NSLog(@"%@",tableData);
+        
+        //[self.ddayTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        // 이 메소드 오류 있는듯
+        
+        [tableView reloadData];
+        
+    }
 }
 
 // Table view edit mode

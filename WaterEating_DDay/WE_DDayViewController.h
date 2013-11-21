@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
+{
+    NSMutableArray *tableData;
+}
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
+
 
 - (IBAction)editButtonAction:(id)sender;
 - (IBAction)addButtonAction:(id)sender;

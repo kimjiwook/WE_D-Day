@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WE_DDayViewController : UIViewController
+@interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UITableView *ddayTable;
 
 @end

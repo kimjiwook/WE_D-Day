@@ -13,7 +13,7 @@
 		DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB649183DBD2900D78B84 /* InfoPlist.strings */; };
 		DEDDB64D183DBD2900D78B84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB64C183DBD2900D78B84 /* main.m */; };
 		DEDDB651183DBD2900D78B84 /* WE_DDayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */; };
-		DEDDB654183DBD2900D78B84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB652183DBD2900D78B84 /* Main.storyboard */; };
+		DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB652183DBD2900D78B84 /* D_Day.storyboard */; };
 		DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */; };
 		DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB658183DBD2900D78B84 /* Images.xcassets */; };
 		DEDDB660183DBD2900D78B84 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB65F183DBD2900D78B84 /* XCTest.framework */; };
@@ -44,7 +44,7 @@
 		DEDDB64E183DBD2900D78B84 /* WaterEating_DDay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaterEating_DDay-Prefix.pch"; sourceTree = "<group>"; };
 		DEDDB64F183DBD2900D78B84 /* WE_DDayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_DDayAppDelegate.h; sourceTree = "<group>"; };
 		DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_DDayAppDelegate.m; sourceTree = "<group>"; };
-		DEDDB653183DBD2900D78B84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEDDB653183DBD2900D78B84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/D_Day.storyboard; sourceTree = "<group>"; };
 		DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_DDayViewController.h; sourceTree = "<group>"; };
 		DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_DDayViewController.m; sourceTree = "<group>"; };
 		DEDDB658183DBD2900D78B84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			children = (
 				DEDDB64F183DBD2900D78B84 /* WE_DDayAppDelegate.h */,
 				DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */,
-				DEDDB652183DBD2900D78B84 /* Main.storyboard */,
+				DEDDB652183DBD2900D78B84 /* D_Day.storyboard */,
 				DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */,
 				DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */,
 				DEDDB658183DBD2900D78B84 /* Images.xcassets */,
@@ -231,7 +231,7 @@
 			files = (
 				DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */,
 				DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */,
-				DEDDB654183DBD2900D78B84 /* Main.storyboard in Resources */,
+				DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +283,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		DEDDB652183DBD2900D78B84 /* Main.storyboard */ = {
+		DEDDB652183DBD2900D78B84 /* D_Day.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DEDDB653183DBD2900D78B84 /* Base */,
 			);
-			name = Main.storyboard;
+			name = D_Day.storyboard;
 			sourceTree = "<group>";
 		};
 		DEDDB668183DBD2900D78B84 /* InfoPlist.strings */ = {
@@ -461,6 +461,7 @@
 				DEDDB671183DBD2900D78B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEDDB672183DBD2900D78B84 /* Build configuration list for PBXNativeTarget "WaterEating_DDayTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				DEDDB674183DBD2900D78B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

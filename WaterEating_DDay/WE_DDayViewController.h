@@ -13,4 +13,5 @@
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
 
 - (IBAction)editButtonAction:(id)sender;
+- (IBAction)addButtonAction:(id)sender;
 @end

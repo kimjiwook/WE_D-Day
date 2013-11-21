@@ -72,12 +72,39 @@
 
 #pragma mark - Table view delegate
 
+// Table view Cell Select Action
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];  // 해제
 }
 
+
+// Table view edit Cell move Action
+- (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    
+}
+
+// Table view editing..
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Cell Delete Action
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"Delete Button Click %@",indexPath);
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        
+        
+        }
+}
+
+// Table view edit mode
 - (IBAction)editButtonAction:(id)sender
+{
+    [ddayTable setEditing:!ddayTable.editing];
+}
+
+// Table view add mode
+- (IBAction)addButtonAction:(id)sender
 {
     
 }

@@ -36,6 +36,7 @@
                                 <action selector="editButtonAction:" destination="vXZ-lx-hvc" id="lAT-qj-DvU"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Njl-KC-1ll"/>
                     </navigationItem>
                     <connections>
                         <outlet property="ddayTable" destination="PTs-mG-WhF" id="DA9-rQ-XwM"/>

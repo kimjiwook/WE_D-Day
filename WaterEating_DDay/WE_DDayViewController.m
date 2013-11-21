@@ -23,8 +23,7 @@
     [ddayTable setDelegate:self];
     // TableView DataSource, Delegate Setting
     
-    self.navigationItem.title = @"D-Day";
-    
+    self.navigationItem.title = @"D-Day";    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +68,18 @@
     [cell.contentView addSubview:title];
     
     return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];  // 해제
+}
+
+- (IBAction)editButtonAction:(id)sender
+{
+    
 }
 
 @end

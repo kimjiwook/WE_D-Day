@@ -29,4 +29,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)dateChanged:(id)sender
+{
+    // Today
+    NSDate *dateNow = [NSDate date];
+    // Select Day
+    NSDate *dateSelected = self.datePicker.date;
+    // 64bit int 호환
+    NSInteger result = 0;
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
+    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateNow interval:Nil forDate:dateNow];
+    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
+    
+    result = [[calendar components:NSDayCalendarUnit fromDate:dateSelected toDate:dateNow options:0] day];
+    
+    self.dayLabel.text = [NSString stringWithFormat:@"%ld 일",result];
+    
+}
+
 @end

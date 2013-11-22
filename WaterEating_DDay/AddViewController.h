@@ -10,5 +10,9 @@
 
 @interface AddViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UIDatePicker *datePicker;
+@property (nonatomic, strong) IBOutlet UILabel *dayLabel;
+
+- (IBAction)dateChanged:(id)sender;
 
 @end

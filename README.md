@@ -6,7 +6,3 @@ WE_D-Day
  Target : 
  1. Multiple Storyboard
  2. Only iOS7 Type
- 
- 목표 :
- 1. 다중 스토리보드 사용
- 2. iOS7 만 지원

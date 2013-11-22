@@ -26,6 +26,7 @@
     // TableView DataSource, Delegate Setting
     [ddayTable setBackgroundColor:[UIColor clearColor]];
 
+    [ddayTable setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_test.png"]]];
     
     self.navigationItem.title = @"D-Day";    
 }

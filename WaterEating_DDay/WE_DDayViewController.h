@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddViewController.h"
 
 @interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *tableData;
+    AddViewController *addViewController;
+    
 }
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
 

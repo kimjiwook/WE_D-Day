@@ -121,7 +121,11 @@
 // Table view add mode
 - (IBAction)addButtonAction:(id)sender
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Add" bundle:nil];
+    addViewController = [storyboard instantiateViewControllerWithIdentifier:@"AddViewController"];
     
+//    [self presentViewController:addViewController animated:YES completion:Nil]; //ModalView
+    [self.navigationController pushViewController:addViewController animated:YES]; // PushView
 }
 
 @end

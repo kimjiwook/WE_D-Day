@@ -7,7 +7,7 @@
         <!--Day View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="WE_DDayViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WE_DDayViewController" id="vXZ-lx-hvc" customClass="WE_DDayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,7 +36,11 @@
                                 <action selector="editButtonAction:" destination="vXZ-lx-hvc" id="lAT-qj-DvU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Njl-KC-1ll"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Njl-KC-1ll">
+                            <connections>
+                                <action selector="addButtonAction:" destination="vXZ-lx-hvc" id="3Ob-kf-PCG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ddayTable" destination="PTs-mG-WhF" id="DA9-rQ-XwM"/>

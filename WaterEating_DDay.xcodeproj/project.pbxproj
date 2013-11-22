@@ -22,6 +22,8 @@
 		DEDDB662183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
 		DEDDB66A183DBD2900D78B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB668183DBD2900D78B84 /* InfoPlist.strings */; };
 		DEDDB66C183DBD2900D78B84 /* WaterEating_DDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB66B183DBD2900D78B84 /* WaterEating_DDayTests.m */; };
+		DEECA31B183F34EC0068ABAD /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECA31A183F34EC0068ABAD /* AddViewController.m */; };
+		DEECA320183F36290068ABAD /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEECA31F183F36290068ABAD /* Add.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		DEDDB667183DBD2900D78B84 /* WaterEating_DDayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterEating_DDayTests-Info.plist"; sourceTree = "<group>"; };
 		DEDDB669183DBD2900D78B84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEDDB66B183DBD2900D78B84 /* WaterEating_DDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterEating_DDayTests.m; sourceTree = "<group>"; };
+		DEECA319183F34EC0068ABAD /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		DEECA31A183F34EC0068ABAD /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		DEECA31F183F36290068ABAD /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +127,9 @@
 		DEDDB646183DBD2900D78B84 /* WaterEating_DDay */ = {
 			isa = PBXGroup;
 			children = (
-				DEDDB64F183DBD2900D78B84 /* WE_DDayAppDelegate.h */,
-				DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */,
-				DEDDB652183DBD2900D78B84 /* D_Day.storyboard */,
-				DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */,
-				DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */,
+				DEECA31E183F351C0068ABAD /* AppDelegate */,
+				DEECA31D183F350E0068ABAD /* AddView */,
+				DEECA31C183F34F80068ABAD /* MainView */,
 				DEDDB658183DBD2900D78B84 /* Images.xcassets */,
 				DEDDB647183DBD2900D78B84 /* Supporting Files */,
 			);
@@ -161,6 +164,35 @@
 				DEDDB668183DBD2900D78B84 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEECA31C183F34F80068ABAD /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				DEDDB652183DBD2900D78B84 /* D_Day.storyboard */,
+				DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */,
+				DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		DEECA31D183F350E0068ABAD /* AddView */ = {
+			isa = PBXGroup;
+			children = (
+				DEECA319183F34EC0068ABAD /* AddViewController.h */,
+				DEECA31A183F34EC0068ABAD /* AddViewController.m */,
+				DEECA31F183F36290068ABAD /* Add.storyboard */,
+			);
+			name = AddView;
+			sourceTree = "<group>";
+		};
+		DEECA31E183F351C0068ABAD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DEDDB64F183DBD2900D78B84 /* WE_DDayAppDelegate.h */,
+				DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +274,7 @@
 			files = (
 				DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */,
 				DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */,
+				DEECA320183F36290068ABAD /* Add.storyboard in Resources */,
 				DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */,
 				DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */,
 			);
@@ -264,6 +297,7 @@
 			files = (
 				DEDDB651183DBD2900D78B84 /* WE_DDayAppDelegate.m in Sources */,
 				DEDDB64D183DBD2900D78B84 /* main.m in Sources */,
+				DEECA31B183F34EC0068ABAD /* AddViewController.m in Sources */,
 				DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

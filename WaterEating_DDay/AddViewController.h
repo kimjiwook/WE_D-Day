@@ -12,7 +12,9 @@
 
 @property (nonatomic, strong) IBOutlet UIDatePicker *datePicker;
 @property (nonatomic, strong) IBOutlet UILabel *dayLabel;
+@property (strong, nonatomic) IBOutlet UISwitch *oneDayCheckSwitch;
 
 - (IBAction)dateChanged:(id)sender;
+- (IBAction)onDayCheckAction:(id)sender;
 
 @end

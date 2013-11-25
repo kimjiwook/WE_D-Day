@@ -13,6 +13,7 @@
 @end
 
 @implementation AddViewController
+@synthesize oneDayCheckSwitch;
 
 - (void)viewDidLoad
 {
@@ -45,9 +46,21 @@
     [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
     
     result = [[calendar components:NSDayCalendarUnit fromDate:dateSelected toDate:dateNow options:0] day];
+    if (oneDayCheckSwitch.on)
+    { result += 1; }
     
-    self.dayLabel.text = [NSString stringWithFormat:@"%ld 일",result];
-    
+    if (result >= 0) {
+        // D+ 일 경우
+        self.dayLabel.text = [NSString stringWithFormat:@"D+%ld 일",result];
+    }else{
+        // D- 일 경우
+        self.dayLabel.text = [NSString stringWithFormat:@"D%ld 일",result];
+    }
+}
+
+- (IBAction)onDayCheckAction:(id)sender
+{
+    [self dateChanged:nil];
 }
 
 @end

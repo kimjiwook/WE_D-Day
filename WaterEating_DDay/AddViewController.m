@@ -14,6 +14,7 @@
 
 @implementation AddViewController
 @synthesize oneDayCheckSwitch;
+@synthesize addTable;
 
 - (void)viewDidLoad
 {
@@ -22,6 +23,17 @@
     [self.navigationItem setTitle:@"D-Day 추가"];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] init]];
     [self.navigationItem.rightBarButtonItem setTitle:@"저장"];
+    
+    // Storyboard 에서 작성시 err 발생함..
+    addTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,self.view.bounds.size.height) style:UITableViewStyleGrouped];
+    
+    [addTable setDataSource:self];
+    [addTable setDelegate:self];
+    
+    // TableView DataSource, Delegate Setting
+    [addTable setBackgroundColor:[UIColor clearColor]];
+    
+    [self.view addSubview:addTable];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,6 +41,48 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1) {
+        if (indexPath.row == 1) {
+            return 100;
+        }
+    }
+    
+    return 50;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    return cell;
+}
+
+#pragma mark - Table view delegate
+
+// Table view Cell Select Action
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];  // 해제
+}
+
 
 - (IBAction)dateChanged:(id)sender
 {

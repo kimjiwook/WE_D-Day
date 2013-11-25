@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddViewController : UIViewController
+@interface AddViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UITableView *addTable;
 
 @property (nonatomic, strong) IBOutlet UIDatePicker *datePicker;
 @property (nonatomic, strong) IBOutlet UILabel *dayLabel;

@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface AddViewController : UIViewController
+<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *addTable;
 
 @property (nonatomic, strong) IBOutlet UIDatePicker *datePicker;
 @property (nonatomic, strong) IBOutlet UILabel *dayLabel;
 @property (strong, nonatomic) IBOutlet UISwitch *oneDayCheckSwitch;
+@property (strong, nonatomic) IBOutlet UITextField *subJectTextField;
 
 - (IBAction)dateChanged:(id)sender;
 - (IBAction)onDayCheckAction:(id)sender;

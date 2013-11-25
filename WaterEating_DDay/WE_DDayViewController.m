@@ -26,7 +26,7 @@
     // TableView DataSource, Delegate Setting
     [ddayTable setBackgroundColor:[UIColor clearColor]];
 
-    [ddayTable setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_test.png"]]];
+//    [ddayTable setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_test.png"]]];
     
     self.navigationItem.title = @"D-Day";    
 }
@@ -77,8 +77,8 @@
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 100, 30)];
     [title setText:[tableData objectAtIndex:indexPath.row]];
     [title setBackgroundColor:[UIColor clearColor]];
-    [title setTextColor:[UIColor whiteColor]];
-    [title setFont:[UIFont systemFontOfSize:14.0f]];
+//    [title setTextColor:[UIColor whiteColor]];
+    [title setFont:[UIFont systemFontOfSize:18.0f]];
     [title setTag:1000];
     
     [cell setBackgroundColor:[UIColor clearColor]];

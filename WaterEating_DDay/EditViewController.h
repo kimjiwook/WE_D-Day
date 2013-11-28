@@ -1,5 +1,5 @@
 //
-//  AddViewController.h
+//  EditViewController.h
 //  WaterEating_DDay
 //
 //  Created by JWMAC on 2013. 11. 22..
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddViewController : UIViewController
+@interface EditViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *addTable;

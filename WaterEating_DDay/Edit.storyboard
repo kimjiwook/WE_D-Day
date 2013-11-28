@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Add View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="7Jo-60-XI0">
             <objects>
-                <viewController storyboardIdentifier="AddViewController" id="xWD-zq-rbO" customClass="AddViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" id="xWD-zq-rbO" customClass="EditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9F7-su-2u6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

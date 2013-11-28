@@ -1,18 +1,18 @@
 //
-//  AddViewController.m
+//  EditViewController.m
 //  WaterEating_DDay
 //
 //  Created by JWMAC on 2013. 11. 22..
 //  Copyright (c) 2013년 KimJiWook. All rights reserved.
 //
 
-#import "AddViewController.h"
+#import "EditViewController.h"
 
-@interface AddViewController ()
+@interface EditViewController ()
 
 @end
 
-@implementation AddViewController
+@implementation EditViewController
 @synthesize oneDayCheckSwitch;
 @synthesize addTable;
 @synthesize datePicker;
@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
     
-    [self.navigationItem setTitle:@"D-Day 추가"];
+    [self.navigationItem setTitle:@"새로운 D-Day"];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] init]];
     [self.navigationItem.rightBarButtonItem setTitle:@"저장"];
     

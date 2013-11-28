@@ -22,8 +22,8 @@
 		DEDDB662183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
 		DEDDB66A183DBD2900D78B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB668183DBD2900D78B84 /* InfoPlist.strings */; };
 		DEDDB66C183DBD2900D78B84 /* WaterEating_DDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB66B183DBD2900D78B84 /* WaterEating_DDayTests.m */; };
-		DEECA31B183F34EC0068ABAD /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECA31A183F34EC0068ABAD /* AddViewController.m */; };
-		DEECA320183F36290068ABAD /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEECA31F183F36290068ABAD /* Add.storyboard */; };
+		DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECA31A183F34EC0068ABAD /* EditViewController.m */; };
+		DEECA320183F36290068ABAD /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEECA31F183F36290068ABAD /* Edit.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +57,9 @@
 		DEDDB667183DBD2900D78B84 /* WaterEating_DDayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterEating_DDayTests-Info.plist"; sourceTree = "<group>"; };
 		DEDDB669183DBD2900D78B84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEDDB66B183DBD2900D78B84 /* WaterEating_DDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterEating_DDayTests.m; sourceTree = "<group>"; };
-		DEECA319183F34EC0068ABAD /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
-		DEECA31A183F34EC0068ABAD /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
-		DEECA31F183F36290068ABAD /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		DEECA319183F34EC0068ABAD /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		DEECA31A183F34EC0068ABAD /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		DEECA31F183F36290068ABAD /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				DEECA31E183F351C0068ABAD /* AppDelegate */,
-				DEECA31D183F350E0068ABAD /* AddView */,
+				DEECA31D183F350E0068ABAD /* EditView */,
 				DEECA31C183F34F80068ABAD /* MainView */,
 				DEDDB658183DBD2900D78B84 /* Images.xcassets */,
 				DEDDB647183DBD2900D78B84 /* Supporting Files */,
@@ -176,14 +176,14 @@
 			name = MainView;
 			sourceTree = "<group>";
 		};
-		DEECA31D183F350E0068ABAD /* AddView */ = {
+		DEECA31D183F350E0068ABAD /* EditView */ = {
 			isa = PBXGroup;
 			children = (
-				DEECA319183F34EC0068ABAD /* AddViewController.h */,
-				DEECA31A183F34EC0068ABAD /* AddViewController.m */,
-				DEECA31F183F36290068ABAD /* Add.storyboard */,
+				DEECA319183F34EC0068ABAD /* EditViewController.h */,
+				DEECA31A183F34EC0068ABAD /* EditViewController.m */,
+				DEECA31F183F36290068ABAD /* Edit.storyboard */,
 			);
-			name = AddView;
+			name = EditView;
 			sourceTree = "<group>";
 		};
 		DEECA31E183F351C0068ABAD /* AppDelegate */ = {
@@ -274,7 +274,7 @@
 			files = (
 				DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */,
 				DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */,
-				DEECA320183F36290068ABAD /* Add.storyboard in Resources */,
+				DEECA320183F36290068ABAD /* Edit.storyboard in Resources */,
 				DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */,
 				DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */,
 			);
@@ -297,7 +297,7 @@
 			files = (
 				DEDDB651183DBD2900D78B84 /* WE_DDayAppDelegate.m in Sources */,
 				DEDDB64D183DBD2900D78B84 /* main.m in Sources */,
-				DEECA31B183F34EC0068ABAD /* AddViewController.m in Sources */,
+				DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */,
 				DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

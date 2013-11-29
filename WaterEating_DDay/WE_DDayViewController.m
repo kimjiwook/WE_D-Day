@@ -116,22 +116,13 @@
     [self.tableData removeObjectAtIndex:fromRow];
     [self.tableData insertObject:object atIndex:toRow];
     
-//    NSLog(@"%@\r\n%@",tableData,tempArray);
-//    
-//    // 데이터를 가져와 update
-//    for (int i = 0; i < tempArray.count; i++)
-//    {
-//        EditDay *editDay = [self.tableData objectAtIndex:i];
-//        
-//        EditDay *addDay = [tempArray objectAtIndex:i];
-//        
-//        [addDay setTitle:editDay.title];
-//        [addDay setDate:editDay.date];
-//        [addDay setStartdate:editDay.startdate];
-//        [addDay setBadge:editDay.badge];
-//        
-//        NSLog(@"%d, %@",i, editDay.title);
-//    }
+    // 데이터를 가져와 Index 만 바꿔준다.
+    for (int i = 0; i < self.tableData.count; i++)
+    {
+        EditDay *editDay = [self.tableData objectAtIndex:i];
+        
+        editDay.index = [NSNumber numberWithInteger:i * 10];
+    }
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }

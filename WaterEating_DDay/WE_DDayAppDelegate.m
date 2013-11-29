@@ -12,7 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [MagicalRecord setupCoreDataStack];
+    // 시작에 앞서 MagicalRecord setup 시켜준다.
+    
     return YES;
 }
 							

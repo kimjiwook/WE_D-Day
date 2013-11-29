@@ -11,12 +11,11 @@
 
 @interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
-    NSMutableArray *tableData;
-    EditViewController *editViewController;
-    
+    EditViewController *editViewController;    
 }
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
 
+@property (nonatomic, strong) NSMutableArray *tableData;
 
 - (IBAction)editButtonAction:(id)sender;
 - (IBAction)addButtonAction:(id)sender;

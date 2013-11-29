@@ -12,7 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [MagicalRecord setupCoreDataStack];
+    [MagicalRecord setupAutoMigratingCoreDataStack];
     // 시작에 앞서 MagicalRecord setup 시켜준다.
     
     return YES;

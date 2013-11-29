@@ -12,8 +12,6 @@
 @interface EditViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
-@property (nonatomic, strong) EditDay *editDay;
-
 @property (nonatomic, strong) IBOutlet UITableView *addTable;
 
 @property (nonatomic, strong) IBOutlet UIDatePicker *datePicker; // 오늘 날짜 (date)

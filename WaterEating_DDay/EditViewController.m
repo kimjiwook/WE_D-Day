@@ -18,7 +18,6 @@
 @synthesize datePicker;
 @synthesize dayLabel;
 @synthesize subJectTextField;
-@synthesize editDay;
 
 - (void)viewDidLoad
 {
@@ -51,7 +50,7 @@
 
 - (IBAction)daySave:(id)sender
 {
-    editDay = [EditDay createEntity]; // Entitiy 생성
+    EditDay *editDay = [EditDay MR_createEntity]; // Entitiy 생성
 
     NSDate *dateSelected = self.datePicker.date;
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -63,7 +62,7 @@
     [editDay setStartdate:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
     [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
     
-    [[NSManagedObjectContext defaultContext] saveNestedContexts]; // 저장
+    [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfAndWait];// 저장
     
     [self.navigationController popViewControllerAnimated:YES];
 }

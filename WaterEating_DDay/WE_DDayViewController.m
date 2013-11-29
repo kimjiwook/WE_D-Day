@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    self.tableData = [NSMutableArray arrayWithArray:[EditDay findAll]];
+    self.tableData = [NSMutableArray arrayWithArray:[EditDay MR_findAll]];
     NSLog(@"Test");
     
     NSLog(@"카운트 갯수 %d", [self.tableData count]);
@@ -40,6 +40,7 @@
 {
     [super viewWillAppear:animated];
     [self viewDidLoad];
+    [ddayTable reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,8 +76,10 @@
         
     }
     
+    EditDay *editDay = [self.tableData objectAtIndex:indexPath.row];
+    
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 100, 30)];
-    [title setText:[tableData objectAtIndex:indexPath.row]];
+    [title setText:editDay.title];
     [title setBackgroundColor:[UIColor clearColor]];
 //    [title setTextColor:[UIColor whiteColor]];
     [title setFont:[UIFont systemFontOfSize:18.0f]];

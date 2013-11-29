@@ -21,7 +21,10 @@
 {
     [super viewDidLoad];
     
-    self.tableData = [NSMutableArray arrayWithArray:[EditDay MR_findAll]];
+//    self.tableData = [NSMutableArray arrayWithArray:[EditDay MR_findAll]];
+    self.tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"index" ascending:YES]];
+    // index로 정렬해서 뿌려줌
+    
 
     [ddayTable setDataSource:self];
     [ddayTable setDelegate:self];
@@ -85,6 +88,8 @@
     [cell setBackgroundColor:[UIColor clearColor]];
     [cell.contentView addSubview:title];
     
+    NSLog(@"index %@, title %@",editDay.index , editDay.title);
+    
     return cell;
 }
 
@@ -111,21 +116,24 @@
     [self.tableData removeObjectAtIndex:fromRow];
     [self.tableData insertObject:object atIndex:toRow];
     
-    NSLog(@"%@",tableData);
-    
-//    // CoreData row 위치 변경
+//    NSLog(@"%@\r\n%@",tableData,tempArray);
 //    
-//    // Delete All
-//    [EditDay MR_truncateAll];
-//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-//    
-//    // 데이터를 가져와 저장한다.
-//    for (EditDay *editDay in self.tableData)
+//    // 데이터를 가져와 update
+//    for (int i = 0; i < tempArray.count; i++)
 //    {
-//        EditDay *addDay = [EditDay MR_createEntity];
-//        addDay = editDay;
-//        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+//        EditDay *editDay = [self.tableData objectAtIndex:i];
+//        
+//        EditDay *addDay = [tempArray objectAtIndex:i];
+//        
+//        [addDay setTitle:editDay.title];
+//        [addDay setDate:editDay.date];
+//        [addDay setStartdate:editDay.startdate];
+//        [addDay setBadge:editDay.badge];
+//        
+//        NSLog(@"%d, %@",i, editDay.title);
 //    }
+    
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 // Table view editing..

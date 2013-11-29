@@ -35,9 +35,9 @@
 		DEA3CBBB1847381600034A4D /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB9D1847381600034A4D /* MagicalRecord+Setup.m */; };
 		DEA3CBBC1847381600034A4D /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB9F1847381600034A4D /* MagicalRecord+ShorthandSupport.m */; };
 		DEA3CBBD1847381600034A4D /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CBA11847381600034A4D /* MagicalRecord.m */; };
-		DEA3CBC018473DEE00034A4D /* EditDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CBBF18473DEE00034A4D /* EditDay.m */; };
 		DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0BB0218482AE500F7564F /* CoreData.framework */; };
 		DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0BB08184848A400F7564F /* Date+Calendar.m */; };
+		DED0BB0C18487BA000F7564F /* EditDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0BB0B18487BA000F7564F /* EditDay.m */; };
 		DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
 		DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */; };
 		DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
@@ -123,11 +123,11 @@
 		DEA3CBA11847381600034A4D /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		DEA3CBA21847381600034A4D /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		DEA3CBA31847381600034A4D /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
-		DEA3CBBE18473DEE00034A4D /* EditDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditDay.h; path = ../EditDay.h; sourceTree = "<group>"; };
-		DEA3CBBF18473DEE00034A4D /* EditDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditDay.m; path = ../EditDay.m; sourceTree = "<group>"; };
 		DED0BB0218482AE500F7564F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DED0BB07184848A400F7564F /* Date+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Date+Calendar.h"; sourceTree = "<group>"; };
 		DED0BB08184848A400F7564F /* Date+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Calendar.m"; sourceTree = "<group>"; };
+		DED0BB0A18487BA000F7564F /* EditDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDay.h; sourceTree = "<group>"; };
+		DED0BB0B18487BA000F7564F /* EditDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDay.m; sourceTree = "<group>"; };
 		DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterEating_DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB640183DBD2900D78B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -291,8 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */,
-				DEA3CBBE18473DEE00034A4D /* EditDay.h */,
-				DEA3CBBF18473DEE00034A4D /* EditDay.m */,
+				DED0BB0A18487BA000F7564F /* EditDay.h */,
+				DED0BB0B18487BA000F7564F /* EditDay.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -538,7 +538,6 @@
 				DEA3CBAF1847381600034A4D /* NSManagedObject+MagicalRequests.m in Sources */,
 				DEA3CBAA1847381600034A4D /* NSString+MagicalDataImport.m in Sources */,
 				DEA3CBB51847381600034A4D /* NSPersistentStore+MagicalRecord.m in Sources */,
-				DEA3CBC018473DEE00034A4D /* EditDay.m in Sources */,
 				DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */,
 				DEA3CBAE1847381600034A4D /* NSManagedObject+MagicalRecord.m in Sources */,
 				DEA3CBB91847381600034A4D /* MagicalRecord+iCloud.m in Sources */,
@@ -560,6 +559,7 @@
 				DEA3CBB01847381600034A4D /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				DEA3CBAB1847381600034A4D /* NSManagedObject+MagicalAggregation.m in Sources */,
 				DEA3CBB41847381600034A4D /* NSManagedObjectModel+MagicalRecord.m in Sources */,
+				DED0BB0C18487BA000F7564F /* EditDay.m in Sources */,
 				DEA3CBAD1847381600034A4D /* NSManagedObject+MagicalFinders.m in Sources */,
 				DEA3CBA81847381600034A4D /* NSObject+MagicalDataImport.m in Sources */,
 				DEA3CBB71847381600034A4D /* MagicalRecord+Actions.m in Sources */,

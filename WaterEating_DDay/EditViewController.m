@@ -57,10 +57,13 @@
     // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
     [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
     
+    // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
+    [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
     [editDay setDate:dateSelected]; // 선택한 날짜
     [editDay setTitle:[subJectTextField text]]; // 제목
     [editDay setStartdate:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
     [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
+    
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
     

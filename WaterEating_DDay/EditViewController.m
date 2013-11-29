@@ -62,7 +62,7 @@
     [editDay setStartdate:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
     [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
     
-    [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfAndWait];// 저장
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -165,22 +165,9 @@
 
 - (IBAction)dateChanged:(id)sender
 {
-    // Today
-    NSDate *dateNow = [NSDate date];
-    // Select Day
-    NSDate *dateSelected = self.datePicker.date;
     // 64bit int 호환
-    NSInteger result = 0;
-    
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    
-    // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
-    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateNow interval:Nil forDate:dateNow];
-    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
-    
-    result = [[calendar components:NSDayCalendarUnit fromDate:dateSelected toDate:dateNow options:0] day];
-    if (oneDayCheckSwitch.on)
-    { result += 1; }
+    NSInteger result = [Date_Calendar startDate:self.datePicker.date
+                                     addOneDays:oneDayCheckSwitch.on];
     
     if (result >= 0) {
         // D+ 일 경우

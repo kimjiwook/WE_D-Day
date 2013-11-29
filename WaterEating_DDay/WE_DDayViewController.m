@@ -22,10 +22,7 @@
     [super viewDidLoad];
     
     self.tableData = [NSMutableArray arrayWithArray:[EditDay MR_findAll]];
-    NSLog(@"Test");
-    
-    NSLog(@"카운트 갯수 %d", [self.tableData count]);
-    
+
     [ddayTable setDataSource:self];
     [ddayTable setDelegate:self];
     // TableView DataSource, Delegate Setting
@@ -78,7 +75,7 @@
     
     EditDay *editDay = [self.tableData objectAtIndex:indexPath.row];
     
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 100, 30)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 180, 30)];
     [title setText:editDay.title];
     [title setBackgroundColor:[UIColor clearColor]];
 //    [title setTextColor:[UIColor whiteColor]];
@@ -103,7 +100,32 @@
 // Table view edit Cell move Action
 - (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
+    NSLog(@"TableView Cell Move : %d,%d",sourceIndexPath.row,destinationIndexPath.row);
     
+    NSInteger fromRow = sourceIndexPath.row;
+    NSInteger toRow = destinationIndexPath.row;
+    
+    id object = [self.tableData objectAtIndex:fromRow];
+    
+    // TableView Data 위치 변경
+    [self.tableData removeObjectAtIndex:fromRow];
+    [self.tableData insertObject:object atIndex:toRow];
+    
+    NSLog(@"%@",tableData);
+    
+//    // CoreData row 위치 변경
+//    
+//    // Delete All
+//    [EditDay MR_truncateAll];
+//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+//    
+//    // 데이터를 가져와 저장한다.
+//    for (EditDay *editDay in self.tableData)
+//    {
+//        EditDay *addDay = [EditDay MR_createEntity];
+//        addDay = editDay;
+//        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+//    }
 }
 
 // Table view editing..
@@ -111,6 +133,13 @@
 {
     // Cell Delete Action
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        //CoreData row Delete...
+        EditDay *editDay = [self.tableData objectAtIndex:indexPath.row];
+        [editDay MR_deleteEntity];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
+        // TableView Cell Delete...
         [tableData removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
     }

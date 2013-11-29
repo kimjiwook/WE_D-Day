@@ -37,6 +37,7 @@
 		DEA3CBBD1847381600034A4D /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CBA11847381600034A4D /* MagicalRecord.m */; };
 		DEA3CBC018473DEE00034A4D /* EditDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CBBF18473DEE00034A4D /* EditDay.m */; };
 		DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0BB0218482AE500F7564F /* CoreData.framework */; };
+		DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0BB08184848A400F7564F /* Date+Calendar.m */; };
 		DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
 		DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */; };
 		DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
@@ -125,6 +126,8 @@
 		DEA3CBBE18473DEE00034A4D /* EditDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditDay.h; path = ../EditDay.h; sourceTree = "<group>"; };
 		DEA3CBBF18473DEE00034A4D /* EditDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditDay.m; path = ../EditDay.m; sourceTree = "<group>"; };
 		DED0BB0218482AE500F7564F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DED0BB07184848A400F7564F /* Date+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Date+Calendar.h"; sourceTree = "<group>"; };
+		DED0BB08184848A400F7564F /* Date+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Calendar.m"; sourceTree = "<group>"; };
 		DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterEating_DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB640183DBD2900D78B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,15 +183,6 @@
 				DE0E554A183E09BE00A78CB7 /* background_test.png */,
 			);
 			name = images;
-			sourceTree = "<group>";
-		};
-		DEA3CB67184735DC00034A4D /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */,
-				DEA3CBC118473DF800034A4D /* Entities */,
-			);
-			name = CoreData;
 			sourceTree = "<group>";
 		};
 		DEA3CB681847381600034A4D /* MagicalRecord */ = {
@@ -296,10 +290,38 @@
 		DEA3CBC118473DF800034A4D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */,
 				DEA3CBBE18473DEE00034A4D /* EditDay.h */,
 				DEA3CBBF18473DEE00034A4D /* EditDay.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		DED0BB04184846C800F7564F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEECA31D183F350E0068ABAD /* EditView */,
+				DEECA31C183F34F80068ABAD /* MainView */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		DED0BB05184846DF00F7564F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				DEA3CB681847381600034A4D /* MagicalRecord */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		DED0BB06184847A100F7564F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DED0BB07184848A400F7564F /* Date+Calendar.h */,
+				DED0BB08184848A400F7564F /* Date+Calendar.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		DEDDB634183DBD2800D78B84 = {
@@ -336,11 +358,11 @@
 		DEDDB646183DBD2900D78B84 /* WaterEating_DDay */ = {
 			isa = PBXGroup;
 			children = (
-				DEA3CB681847381600034A4D /* MagicalRecord */,
-				DEA3CB67184735DC00034A4D /* CoreData */,
+				DED0BB06184847A100F7564F /* Utils */,
 				DEECA31E183F351C0068ABAD /* AppDelegate */,
-				DEECA31D183F350E0068ABAD /* EditView */,
-				DEECA31C183F34F80068ABAD /* MainView */,
+				DEA3CBC118473DF800034A4D /* Entities */,
+				DED0BB05184846DF00F7564F /* Lib */,
+				DED0BB04184846C800F7564F /* Views */,
 				DEDDB658183DBD2900D78B84 /* Images.xcassets */,
 				DEDDB647183DBD2900D78B84 /* Supporting Files */,
 			);
@@ -380,11 +402,12 @@
 		DEECA31C183F34F80068ABAD /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				DEDDB652183DBD2900D78B84 /* D_Day.storyboard */,
 				DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */,
 				DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */,
+				DEDDB652183DBD2900D78B84 /* D_Day.storyboard */,
 			);
 			name = MainView;
+			path = WaterEating_DDay;
 			sourceTree = "<group>";
 		};
 		DEECA31D183F350E0068ABAD /* EditView */ = {
@@ -395,6 +418,7 @@
 				DEECA31F183F36290068ABAD /* Edit.storyboard */,
 			);
 			name = EditView;
+			path = WaterEating_DDay;
 			sourceTree = "<group>";
 		};
 		DEECA31E183F351C0068ABAD /* AppDelegate */ = {
@@ -525,6 +549,7 @@
 				DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */,
 				DEA3CBBA1847381600034A4D /* MagicalRecord+Options.m in Sources */,
 				DEA3CBB81847381600034A4D /* MagicalRecord+ErrorHandling.m in Sources */,
+				DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */,
 				DEA3CBA41847381600034A4D /* MagicalImportFunctions.m in Sources */,
 				DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				DEA3CBB21847381600034A4D /* NSManagedObjectContext+MagicalSaves.m in Sources */,

@@ -18,6 +18,7 @@
 @synthesize datePicker;
 @synthesize dayLabel;
 @synthesize subJectTextField;
+@synthesize editDay;
 
 - (void)viewDidLoad
 {
@@ -26,6 +27,9 @@
     [self.navigationItem setTitle:@"새로운 D-Day"];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] init]];
     [self.navigationItem.rightBarButtonItem setTitle:@"저장"];
+    [self.navigationItem.rightBarButtonItem setAction:@selector(daySave:)];
+    [self.navigationItem.rightBarButtonItem setTarget:self];
+    // 이유는 잘 모르겠는데. addTarget: action 메소드가 없어서 두가지를 붙여놓음
     
     // Storyboard 에서 작성시 err 발생함..
     addTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0,self.view.bounds.size.width,self.view.bounds.size.height) style:UITableViewStyleGrouped];
@@ -43,6 +47,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)daySave:(id)sender
+{
+    editDay = [EditDay createEntity]; // Entitiy 생성
+
+    NSDate *dateSelected = self.datePicker.date;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
+    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
+    
+    [editDay setDate:dateSelected]; // 선택한 날짜
+    [editDay setTitle:[subJectTextField text]]; // 제목
+    [editDay setStartdate:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
+    [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
+    
+    [[NSManagedObjectContext defaultContext] saveNestedContexts]; // 저장
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Table view data source

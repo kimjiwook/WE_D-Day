@@ -7,6 +7,7 @@
 //
 
 #import "WE_DDayViewController.h"
+#import "EditDay.h"
 
 @interface WE_DDayViewController ()
 
@@ -14,12 +15,16 @@
 
 @implementation WE_DDayViewController
 @synthesize ddayTable;
+@synthesize tableData;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    tableData = [[NSMutableArray alloc] initWithArray:[self topLevelItems]];
+    self.tableData = [NSMutableArray arrayWithArray:[EditDay findAll]];
+    NSLog(@"Test");
+    
+    NSLog(@"카운트 갯수 %d", [self.tableData count]);
     
     [ddayTable setDataSource:self];
     [ddayTable setDelegate:self];
@@ -31,19 +36,15 @@
     self.navigationItem.title = @"D-Day";    
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self viewDidLoad];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (NSArray *)topLevelItems {
-    NSMutableArray *items = [NSMutableArray array];
-    
-    for (int i = 0; i < 20; i++) {
-        [items addObject:[NSString stringWithFormat:@"제목은 %d", i + 1]];
-    }
-    
-    return items;
 }
 
 #pragma mark - Table view data source
@@ -53,7 +54,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [tableData count];
+    return [self.tableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

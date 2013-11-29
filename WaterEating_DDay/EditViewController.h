@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EditDay.h"
 
 @interface EditViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+
+@property (nonatomic, strong) EditDay *editDay;
 
 @property (nonatomic, strong) IBOutlet UITableView *addTable;
 

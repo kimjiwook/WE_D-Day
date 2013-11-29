@@ -36,6 +36,7 @@
 		DEA3CBBC1847381600034A4D /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB9F1847381600034A4D /* MagicalRecord+ShorthandSupport.m */; };
 		DEA3CBBD1847381600034A4D /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CBA11847381600034A4D /* MagicalRecord.m */; };
 		DEA3CBC018473DEE00034A4D /* EditDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CBBF18473DEE00034A4D /* EditDay.m */; };
+		DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0BB0218482AE500F7564F /* CoreData.framework */; };
 		DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
 		DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */; };
 		DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
@@ -123,6 +124,7 @@
 		DEA3CBA31847381600034A4D /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		DEA3CBBE18473DEE00034A4D /* EditDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditDay.h; path = ../EditDay.h; sourceTree = "<group>"; };
 		DEA3CBBF18473DEE00034A4D /* EditDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditDay.m; path = ../EditDay.m; sourceTree = "<group>"; };
+		DED0BB0218482AE500F7564F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterEating_DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB640183DBD2900D78B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -152,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */,
 				DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */,
 				DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */,
 				DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */,
@@ -321,6 +324,7 @@
 		DEDDB63F183DBD2900D78B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DED0BB0218482AE500F7564F /* CoreData.framework */,
 				DEDDB640183DBD2900D78B84 /* Foundation.framework */,
 				DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */,
 				DEDDB644183DBD2900D78B84 /* UIKit.framework */,

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0E554A183E09BE00A78CB7 /* background_test.png */; };
+		DE8136D2184C10D600C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136D1184C10D600C07144 /* DetailViewController.m */; };
+		DE8136D4184C110C00C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D3184C110C00C07144 /* Detail.storyboard */; };
 		DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */; };
 		DEA3CBA41847381600034A4D /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */; };
 		DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6E1847381600034A4D /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -68,6 +70,9 @@
 
 /* Begin PBXFileReference section */
 		DE0E554A183E09BE00A78CB7 /* background_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_test.png; sourceTree = "<group>"; };
+		DE8136D0184C10D600C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DE8136D1184C10D600C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DE8136D3184C110C00C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		DEA3CB65184735CE00034A4D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DEA3CB6B1847381600034A4D /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
@@ -185,6 +190,16 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		DE8136CF184C10AC00C07144 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DE8136D0184C10D600C07144 /* DetailViewController.h */,
+				DE8136D1184C10D600C07144 /* DetailViewController.m */,
+				DE8136D3184C110C00C07144 /* Detail.storyboard */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
 		DEA3CB681847381600034A4D /* MagicalRecord */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +315,7 @@
 		DED0BB04184846C800F7564F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE8136CF184C10AC00C07144 /* DetailView */,
 				DEECA31D183F350E0068ABAD /* EditView */,
 				DEECA31C183F34F80068ABAD /* MainView */,
 			);
@@ -512,6 +528,7 @@
 				DEECA320183F36290068ABAD /* Edit.storyboard in Resources */,
 				DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */,
 				DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */,
+				DE8136D4184C110C00C07144 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +566,7 @@
 				DEA3CBBA1847381600034A4D /* MagicalRecord+Options.m in Sources */,
 				DEA3CBB81847381600034A4D /* MagicalRecord+ErrorHandling.m in Sources */,
 				DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */,
+				DE8136D2184C10D600C07144 /* DetailViewController.m in Sources */,
 				DEA3CBA41847381600034A4D /* MagicalImportFunctions.m in Sources */,
 				DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				DEA3CBB21847381600034A4D /* NSManagedObjectContext+MagicalSaves.m in Sources */,

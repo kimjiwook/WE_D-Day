@@ -37,4 +37,16 @@
     return date;
 }
 
+// D+234, D-23 형식의 String 반환 작업
++ (NSString *) stringResult : (NSInteger) result
+{
+    if (result >= 0) {
+        // D+ 일 경우
+        return [NSString stringWithFormat:@"D+%ld 일",(long)result];
+    }else{
+        // D- 일 경우
+        return [NSString stringWithFormat:@"D%ld 일",(long)result];
+    }
+}
+
 @end

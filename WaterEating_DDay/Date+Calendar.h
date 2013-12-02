@@ -15,4 +15,7 @@
 
 // DDay 만들기
 + (NSInteger) startDate :(NSDate *)startDate addOneDays :(Boolean)oneDays;
+
+// D+234, D-23 형식의 String 반환 작업
++ (NSString *) stringResult : (NSInteger) result;
 @end

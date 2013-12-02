@@ -18,4 +18,10 @@
 
 // D+234, D-23 형식의 String 반환 작업
 + (NSString *) stringResult : (NSInteger) result;
+
+// +100일, +200일 등등 만들기
++ (NSString *) stringDate :(NSDate *)startDate calendar :(NSInteger)day;
+
+// +100일, +200일 등등 Date반환형
++ (NSDate *) date :(NSDate *)startDate calendar :(NSInteger)day;
 @end

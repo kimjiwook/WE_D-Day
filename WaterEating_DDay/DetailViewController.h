@@ -15,7 +15,6 @@
 @property (nonatomic, readonly) EditDay *editDay;
 @property (nonatomic, strong) IBOutlet UITableView *detailTable;
 
-+ (DetailViewController *) instance;
 - (void)setting : (EditDay *) editDayCopy;
 
 @end

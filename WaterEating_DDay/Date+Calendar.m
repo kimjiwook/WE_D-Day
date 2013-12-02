@@ -23,6 +23,7 @@
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     
     result = [[calendar components:NSDayCalendarUnit fromDate:dateSelected toDate:dateNow options:0] day];
+    
     if (oneDays) { result += 1; }
     
     return result;
@@ -47,6 +48,35 @@
         // D- 일 경우
         return [NSString stringWithFormat:@"D%ld 일",(long)result];
     }
+}
+
+// +100일, +200일 등등 만들기
++ (NSString *) stringDate :(NSDate *)startDate calendar :(NSInteger)day
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setDay:day];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *daysData = [calendar dateByAddingComponents:components toDate:startDate options:0];
+    
+    return [dateFormat stringFromDate:daysData];
+}
+
+// +100일, +200일 등등 Date반환형
++ (NSDate *) date :(NSDate *)startDate calendar :(NSInteger)day
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setDay:day];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    return [calendar dateByAddingComponents:components toDate:startDate options:0];
 }
 
 @end

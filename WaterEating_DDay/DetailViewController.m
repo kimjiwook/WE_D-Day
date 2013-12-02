@@ -40,12 +40,79 @@
     [detailTable setBackgroundColor:[UIColor clearColor]];
     
     [self.view addSubview:detailTable];
+    [self awesomeMenuCreate];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Path button UI
+// 이걸로 DetailView 보여지는 형식 변경
+- (void)awesomeMenuCreate
+{
+    UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
+    UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
+    
+    UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
+    
+    AwesomeMenuItem *starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+                                                           highlightedImage:storyMenuItemImagePressed
+                                                               ContentImage:starImage
+                                                    highlightedContentImage:nil];
+    AwesomeMenuItem *starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+                                                           highlightedImage:storyMenuItemImagePressed
+                                                               ContentImage:starImage
+                                                    highlightedContentImage:nil];
+    AwesomeMenuItem *starMenuItem3 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
+                                                           highlightedImage:storyMenuItemImagePressed
+                                                               ContentImage:starImage
+                                                    highlightedContentImage:nil];
+
+    
+    NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, nil];
+    
+    AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
+                                                       highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
+                                                           ContentImage:[UIImage imageNamed:@"icon-plus.png"]
+                                                highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
+    
+    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.frame startItem:startItem optionMenus:menus];
+    menu.delegate = self;
+    
+	menu.menuWholeAngle = M_PI_2;
+	menu.farRadius = 110.0f;
+	menu.endRadius = 100.0f;
+	menu.nearRadius = 90.0f;
+    menu.animationDuration = 0.3f;
+    menu.startPoint = CGPointMake(40.0, self.view.frame.size.height-40.0);
+    
+    [self.view addSubview:menu];
+}
+
+/* ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ */
+/* ⬇⬇⬇⬇⬇⬇ GET RESPONSE OF MENU ⬇⬇⬇⬇⬇⬇ */
+/* ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ */
+
+- (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
+{
+    if (idx == 0) {
+        
+    }else if(idx == 1){
+        
+    }else if(idx == 2){
+        
+    }else{
+        NSLog(@"is not menu");
+    }
+}
+- (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu {
+    NSLog(@"Menu was closed!");
+}
+- (void)awesomeMenuDidFinishAnimationOpen:(AwesomeMenu *)menu {
+    NSLog(@"Menu is open!");
 }
 
 #pragma mark - Table view data source
@@ -99,7 +166,7 @@
         
         // Left
         UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-        [date setText:[NSString stringWithFormat:@"%ld 일",indexPath.row * 100]];
+        [date setText:[NSString stringWithFormat:@"%d 일",indexPath.row * 100]];
         [date setTag:2000];
         
         [cell.contentView addSubview:date];

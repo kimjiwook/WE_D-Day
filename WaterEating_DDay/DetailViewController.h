@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "EditDay.h"
+#import "AwesomeMenu.h"
 
 @interface DetailViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate>
+<UITableViewDataSource, UITableViewDelegate, AwesomeMenuDelegate>
 
 @property (nonatomic, readonly) EditDay *editDay;
 @property (nonatomic, strong) IBOutlet UITableView *detailTable;

@@ -171,14 +171,9 @@
     // 64bit int 호환
     NSInteger result = [Date_Calendar startDate:self.datePicker.date
                                      addOneDays:oneDayCheckSwitch.on];
-    
-    if (result >= 0) {
-        // D+ 일 경우
-        self.dayLabel.text = [NSString stringWithFormat:@"D+%ld 일",(long)result];
-    }else{
-        // D- 일 경우
-        self.dayLabel.text = [NSString stringWithFormat:@"D%ld 일",(long)result];
-    }
+
+    self.dayLabel.text = [Date_Calendar stringResult:result];
+
 }
 
 - (IBAction)onDayCheckAction:(id)sender

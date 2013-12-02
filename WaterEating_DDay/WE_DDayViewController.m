@@ -116,13 +116,21 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];  // 해제
+    
+    EditDay *editDay = [self.tableData objectAtIndex:indexPath.row];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Detail" bundle:nil];
+    detailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    
+    [detailViewController setting:editDay]; // 값 복사하기
+    
+    [self.navigationController pushViewController:detailViewController animated:YES]; // PushView
 }
 
 
 // Table view edit Cell move Action
 - (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    NSLog(@"TableView Cell Move : %d,%d",sourceIndexPath.row,destinationIndexPath.row);
     
     NSInteger fromRow = sourceIndexPath.row;
     NSInteger toRow = destinationIndexPath.row;

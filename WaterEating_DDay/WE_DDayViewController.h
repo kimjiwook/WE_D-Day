@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "EditViewController.h"
+#import "DetailViewController.h"
 
 @interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
-    EditViewController *editViewController;    
+    EditViewController *editViewController;
+    DetailViewController *detailViewController;
 }
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
 

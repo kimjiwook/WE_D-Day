@@ -102,7 +102,7 @@
     }else{
         dayLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
         dayLabel.text = @"D+0 일";
-        [dayLabel setFont:[UIFont systemFontOfSize:23.0f]];
+        [dayLabel setFont:[UIFont systemFontOfSize:20.0f]];
         [dayLabel setTextAlignment:NSTextAlignmentCenter];
         return dayLabel;
     }

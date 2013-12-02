@@ -56,19 +56,21 @@
     UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
     UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
     
-    UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
+    UIImage *d_puls = [UIImage imageNamed:@"D_puls.png"];
+    UIImage *d_minus = [UIImage imageNamed:@"D_minus.png"];
+    UIImage *year = [UIImage imageNamed:@"Year.png"];
     
     AwesomeMenuItem *starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
                                                            highlightedImage:storyMenuItemImagePressed
-                                                               ContentImage:starImage
+                                                               ContentImage:d_puls
                                                     highlightedContentImage:nil];
     AwesomeMenuItem *starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
                                                            highlightedImage:storyMenuItemImagePressed
-                                                               ContentImage:starImage
+                                                               ContentImage:d_minus
                                                     highlightedContentImage:nil];
     AwesomeMenuItem *starMenuItem3 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
                                                            highlightedImage:storyMenuItemImagePressed
-                                                               ContentImage:starImage
+                                                               ContentImage:year
                                                     highlightedContentImage:nil];
 
     
@@ -98,15 +100,9 @@
 
 - (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
 {
-    if (idx == 0) {
-        
-    }else if(idx == 1){
-        
-    }else if(idx == 2){
-        
-    }else{
-        NSLog(@"is not menu");
-    }
+    // 0 = D+ //1 = D- //2 = Y (년도별 표시)
+    tableViewType = idx;
+    [detailTable reloadData];
 }
 - (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu {
     NSLog(@"Menu was closed!");
@@ -119,7 +115,26 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 51;
+    if (tableViewType == 0) {
+        return 51;
+    }else if (tableViewType == 1){
+        // D- 일때만 제대로 계산한다.
+        
+        NSInteger d_minus = [Date_Calendar startDate:editDay.date addOneDays:(BOOL)editDay.startdate];
+        
+        if (d_minus < 0)
+        {
+            d_minus = (d_minus*-1)/100;
+            NSLog(@"값은 : %ld", d_minus);
+        }
+        
+        return d_minus+1;
+        
+    }else if (tableViewType == 2){
+        return 31;
+    }else{
+        return 1;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -163,21 +178,60 @@
         [cell.contentView addSubview:days];
         
     }else{
-        
-        // Left
-        UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-        [date setText:[NSString stringWithFormat:@"%d 일",indexPath.row * 100]];
-        [date setTag:2000];
-        
-        [cell.contentView addSubview:date];
-        
-        //Right
-        UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
-        [days setText:[Date_Calendar stringDate:editDay.date calendar:indexPath.row*100]];
-        [days setTextAlignment:NSTextAlignmentRight];
-        [days setTag:3000];
-        
-        [cell.contentView addSubview:days];
+        if (tableViewType == 0) {
+            // D+ 계산법
+            // Left
+            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
+            [date setText:[NSString stringWithFormat:@"%ld 일",indexPath.row * 100]];
+            [date setTag:2000];
+            
+            [cell.contentView addSubview:date];
+            
+            //Right
+            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
+            [days setText:[Date_Calendar stringDate:editDay.date calendar:indexPath.row*100]];
+            [days setTextAlignment:NSTextAlignmentRight];
+            [days setTag:3000];
+            
+            [cell.contentView addSubview:days];
+            
+        }else if (tableViewType == 1){
+            // D- 계산법
+            // Left
+             NSInteger d_minus = [Date_Calendar startDate:editDay.date addOneDays:(BOOL)editDay.startdate];
+            d_minus = (d_minus)/100;
+            
+            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
+            [date setText:[NSString stringWithFormat:@"D%ld 일",(d_minus*100) + ((indexPath.row-1)*100)]];
+            [date setTag:2000];
+            
+            [cell.contentView addSubview:date];
+            
+            //Right
+            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
+            [days setText:[Date_Calendar stringDate:editDay.date calendar:(d_minus*100) + ((indexPath.row-1)*100)]];
+            [days setTextAlignment:NSTextAlignmentRight];
+            [days setTag:3000];
+            
+            [cell.contentView addSubview:days];
+            
+        }else if (tableViewType == 2){
+            // 1주년씩 계산법
+            // Left
+            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
+            [date setText:[NSString stringWithFormat:@"%ld 주년",indexPath.row]];
+            [date setTag:2000];
+            
+            [cell.contentView addSubview:date];
+            
+            //Right
+            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
+            [days setText:[Date_Calendar stringDate:editDay.date calendar:indexPath.row*365]];
+            [days setTextAlignment:NSTextAlignmentRight];
+            [days setTag:3000];
+            
+            [cell.contentView addSubview:days];
+        }
     }
 
     [cell setBackgroundColor:[UIColor clearColor]];

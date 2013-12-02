@@ -12,7 +12,9 @@
 
 @interface DetailViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, AwesomeMenuDelegate>
-
+{
+    NSInteger tableViewType;
+}
 @property (nonatomic, readonly) EditDay *editDay;
 @property (nonatomic, strong) IBOutlet UITableView *detailTable;
 

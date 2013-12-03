@@ -142,7 +142,7 @@
             [cell.contentView addSubview:startCheckLabel];
             
             oneDayCheckSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(251, 9, 49, 31)];
-            [oneDayCheckSwitch setOn:true];
+            [oneDayCheckSwitch setOn:false];
             [oneDayCheckSwitch addTarget:self action:@selector(onDayCheckAction:) forControlEvents:UIControlEventValueChanged];
             [cell.contentView addSubview:oneDayCheckSwitch];
             

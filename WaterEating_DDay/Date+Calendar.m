@@ -61,7 +61,8 @@
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDate *daysData = [calendar dateByAddingComponents:components toDate:startDate options:0];
-    
+    NSLog(@"%@",[self date_yyyy_mm_dd:daysData]);
+    NSLog(@"%@",[dateFormat stringFromDate:daysData]);
     return [dateFormat stringFromDate:daysData];
 }
 

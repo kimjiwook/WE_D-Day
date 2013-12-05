@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0E554A183E09BE00A78CB7 /* background_test.png */; };
+		DE80E320184FFF1200B2E9F9 /* Coredata_CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
 		DE91A077184C6CBD008AB9CC /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91A062184C6CBD008AB9CC /* AwesomeMenu.m */; };
@@ -72,7 +73,6 @@
 		DEDDB661183DBD2900D78B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
 		DEDDB662183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
 		DEDDB66A183DBD2900D78B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB668183DBD2900D78B84 /* InfoPlist.strings */; };
-		DEDDB66C183DBD2900D78B84 /* WaterEating_DDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB66B183DBD2900D78B84 /* WaterEating_DDayTests.m */; };
 		DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECA31A183F34EC0068ABAD /* EditViewController.m */; };
 		DEECA320183F36290068ABAD /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEECA31F183F36290068ABAD /* Edit.storyboard */; };
 /* End PBXBuildFile section */
@@ -89,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		DE0E554A183E09BE00A78CB7 /* background_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_test.png; sourceTree = "<group>"; };
+		DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coredata_CRUD.m; sourceTree = "<group>"; };
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
 		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
@@ -191,7 +192,6 @@
 		DEDDB65F183DBD2900D78B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DEDDB667183DBD2900D78B84 /* WaterEating_DDayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterEating_DDayTests-Info.plist"; sourceTree = "<group>"; };
 		DEDDB669183DBD2900D78B84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DEDDB66B183DBD2900D78B84 /* WaterEating_DDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterEating_DDayTests.m; sourceTree = "<group>"; };
 		DEECA319183F34EC0068ABAD /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		DEECA31A183F34EC0068ABAD /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		DEECA31F183F36290068ABAD /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
@@ -477,8 +477,8 @@
 		DEDDB665183DBD2900D78B84 /* WaterEating_DDayTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEDDB66B183DBD2900D78B84 /* WaterEating_DDayTests.m */,
 				DEDDB666183DBD2900D78B84 /* Supporting Files */,
+				DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */,
 			);
 			path = WaterEating_DDayTests;
 			sourceTree = "<group>";
@@ -684,7 +684,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEDDB66C183DBD2900D78B84 /* WaterEating_DDayTests.m in Sources */,
+				DE80E320184FFF1200B2E9F9 /* Coredata_CRUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

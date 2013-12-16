@@ -93,6 +93,7 @@
     // 64bit int 호환
     NSInteger result = [Date_Calendar startDate:editDay.date
                                      addOneDays:(BOOL)editDay.startdate];
+    NSLog(@"%d",(BOOL)editDay.startdate);
     
     [days setText:[Date_Calendar stringResult:result]];
 //    [days setBackgroundColor:[UIColor clearColor]];

@@ -571,6 +571,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = KimJiWook;
 				TargetAttributes = {
+					DEDDB63C183DBD2900D78B84 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					DEDDB65D183DBD2900D78B84 = {
 						TestTargetID = DEDDB63C183DBD2900D78B84;
 					};

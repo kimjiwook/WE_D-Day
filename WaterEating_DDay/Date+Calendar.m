@@ -61,8 +61,18 @@
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDate *daysData = [calendar dateByAddingComponents:components toDate:startDate options:0];
-    NSLog(@"%@",[self date_yyyy_mm_dd:daysData]);
-    NSLog(@"%@",[dateFormat stringFromDate:daysData]);
+    
+    NSLog(@"1 : %@",[self date_yyyy_mm_dd:daysData]);
+    NSLog(@"2 : %@",[dateFormat stringFromDate:daysData]);
+    
+    NSCalendar *calendar1 = [NSCalendar currentCalendar];
+    NSCalendarUnit unitFlags = NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit;
+    NSDateComponents *comp = [calendar1 components:unitFlags fromDate:[self date_yyyy_mm_dd:daysData]];
+    
+    NSString *strDate = [NSString stringWithFormat:@"%04ld-%02ld-%02ld",(long)[comp year],(long)[comp month],(long)[comp day]];
+    
+    NSLog(@"0 : %@",strDate);
+    
     return [dateFormat stringFromDate:daysData];
 }
 

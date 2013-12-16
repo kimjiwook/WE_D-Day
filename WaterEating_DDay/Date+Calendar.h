@@ -10,21 +10,13 @@
 
 @interface Date_Calendar : NSObject
 
-// 시분초를 없애는 작업
-+ (NSDate *) date_yyyy_mm_dd :(NSDate *)date;
-
-// DDay 만들기
-+ (NSInteger) startDate :(NSDate *)startDate addOneDays :(Boolean)oneDays;
-
 // D+234, D-23 형식의 String 반환 작업
 + (NSString *) stringResult : (NSInteger) result;
 
-// +100일, +200일 등등 만들기
-+ (NSString *) stringDate :(NSDate *)startDate calendar :(NSInteger)day;
+// DDay Create
+// ex) D+143, D-54..
++ (NSInteger) stringDate : (NSString *) date plusOne : (BOOL)plusOne;
 
-// +100일, +200일 등등 Date반환형
-+ (NSDate *) date :(NSDate *)startDate calendar :(NSInteger)day;
-
-// Date To String...
-+ (NSString *) dateToString : (NSDate *)date;
+// +100일 (2013-09-07) Create...
++ (NSString *) stringDate:(NSString *)date howdays:(NSInteger)day;
 @end

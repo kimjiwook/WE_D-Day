@@ -11,30 +11,32 @@
 
 @interface Coredata_CRUD : XCTestCase
 
+
+@property (nonatomic, strong) EditDay *editDay;
 @end
 
 @implementation Coredata_CRUD
+@synthesize editDay;
 
 - (void)setUp
 {
     [super setUp];
     // Put setup code here; it will be run once, before the first test case.
-    
-    [EditDay MR_truncateAll];
-    // Entity 전체 삭제
-    
+    [EditDay MR_truncateAll]; // 전체 삭제
+    editDay = [EditDay MR_createEntity]; // Entitiy 생성
 }
 
 - (void)tearDown
 {
     // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
+    
+    [editDay MR_deleteEntity]; // Entitiy 삭제
 }
 
 - (void)test_Create
 {
-    EditDay *editDay = [EditDay MR_createEntity]; // Entitiy 생성
-    
+
     NSDate *dateSelected = [Date_Calendar date_yyyy_mm_dd:[NSDate date]];
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정

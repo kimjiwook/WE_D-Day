@@ -10,33 +10,53 @@
 
 @implementation Date_Calendar
 
-// DDay 만들기
-+ (NSInteger) startDate :(NSDate *)startDate addOneDays :(Boolean)oneDays
+// DDay Create
+// ex) D+143, D-54..
++ (NSInteger) stringDate : (NSString *) date plusOne : (BOOL)plusOne
 {
-    // Today
-    NSDate *dateNow = [self date_yyyy_mm_dd:[NSDate date]];
-    // Select Day
-    NSDate *dateSelected = [self date_yyyy_mm_dd:startDate];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    // Today (yyyy-MM-dd)
+    NSDate *dateNow = [dateFormat dateFromString:[dateFormat stringFromDate:[NSDate date]]];
+    
+    // Select Date (yyyy-MM-dd)
+    NSDate *stringToDate = [[NSDate alloc] init];
+    stringToDate = [dateFormat dateFromString:date];
+    
+    // 아래와 같이 해야 내가 원하는 날짜가 나옴
+    // DateFormat 을 둘다 맞춰야지 된다.
+    NSLog(@"Today : %@, Select Date : %@",
+          [dateFormat stringFromDate:dateNow],
+          [dateFormat stringFromDate:stringToDate]);
+    
     // 64bit int 호환
     NSInteger result = 0;
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     
-    result = [[calendar components:NSDayCalendarUnit fromDate:dateSelected toDate:dateNow options:0] day];
+    result = [[calendar components:NSDayCalendarUnit fromDate:stringToDate toDate:dateNow options:0] day];
     
-    if (oneDays) { result += 1; }
+    if (plusOne) { result += 1; }
     
     return result;
 }
 
-// 시분초를 없애는 작업
-+ (NSDate *) date_yyyy_mm_dd :(NSDate *)date
+
+
+// +100일 (2013-09-07) Create...
++ (NSString *) stringDate:(NSString *)date howdays:(NSInteger)day
 {
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&date interval:Nil forDate:date];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setDay:day];
     
-    return date;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *daysDate = [calendar dateByAddingComponents:components toDate:[Date_Conversion stringToDate:date] options:0];
+
+    return [Date_Conversion dateToString:daysDate];
 }
+
+
 
 // D+234, D-23 형식의 String 반환 작업
 + (NSString *) stringResult : (NSInteger) result
@@ -50,53 +70,5 @@
     }
 }
 
-// +100일, +200일 등등 만들기
-+ (NSString *) stringDate :(NSDate *)startDate calendar :(NSInteger)day
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:day];
-    
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDate *daysData = [calendar dateByAddingComponents:components toDate:startDate options:0];
-    
-    NSLog(@"1 : %@",[self date_yyyy_mm_dd:daysData]);
-    NSLog(@"2 : %@",[dateFormat stringFromDate:daysData]);
-    
-    NSCalendar *calendar1 = [NSCalendar currentCalendar];
-    NSCalendarUnit unitFlags = NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit;
-    NSDateComponents *comp = [calendar1 components:unitFlags fromDate:[self date_yyyy_mm_dd:daysData]];
-    
-    NSString *strDate = [NSString stringWithFormat:@"%04ld-%02ld-%02ld",(long)[comp year],(long)[comp month],(long)[comp day]];
-    
-    NSLog(@"0 : %@",strDate);
-    
-    return [dateFormat stringFromDate:daysData];
-}
-
-// +100일, +200일 등등 Date반환형
-+ (NSDate *) date :(NSDate *)startDate calendar :(NSInteger)day
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:day];
-    
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    
-    return [calendar dateByAddingComponents:components toDate:startDate options:0];
-}
-
-// date To String ...
-+ (NSString *) dateToString : (NSDate *)date
-{
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd"];
-    
-    return [dateFormat stringFromDate:date];
-}
 
 @end

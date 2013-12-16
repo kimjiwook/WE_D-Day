@@ -77,8 +77,6 @@
     // 제목 만들기
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 180, 30)];
     [title setText:editDay.title];
-//    [title setBackgroundColor:[UIColor clearColor]];
-//    [title setTextColor:[UIColor whiteColor]];
     [title setFont:[UIFont systemFontOfSize:18.0f]];
     [title setTag:1000];
     
@@ -88,14 +86,13 @@
     // d-Day 만들기
     UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(190, 10, 125, 30)];
     // 64bit int 호환
-//    NSInteger result = [Date_Calendar startDate:editDay.date
-//                                     addOneDays:(BOOL)editDay.startdate];
-//    NSLog(@"DDay Bool : %d",(BOOL)editDay.startdate);
+    NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
+    // plusOne 은 Boolean type으로 넘겨주어야 정상처리 됨.
+    NSLog(@"DDay Bool : %hhu",(Boolean)editDay.plusone);
     
-//    [days setText:[Date_Calendar stringResult:result]];
-//    [days setBackgroundColor:[UIColor clearColor]];
+    [days setText:[Date_Calendar stringResult:result]];
+    [days setBackgroundColor:[UIColor clearColor]];
     [days setTextAlignment:NSTextAlignmentRight];
-//    [days setTextColor:[UIColor whiteColor]];
     [days setFont:[UIFont systemFontOfSize:18.0f]];
     [days setTag:2000];
     

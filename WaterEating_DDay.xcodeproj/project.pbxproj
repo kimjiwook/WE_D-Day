@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0E554A183E09BE00A78CB7 /* background_test.png */; };
 		DE143116185ED3E5000E8937 /* EditDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DE143115185ED3E5000E8937 /* EditDay.m */; };
+		DE143118185EE153000E8937 /* DateUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE143117185EE153000E8937 /* DateUtilsTests.m */; };
+		DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = DE14311A185EF6D2000E8937 /* Date+Conversion.m */; };
 		DE80E320184FFF1200B2E9F9 /* Coredata_CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
@@ -91,6 +93,9 @@
 		DE0E554A183E09BE00A78CB7 /* background_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_test.png; sourceTree = "<group>"; };
 		DE143114185ED3E5000E8937 /* EditDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDay.h; sourceTree = "<group>"; };
 		DE143115185ED3E5000E8937 /* EditDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDay.m; sourceTree = "<group>"; };
+		DE143117185EE153000E8937 /* DateUtilsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtilsTests.m; sourceTree = "<group>"; };
+		DE143119185EF6D2000E8937 /* Date+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Date+Conversion.h"; sourceTree = "<group>"; };
+		DE14311A185EF6D2000E8937 /* Date+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Conversion.m"; sourceTree = "<group>"; };
 		DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coredata_CRUD.m; sourceTree = "<group>"; };
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
@@ -413,6 +418,8 @@
 			children = (
 				DED0BB07184848A400F7564F /* Date+Calendar.h */,
 				DED0BB08184848A400F7564F /* Date+Calendar.m */,
+				DE143119185EF6D2000E8937 /* Date+Conversion.h */,
+				DE14311A185EF6D2000E8937 /* Date+Conversion.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -479,6 +486,7 @@
 			children = (
 				DEDDB666183DBD2900D78B84 /* Supporting Files */,
 				DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */,
+				DE143117185EE153000E8937 /* DateUtilsTests.m */,
 			);
 			path = WaterEating_DDayTests;
 			sourceTree = "<group>";
@@ -675,6 +683,7 @@
 				DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				DEA3CBB21847381600034A4D /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				DEA3CBBD1847381600034A4D /* MagicalRecord.m in Sources */,
+				DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */,
 				DEA3CBB31847381600034A4D /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				DEA3CBB11847381600034A4D /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				DEA3CBAC1847381600034A4D /* NSManagedObject+MagicalDataImport.m in Sources */,
@@ -692,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE80E320184FFF1200B2E9F9 /* Coredata_CRUD.m in Sources */,
+				DE143118185EE153000E8937 /* DateUtilsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

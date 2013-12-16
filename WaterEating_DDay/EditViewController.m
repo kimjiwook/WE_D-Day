@@ -45,7 +45,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)daySave:(id)sender
@@ -59,15 +58,15 @@
     
     // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
     [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
-    [editDay setDate:dateSelected]; // 선택한 날짜
-    NSLog(@"%@",dateSelected);
+    [editDay setDate:[Date_Conversion dateToString:dateSelected]]; // 선택한 날짜
     [editDay setTitle:[subJectTextField text]]; // 제목
-//    [editDay setStartdate:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
-    NSLog(@"Bool, %d , %@",oneDayCheckSwitch.on,[NSNumber numberWithBool:oneDayCheckSwitch.on]);
+    [editDay setPlusone:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
     [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
-    
+    // 여기에선 Plusone 값 제대로 저장이됨
+    NSLog(@"plusOne : %d , %@",oneDayCheckSwitch.on,[NSNumber numberWithBool:oneDayCheckSwitch.on]);
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
+    
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -171,8 +170,8 @@
 - (IBAction)dateChanged:(id)sender
 {
     // 64bit int 호환
-    NSInteger result = [Date_Calendar startDate:self.datePicker.date
-                                     addOneDays:oneDayCheckSwitch.on];
+    NSInteger result = [Date_Calendar stringDate:
+                        [Date_Conversion dateToString: self.datePicker.date] plusOne:oneDayCheckSwitch.on];
 
     self.dayLabel.text = [Date_Calendar stringResult:result];
 

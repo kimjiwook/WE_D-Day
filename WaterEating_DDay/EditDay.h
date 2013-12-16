@@ -12,10 +12,10 @@
 
 @interface EditDay : NSManagedObject
 
-@property (nonatomic) BOOL badge;
+@property (nonatomic, retain) NSNumber * badge;
 @property (nonatomic, retain) NSString * date;
-@property (nonatomic) int64_t index;
-@property (nonatomic) BOOL plusone;
+@property (nonatomic, retain) NSNumber * index;
+@property (nonatomic, retain) NSNumber * plusone;
 @property (nonatomic, retain) NSString * title;
 
 @end

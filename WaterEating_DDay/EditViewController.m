@@ -62,7 +62,7 @@
     [editDay setDate:dateSelected]; // 선택한 날짜
     NSLog(@"%@",dateSelected);
     [editDay setTitle:[subJectTextField text]]; // 제목
-    [editDay setStartdate:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
+//    [editDay setStartdate:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
     NSLog(@"Bool, %d , %@",oneDayCheckSwitch.on,[NSNumber numberWithBool:oneDayCheckSwitch.on]);
     [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
     

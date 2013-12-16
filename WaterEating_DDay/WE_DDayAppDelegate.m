@@ -27,18 +27,18 @@
     
     // 특정 위치 뱃지 TRUE 로 바꾸기
 
-    NSMutableArray *tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"badge" ascending:YES]];
-    
-    EditDay *editDay = [tableData objectAtIndex:0];
-    
-    NSInteger result = [Date_Calendar startDate:editDay.date
-                                     addOneDays:(BOOL)editDay.startdate];
-    
-    if (result < 0) {
-        result = result * -1;
-    }
-    
-    application.applicationIconBadgeNumber = result;
+//    NSMutableArray *tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"badge" ascending:YES]];
+//    
+//    EditDay *editDay = [tableData objectAtIndex:0];
+//    
+//    NSInteger result = [Date_Calendar startDate:editDay.date
+//                                     addOneDays:editDay.plusone];
+//    
+//    if (result < 0) {
+//        result = result * -1;
+//    }
+//    
+//    application.applicationIconBadgeNumber = result;
     // 뱃지 표시하기
 
     return YES;
@@ -58,19 +58,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    NSMutableArray *tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"badge" ascending:YES]];
-    
-    EditDay *editDay = [tableData objectAtIndex:0];
-    
-    NSInteger result = [Date_Calendar startDate:editDay.date
-                                     addOneDays:(BOOL)editDay.startdate];
-    
-    if (result < 0) {
-        result = result * -1;
-    }
-    
-    application.applicationIconBadgeNumber = result;
-    // 뱃지 표시하기
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

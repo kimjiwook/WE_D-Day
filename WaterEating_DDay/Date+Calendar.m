@@ -90,4 +90,13 @@
     return [calendar dateByAddingComponents:components toDate:startDate options:0];
 }
 
+// date To String ...
++ (NSString *) dateToString : (NSDate *)date
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    return [dateFormat stringFromDate:date];
+}
+
 @end

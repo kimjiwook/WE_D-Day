@@ -24,4 +24,7 @@
 
 // +100일, +200일 등등 Date반환형
 + (NSDate *) date :(NSDate *)startDate calendar :(NSInteger)day;
+
+// Date To String...
++ (NSString *) dateToString : (NSDate *)date;
 @end

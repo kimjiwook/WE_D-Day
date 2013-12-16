@@ -19,6 +19,10 @@
 {
     [super setUp];
     // Put setup code here; it will be run once, before the first test case.
+    
+    [EditDay MR_truncateAll];
+    // Entity 전체 삭제
+    
 }
 
 - (void)tearDown
@@ -38,10 +42,10 @@
     
     // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
     [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
-    [editDay setDate:dateSelected]; // 선택한 날짜
+    [editDay setDate:@"2013-12-16"]; // 오늘 날짜로 테스트
     [editDay setTitle:@"Test Title"]; // 제목
-    [editDay setStartdate:[NSNumber numberWithBool:TRUE]]; // 시작일 +1일
-    [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
+    [editDay setPlusone:[NSNumber numberWithBool:TRUE]]; // 시작일 +1일
+    [editDay setBadge:FALSE]; // 뱃지 생성당시는 NO
     
     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
     
@@ -50,16 +54,17 @@
     // index로 정렬해서 뿌려줌
     
     EditDay *assertEditDay = [tableData objectAtIndex:([editDay.index integerValue]/10)-1];
-    NSDate *dateSelectedEquls = [Date_Calendar date_yyyy_mm_dd:[NSDate date]];
+    
+    NSString *dateSelectedEquls = [Date_Calendar dateToString:[NSDate date]];
     
     XCTAssertEqualObjects(assertEditDay.date, dateSelectedEquls, @"C_date false");
     XCTAssertEqualObjects(assertEditDay.title, @"Test Title", @"C_title false");
-    XCTAssertTrue([assertEditDay.startdate boolValue], @"C_startdate false");
+    XCTAssertTrue([assertEditDay.plusone boolValue], @"C_startdate false");
     XCTAssertFalse([assertEditDay.badge boolValue], @"C_badge true");
     
     NSLog(@"%@",assertEditDay.date);
     NSLog(@"%@",assertEditDay.title);
-    NSLog(@"%@,%c",assertEditDay.startdate,[assertEditDay.startdate boolValue]);
+    NSLog(@"%@,%c",assertEditDay.plusone,[assertEditDay.plusone boolValue]);
     NSLog(@"%@,%c",assertEditDay.badge,[assertEditDay.badge boolValue]);
 }
 

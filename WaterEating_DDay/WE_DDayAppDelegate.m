@@ -7,6 +7,7 @@
 //
 
 #import "WE_DDayAppDelegate.h"
+#import "EditDay.h"
 
 @implementation WE_DDayAppDelegate
 
@@ -15,8 +16,31 @@
     [MagicalRecord setupAutoMigratingCoreDataStack];
     // 시작에 앞서 MagicalRecord setup 시켜준다.
     
-    application.applicationIconBadgeNumber = 10;
+    
+    
+//    NSMutableArray *tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"index" ascending:YES]];
+    
+//    EditDay *edit = [tableData objectAtIndex:0];
+    
+//    edit.badge = [NSNumber numberWithBool:TRUE];
+//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    
+    // 특정 위치 뱃지 TRUE 로 바꾸기
+
+    NSMutableArray *tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"badge" ascending:YES]];
+    
+    EditDay *editDay = [tableData objectAtIndex:0];
+    
+    NSInteger result = [Date_Calendar startDate:editDay.date
+                                     addOneDays:(BOOL)editDay.startdate];
+    
+    if (result < 0) {
+        result = result * -1;
+    }
+    
+    application.applicationIconBadgeNumber = result;
     // 뱃지 표시하기
+
     return YES;
 }
 							
@@ -34,7 +58,19 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSMutableArray *tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"badge" ascending:YES]];
+    
+    EditDay *editDay = [tableData objectAtIndex:0];
+    
+    NSInteger result = [Date_Calendar startDate:editDay.date
+                                     addOneDays:(BOOL)editDay.startdate];
+    
+    if (result < 0) {
+        result = result * -1;
+    }
+    
+    application.applicationIconBadgeNumber = result;
+    // 뱃지 표시하기
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

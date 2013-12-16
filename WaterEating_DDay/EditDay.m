@@ -2,7 +2,7 @@
 //  EditDay.m
 //  WaterEating_DDay
 //
-//  Created by JWMAC on 2013. 11. 29..
+//  Created by JWMAC on 2013. 12. 16..
 //  Copyright (c) 2013년 KimJiWook. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 
 @dynamic badge;
 @dynamic date;
-@dynamic startdate;
-@dynamic title;
 @dynamic index;
+@dynamic plusone;
+@dynamic title;
 
 @end

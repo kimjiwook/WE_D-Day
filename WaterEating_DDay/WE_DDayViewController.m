@@ -25,6 +25,14 @@
     self.tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"index" ascending:YES]];
     // index로 정렬해서 뿌려줌
     
+    NSLog(@"tableData \r\n %@",tableData);
+    
+    for(EditDay *edit in tableData)
+    {
+        NSLog(@"\r\n%@",edit.badge);
+        NSLog(@"\r\n%@",edit.title);
+    }
+    
 
     [ddayTable setDataSource:self];
     [ddayTable setDelegate:self];
@@ -93,7 +101,7 @@
     // 64bit int 호환
     NSInteger result = [Date_Calendar startDate:editDay.date
                                      addOneDays:(BOOL)editDay.startdate];
-    NSLog(@"%d",(BOOL)editDay.startdate);
+    NSLog(@"DDay Bool : %d",(BOOL)editDay.startdate);
     
     [days setText:[Date_Calendar stringResult:result]];
 //    [days setBackgroundColor:[UIColor clearColor]];

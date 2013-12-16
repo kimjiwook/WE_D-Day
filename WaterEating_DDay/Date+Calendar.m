@@ -52,6 +52,11 @@
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDate *daysDate = [calendar dateByAddingComponents:components toDate:[Date_Conversion stringToDate:date] options:0];
+    
+    NSLog(@"date CC %@", [Date_Conversion stringToDate:date]);
+    NSLog(@"input date %@",date);
+    NSLog(@"daysDate CC %@",daysDate);
+    NSLog(@"daysDate %@",[Date_Conversion dateToString:daysDate]);
 
     return [Date_Conversion dateToString:daysDate];
 }

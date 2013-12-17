@@ -11,7 +11,7 @@
 #import "AwesomeMenu.h"
 
 @interface DetailViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate, AwesomeMenuDelegate>
+<UITableViewDataSource, UITableViewDelegate, AwesomeMenuDelegate, UIAlertViewDelegate>
 {
     NSInteger tableViewType;
 }

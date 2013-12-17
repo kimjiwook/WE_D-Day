@@ -27,8 +27,8 @@
     
     [self.navigationItem setTitle:editDay.title];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] init]];
-    [self.navigationItem.rightBarButtonItem setTitle:@"편집"];
-    //    [self.navigationItem.rightBarButtonItem setAction:@selector(daySave:)];
+    [self.navigationItem.rightBarButtonItem setTitle:@"뱃지알림"];
+    [self.navigationItem.rightBarButtonItem setAction:@selector(badgeSetting:)];
     [self.navigationItem.rightBarButtonItem setTarget:self];
     // 이유는 잘 모르겠는데. addTarget: action 메소드가 없어서 두가지를 붙여놓음
     
@@ -47,6 +47,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// 뱃지알림 설정
+- (IBAction)badgeSetting:(id)sender
+{
+    NSArray *btnTitle = [[NSArray alloc] initWithObjects:BTN_OK,BTN_CANCEL, nil];
+    if ((Boolean)editDay.badge) {
+        // 뱃지 등록이 되어있는경우 '취소' 함
+        [AlertViewCreate alertTitle:TITLE_NOTI Message:MSG_NOTI_CANCEL Create:btnTitle set:self];
+    }else{
+        // 뱃지 등록이 안되어있는경우 '등록' 함 (다른 일정의 뱃지가 있는경우 전부 삭제함
+        [AlertViewCreate alertTitle:TITLE_NOTI Message:MSG_NOTI_OK Create:btnTitle set:self];
+    }
+}
+
+#pragma mark - Alert view delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        if ([alertView.message isEqualToString:MSG_NOTI_OK]) {
+            [Entity_init badgeinit];
+            editDay.badge = [NSNumber numberWithBool:TRUE];
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }else if ([alertView.message isEqualToString:MSG_NOTI_CANCEL]){
+            [Entity_init badgeinit];
+        }
+    }
 }
 
 // Path button UI
@@ -72,7 +101,7 @@
                                                            highlightedImage:storyMenuItemImagePressed
                                                                ContentImage:year
                                                     highlightedContentImage:nil];
-
+    
     
     NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, nil];
     
@@ -121,7 +150,7 @@
         // D- 일때만 제대로 계산한다.
         
         NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
-
+        
         if (d_minus < 0)
         {
             d_minus = (d_minus*-1)/100;
@@ -146,7 +175,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     if(cell == nil)
@@ -157,7 +186,7 @@
     NSArray *viewsToRemove = [cell.contentView subviews];
     for (UIView *v in viewsToRemove)
     {
-        if (v.tag == 1000 || v.tag == 2000 || v.tag == 3000) {
+        if (v.tag == 1000 || v.tag == 1100 ||v.tag == 2000 || v.tag == 3000) {
             [v removeFromSuperview];
         }
     }
@@ -175,6 +204,16 @@
         [days setTag:1000];
         
         [cell.contentView addSubview:days];
+        
+        // 날짜 표시
+        UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 30)];
+        
+        [date setText:editDay.date];
+        [date setTextAlignment:NSTextAlignmentLeft];
+        [date setFont:[UIFont systemFontOfSize:22.0f]];
+        [date setTag:1100];
+        
+        [cell.contentView addSubview:date];
         
     }else{
         if (tableViewType == 0) {
@@ -197,7 +236,7 @@
         }else if (tableViewType == 1){
             // D- 계산법
             // Left
-             NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
+            NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
             d_minus = (d_minus)/100;
             
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
@@ -222,7 +261,7 @@
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
-
+            
             //Right
             UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
             [days setText:[Date_Calendar stringDate:editDay.date howdays:indexPath.row*365]];
@@ -232,7 +271,7 @@
             [cell.contentView addSubview:days];
         }
     }
-
+    
     [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;

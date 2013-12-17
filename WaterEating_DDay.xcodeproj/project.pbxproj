@@ -62,6 +62,8 @@
 		DEA3CBBD1847381600034A4D /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CBA11847381600034A4D /* MagicalRecord.m */; };
 		DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0BB0218482AE500F7564F /* CoreData.framework */; };
 		DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0BB08184848A400F7564F /* Date+Calendar.m */; };
+		DED48ED7185FD8C500ECA59B /* AlertViewCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED48ED5185FD8C500ECA59B /* AlertViewCreate.m */; };
+		DED48EDA185FDEE000ECA59B /* Entity+init.m in Sources */ = {isa = PBXBuildFile; fileRef = DED48ED9185FDEE000ECA59B /* Entity+init.m */; };
 		DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
 		DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */; };
 		DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
@@ -179,6 +181,10 @@
 		DED0BB0218482AE500F7564F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DED0BB07184848A400F7564F /* Date+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Date+Calendar.h"; sourceTree = "<group>"; };
 		DED0BB08184848A400F7564F /* Date+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Calendar.m"; sourceTree = "<group>"; };
+		DED48ED5185FD8C500ECA59B /* AlertViewCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewCreate.m; sourceTree = "<group>"; };
+		DED48ED6185FD8C500ECA59B /* AlertViewCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewCreate.h; sourceTree = "<group>"; };
+		DED48ED8185FDEE000ECA59B /* Entity+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+init.h"; sourceTree = "<group>"; };
+		DED48ED9185FDEE000ECA59B /* Entity+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+init.m"; sourceTree = "<group>"; };
 		DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterEating_DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB640183DBD2900D78B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -416,10 +422,14 @@
 		DED0BB06184847A100F7564F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DED48ED6185FD8C500ECA59B /* AlertViewCreate.h */,
+				DED48ED5185FD8C500ECA59B /* AlertViewCreate.m */,
 				DED0BB07184848A400F7564F /* Date+Calendar.h */,
 				DED0BB08184848A400F7564F /* Date+Calendar.m */,
 				DE143119185EF6D2000E8937 /* Date+Conversion.h */,
 				DE14311A185EF6D2000E8937 /* Date+Conversion.m */,
+				DED48ED8185FDEE000ECA59B /* Entity+init.h */,
+				DED48ED9185FDEE000ECA59B /* Entity+init.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -660,6 +670,7 @@
 				DEDDB64D183DBD2900D78B84 /* main.m in Sources */,
 				DEA3CBA71847381600034A4D /* NSNumber+MagicalDataImport.m in Sources */,
 				DEA3CBA91847381600034A4D /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
+				DED48EDA185FDEE000ECA59B /* Entity+init.m in Sources */,
 				DEA3CBA61847381600034A4D /* NSEntityDescription+MagicalDataImport.m in Sources */,
 				DEA3CBAF1847381600034A4D /* NSManagedObject+MagicalRequests.m in Sources */,
 				DEA3CBAA1847381600034A4D /* NSString+MagicalDataImport.m in Sources */,
@@ -667,6 +678,7 @@
 				DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */,
 				DEA3CBAE1847381600034A4D /* NSManagedObject+MagicalRecord.m in Sources */,
 				DEA3CBB91847381600034A4D /* MagicalRecord+iCloud.m in Sources */,
+				DED48ED7185FD8C500ECA59B /* AlertViewCreate.m in Sources */,
 				DEA3CBB61847381600034A4D /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				DE143116185ED3E5000E8937 /* EditDay.m in Sources */,
 				DE91A077184C6CBD008AB9CC /* AwesomeMenu.m in Sources */,

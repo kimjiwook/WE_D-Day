@@ -24,12 +24,6 @@
     NSDate *stringToDate = [[NSDate alloc] init];
     stringToDate = [dateFormat dateFromString:date];
     
-    // 아래와 같이 해야 내가 원하는 날짜가 나옴
-    // DateFormat 을 둘다 맞춰야지 된다.
-    NSLog(@"Today : %@, Select Date : %@",
-          [dateFormat stringFromDate:dateNow],
-          [dateFormat stringFromDate:stringToDate]);
-    
     // 64bit int 호환
     NSInteger result = 0;
     
@@ -47,18 +41,21 @@
 // +100일 (2013-09-07) Create...
 + (NSString *) stringDate:(NSString *)date howdays:(NSInteger)day
 {
+    // 계산을 진행할때 D+ 일일 경우에는 -1 을
+    // D - 일 경우에는 0을 빼준다.
+    // 날짜 변환에서 발생하는 오류
     NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:day];
     
+    if (day < 0) {
+        // D- 계산법
+        [components setDay:day-0];
+    }else{
+        // D+ 계산법
+        [components setDay:day-1];
+    }
+
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDate *daysDate = [calendar dateByAddingComponents:components toDate:[Date_Conversion stringToDate:date] options:0];
-    
-    // 결과의 날짜가 + 1이 되어서 나옴.. 문제는 - 는 괜찮다는건데..
-    
-    NSLog(@"date CC %@", [Date_Conversion stringToDate:date]);
-    NSLog(@"input date %@",date);
-    NSLog(@"daysDate CC %@",daysDate);
-    NSLog(@"daysDate %@",[Date_Conversion dateToString:daysDate]);
 
     return [Date_Conversion dateToString:daysDate];
 }

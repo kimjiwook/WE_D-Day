@@ -21,16 +21,16 @@
 {
     [super viewDidLoad];
     
-//    self.tableData = [NSMutableArray arrayWithArray:[EditDay MR_findAll]];
+    //    self.tableData = [NSMutableArray arrayWithArray:[EditDay MR_findAll]];
     self.tableData = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"index" ascending:YES]];
     // index로 정렬해서 뿌려줌
-
+    
     [ddayTable setDataSource:self];
     [ddayTable setDelegate:self];
     // TableView DataSource, Delegate Setting
     [ddayTable setBackgroundColor:[UIColor clearColor]];
     
-    self.navigationItem.title = @"D-Day";    
+    self.navigationItem.title = @"D-Day";
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,7 +67,7 @@
     NSArray *viewsToRemove = [cell.contentView subviews];
     for (UIView *v in viewsToRemove)
     {
-        if (v.tag == 1000 || v.tag == 2000) {
+        if (v.tag == 1000 || v.tag == 2000 || v.tag == 3000) {
             [v removeFromSuperview];
         }
     }
@@ -99,8 +99,16 @@
     [cell setBackgroundColor:[UIColor clearColor]];
     [cell.contentView addSubview:days];
     
-    
     NSLog(@"index %@, title %@",editDay.index , editDay.title);
+    
+    if ((Boolean)editDay.badge) {
+        UIImageView *badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(295, 0, 25, 25)];
+        UIImage *image = [UIImage imageNamed:@"noti.png"];
+        badgeImage.image = image;
+        [badgeImage setTag:3000];
+        [cell.contentView addSubview:badgeImage];
+    }
+    
     
     return cell;
 }
@@ -176,7 +184,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Edit" bundle:nil];
     editViewController = [storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
     
-//    [self presentViewController:addViewController animated:YES completion:Nil]; //ModalView
+    //    [self presentViewController:addViewController animated:YES completion:Nil]; //ModalView
     [self.navigationController pushViewController:editViewController animated:YES]; // PushView
 }
 

@@ -70,6 +70,11 @@
             [Entity_init badgeinit];
             editDay.badge = [NSNumber numberWithBool:TRUE];
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
+            
+            UIApplication *application = [UIApplication sharedApplication];
+            application.applicationIconBadgeNumber = 0;
+            application.applicationIconBadgeNumber = [Entity_init badge];
+            
             [self.navigationController popViewControllerAnimated:YES];
             
         }else if ([alertView.message isEqualToString:MSG_NOTI_CANCEL]){
@@ -186,7 +191,7 @@
     NSArray *viewsToRemove = [cell.contentView subviews];
     for (UIView *v in viewsToRemove)
     {
-        if (v.tag == 1000 || v.tag == 1100 ||v.tag == 2000 || v.tag == 3000) {
+        if (v.tag == 1000 || v.tag == 1100 || v.tag == 1200 || v.tag == 2000 || v.tag == 3000) {
             [v removeFromSuperview];
         }
     }
@@ -214,6 +219,14 @@
         [date setTag:1100];
         
         [cell.contentView addSubview:date];
+        
+        if ((Boolean)editDay.badge) {
+            UIImageView *badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(295, 0, 25, 25)];
+            UIImage *image = [UIImage imageNamed:@"noti.png"];
+            badgeImage.image = image;
+            [badgeImage setTag:1200];
+            [cell.contentView addSubview:badgeImage];
+        }
         
     }else{
         if (tableViewType == 0) {

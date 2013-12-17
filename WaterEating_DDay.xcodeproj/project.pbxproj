@@ -33,6 +33,8 @@
 		DE91A087184C6CBD008AB9CC /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91A074184C6CBD008AB9CC /* icon-star.png */; };
 		DE91A088184C6CBD008AB9CC /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91A075184C6CBD008AB9CC /* icon-star@2x.png */; };
 		DE91A089184C6CBD008AB9CC /* Year.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91A076184C6CBD008AB9CC /* Year.png */; };
+		DE933B12186036A7006E0B1B /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B10186036A6006E0B1B /* alarm.png */; };
+		DE933B13186036A7006E0B1B /* noti.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B11186036A6006E0B1B /* noti.png */; };
 		DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */; };
 		DEA3CBA41847381600034A4D /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */; };
 		DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6E1847381600034A4D /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -123,6 +125,8 @@
 		DE91A074184C6CBD008AB9CC /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
 		DE91A075184C6CBD008AB9CC /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star@2x.png"; sourceTree = "<group>"; };
 		DE91A076184C6CBD008AB9CC /* Year.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Year.png; sourceTree = "<group>"; };
+		DE933B10186036A6006E0B1B /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
+		DE933B11186036A6006E0B1B /* noti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noti.png; sourceTree = "<group>"; };
 		DEA3CB65184735CE00034A4D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DEA3CB6B1847381600034A4D /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
@@ -185,7 +189,7 @@
 		DED48ED6185FD8C500ECA59B /* AlertViewCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewCreate.h; sourceTree = "<group>"; };
 		DED48ED8185FDEE000ECA59B /* Entity+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+init.h"; sourceTree = "<group>"; };
 		DED48ED9185FDEE000ECA59B /* Entity+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+init.m"; sourceTree = "<group>"; };
-		DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterEating_DDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDDB63D183DBD2900D78B84 /* 물먹고 D-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "물먹고 D-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB640183DBD2900D78B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEDDB644183DBD2900D78B84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -236,6 +240,8 @@
 		DE0E5549183E09B700A78CB7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DE933B10186036A6006E0B1B /* alarm.png */,
+				DE933B11186036A6006E0B1B /* noti.png */,
 				DE0E554A183E09BE00A78CB7 /* background_test.png */,
 			);
 			name = images;
@@ -447,7 +453,7 @@
 		DEDDB63E183DBD2900D78B84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */,
+				DEDDB63D183DBD2900D78B84 /* 물먹고 D-Day.app */,
 				DEDDB65E183DBD2900D78B84 /* WaterEating_DDayTests.xctest */,
 			);
 			name = Products;
@@ -558,7 +564,7 @@
 			);
 			name = WaterEating_DDay;
 			productName = WaterEating_DDay;
-			productReference = DEDDB63D183DBD2900D78B84 /* WaterEating_DDay.app */;
+			productReference = DEDDB63D183DBD2900D78B84 /* 물먹고 D-Day.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DEDDB65D183DBD2900D78B84 /* WaterEating_DDayTests */ = {
@@ -626,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE91A07F184C6CBD008AB9CC /* bg-menuitem.png in Resources */,
+				DE933B13186036A7006E0B1B /* noti.png in Resources */,
 				DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */,
 				DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */,
 				DE91A086184C6CBD008AB9CC /* icon-plus@2x.png in Resources */,
@@ -642,6 +649,7 @@
 				DE91A07A184C6CBD008AB9CC /* bg-addbutton-highlighted@2x.png in Resources */,
 				DE91A07E184C6CBD008AB9CC /* bg-menuitem-highlighted@2x.png in Resources */,
 				DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */,
+				DE933B12186036A7006E0B1B /* alarm.png in Resources */,
 				DE91A07C184C6CBD008AB9CC /* bg-addbutton@2x.png in Resources */,
 				DE8136DA184C130900C07144 /* Detail.storyboard in Resources */,
 				DE91A07B184C6CBD008AB9CC /* bg-addbutton.png in Resources */,
@@ -835,7 +843,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "물먹고 D-Day";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -848,7 +856,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "물먹고 D-Day";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

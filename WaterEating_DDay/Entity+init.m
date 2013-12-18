@@ -51,4 +51,57 @@
         return 0;
     }
 }
+
+// Badge를 예약한다. (매일매일 정시에 예약한다.)
++ (void) badgeReseve
+{
+    EditDay *editDay = [self mainBadge]; // 뱃지인 EditDay 가져오기
+    
+    if (editDay != nil) {
+        for (int i = 1; i <= 365; i++) {
+            
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"yyyy-MM-dd"];
+            
+            // Today (yyyy-MM-dd)
+            NSDate *dateNow = [dateFormat dateFromString:[dateFormat stringFromDate:[NSDate date]]];
+            
+            // 계산을 진행할때 D+ 일일 경우에는 -1 을
+            // D - 일 경우에는 0을 빼준다.
+            // 날짜 변환에서 발생하는 오류
+            NSDateComponents *components = [[NSDateComponents alloc] init];
+            
+//            if (day < 0) {
+//                // D- 계산법
+//                [components setDay:day-0];
+//            }else{
+//                // D+ 계산법
+//                [components setDay:day-1];
+//            }
+            [components setDay:i];
+            
+            NSCalendar *calendar1 = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+            NSDate *daysDate = [calendar1 dateByAddingComponents:components toDate:dateNow options:0];
+            
+            NSLog(@"days 오늘 다음 날짜 : %@", daysDate);
+            
+            
+            // Select Date (yyyy-MM-dd)
+            NSDate *stringToDate = [[NSDate alloc] init];
+            stringToDate = [dateFormat dateFromString:editDay.date];
+            
+            // 64bit int 호환
+            NSInteger result = 0;
+            
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+            
+            result = [[calendar components:NSDayCalendarUnit fromDate:stringToDate toDate:dateNow options:0] day];
+            
+            if (editDay.plusone) { result += 1; }
+            
+            
+        }
+    }
+}
+
 @end

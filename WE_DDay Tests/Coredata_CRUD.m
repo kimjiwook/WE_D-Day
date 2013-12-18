@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "EditDay.h"
+#import "Date+Calendar.h"
+#import "Date+Conversion.h"
 
 @interface Coredata_CRUD : XCTestCase
 
@@ -37,14 +39,14 @@
 - (void)test_Create
 {
 
-    NSDate *dateSelected = [Date_Calendar date_yyyy_mm_dd:[NSDate date]];
+    NSDate *dateSelected = [NSDate date];
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
     [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
     
     // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
     [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
-    [editDay setDate:@"2013-12-16"]; // 오늘 날짜로 테스트
+    [editDay setDate:@"2013-12-18"]; // 오늘 날짜로 테스트
     [editDay setTitle:@"Test Title"]; // 제목
     [editDay setPlusone:[NSNumber numberWithBool:TRUE]]; // 시작일 +1일
     [editDay setBadge:FALSE]; // 뱃지 생성당시는 NO
@@ -57,7 +59,7 @@
     
     EditDay *assertEditDay = [tableData objectAtIndex:([editDay.index integerValue]/10)-1];
     
-    NSString *dateSelectedEquls = [Date_Calendar dateToString:[NSDate date]];
+    NSString *dateSelectedEquls = [Date_Conversion dateToString:[NSDate date]];
     
     XCTAssertEqualObjects(assertEditDay.date, dateSelectedEquls, @"C_date false");
     XCTAssertEqualObjects(assertEditDay.title, @"Test Title", @"C_title false");

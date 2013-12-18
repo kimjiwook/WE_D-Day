@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-               BuildableName = "WaterEating_DDay.app"
+               BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
                BlueprintName = "WaterEating_DDay"
                ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
             </BuildableReference>
@@ -32,18 +32,23 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DEDDB65D183DBD2900D78B84"
-               BuildableName = "WaterEating_DDayTests.xctest"
-               BlueprintName = "WaterEating_DDayTests"
+               BlueprintIdentifier = "DE06C6B31861780E004E28CD"
+               BuildableName = "WE_DDay Tests.xctest"
+               BlueprintName = "WE_DDay Tests"
                ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "WE_DDay_Tests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-            BuildableName = "WaterEating_DDay.app"
+            BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
             BlueprintName = "WaterEating_DDay"
             ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
          </BuildableReference>
@@ -62,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-            BuildableName = "WaterEating_DDay.app"
+            BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
             BlueprintName = "WaterEating_DDay"
             ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
          </BuildableReference>
@@ -80,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-            BuildableName = "WaterEating_DDay.app"
+            BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
             BlueprintName = "WaterEating_DDay"
             ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
          </BuildableReference>

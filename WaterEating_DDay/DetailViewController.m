@@ -71,9 +71,8 @@
             editDay.badge = [NSNumber numberWithBool:TRUE];
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
             
-            UIApplication *application = [UIApplication sharedApplication];
-            application.applicationIconBadgeNumber = 0;
-            application.applicationIconBadgeNumber = [Entity_init badge];
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = [Entity_init badge];
             
             [self.navigationController popViewControllerAnimated:YES];
             
@@ -159,7 +158,7 @@
         if (d_minus < 0)
         {
             d_minus = (d_minus*-1)/100;
-            NSLog(@"값은 : %ld", d_minus);
+            NSLog(@"값은 : %d", d_minus);
         }
         
         return d_minus+1;
@@ -233,7 +232,7 @@
             // D+ 계산법
             // Left
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-            [date setText:[NSString stringWithFormat:@"%ld 일",indexPath.row * 100]];
+            [date setText:[NSString stringWithFormat:@"%d 일",indexPath.row * 100]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
@@ -253,7 +252,7 @@
             d_minus = (d_minus)/100;
             
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-            [date setText:[NSString stringWithFormat:@"D%ld 일",(d_minus*100) + ((indexPath.row-1)*100)]];
+            [date setText:[NSString stringWithFormat:@"D%d 일",(d_minus*100) + ((indexPath.row-1)*100)]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
@@ -270,7 +269,7 @@
             // 1주년씩 계산법
             // Left
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-            [date setText:[NSString stringWithFormat:@"%ld 주년",indexPath.row]];
+            [date setText:[NSString stringWithFormat:@"%d 주년",indexPath.row]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];

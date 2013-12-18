@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Date+Calendar.h"
+#import "Entity+init.h"
 
 @interface DateUtilsTests : XCTestCase
 
@@ -29,7 +30,9 @@
 
 - (void)testExample
 {
-    NSLog(@"resultDate : %ld",[Date_Calendar stringDate:@"2012-05-31" plusOne:1]);
+    NSLog(@"resultDate : %d",[Date_Calendar stringDate:@"2012-05-31" plusOne:1]);
+    
+    [Entity_init badgeReseve];
 }
 
 @end

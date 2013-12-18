@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE06C6B51861780E004E28CD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB65F183DBD2900D78B84 /* XCTest.framework */; };
+		DE06C6B61861780E004E28CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
+		DE06C6B71861780E004E28CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
+		DE06C6BD1861780E004E28CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE06C6BB1861780E004E28CD /* InfoPlist.strings */; };
+		DE06C6CA186179A7004E28CD /* Coredata_CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6C8186179A7004E28CD /* Coredata_CRUD.m */; };
+		DE06C6CB186179A7004E28CD /* DateUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6C9186179A7004E28CD /* DateUtilsTests.m */; };
 		DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0E554A183E09BE00A78CB7 /* background_test.png */; };
 		DE143116185ED3E5000E8937 /* EditDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DE143115185ED3E5000E8937 /* EditDay.m */; };
-		DE143118185EE153000E8937 /* DateUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE143117185EE153000E8937 /* DateUtilsTests.m */; };
 		DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = DE14311A185EF6D2000E8937 /* Date+Conversion.m */; };
-		DE80E320184FFF1200B2E9F9 /* Coredata_CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
 		DE91A077184C6CBD008AB9CC /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91A062184C6CBD008AB9CC /* AwesomeMenu.m */; };
@@ -75,16 +79,12 @@
 		DEDDB654183DBD2900D78B84 /* D_Day.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB652183DBD2900D78B84 /* D_Day.storyboard */; };
 		DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */; };
 		DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB658183DBD2900D78B84 /* Images.xcassets */; };
-		DEDDB660183DBD2900D78B84 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB65F183DBD2900D78B84 /* XCTest.framework */; };
-		DEDDB661183DBD2900D78B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB640183DBD2900D78B84 /* Foundation.framework */; };
-		DEDDB662183DBD2900D78B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDDB644183DBD2900D78B84 /* UIKit.framework */; };
-		DEDDB66A183DBD2900D78B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB668183DBD2900D78B84 /* InfoPlist.strings */; };
 		DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECA31A183F34EC0068ABAD /* EditViewController.m */; };
 		DEECA320183F36290068ABAD /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEECA31F183F36290068ABAD /* Edit.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DEDDB663183DBD2900D78B84 /* PBXContainerItemProxy */ = {
+		DE06C6C11861780E004E28CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DEDDB635183DBD2800D78B84 /* Project object */;
 			proxyType = 1;
@@ -94,13 +94,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE06C6B41861780E004E28CD /* WE_DDay Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WE_DDay Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE06C6BA1861780E004E28CD /* WE_DDay Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WE_DDay Tests-Info.plist"; sourceTree = "<group>"; };
+		DE06C6BC1861780E004E28CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE06C6C01861780E004E28CD /* WE_DDay Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WE_DDay Tests-Prefix.pch"; sourceTree = "<group>"; };
+		DE06C6C8186179A7004E28CD /* Coredata_CRUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coredata_CRUD.m; sourceTree = "<group>"; };
+		DE06C6C9186179A7004E28CD /* DateUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtilsTests.m; sourceTree = "<group>"; };
 		DE0E554A183E09BE00A78CB7 /* background_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_test.png; sourceTree = "<group>"; };
 		DE143114185ED3E5000E8937 /* EditDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDay.h; sourceTree = "<group>"; };
 		DE143115185ED3E5000E8937 /* EditDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDay.m; sourceTree = "<group>"; };
-		DE143117185EE153000E8937 /* DateUtilsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtilsTests.m; sourceTree = "<group>"; };
+		DE143117185EE153000E8937 /* DateUtilsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateUtilsTests.m; path = ../WaterEating_DDayTests/DateUtilsTests.m; sourceTree = "<group>"; };
 		DE143119185EF6D2000E8937 /* Date+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Date+Conversion.h"; sourceTree = "<group>"; };
 		DE14311A185EF6D2000E8937 /* Date+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Conversion.m"; sourceTree = "<group>"; };
-		DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coredata_CRUD.m; sourceTree = "<group>"; };
+		DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Coredata_CRUD.m; path = ../WaterEating_DDayTests/Coredata_CRUD.m; sourceTree = "<group>"; };
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
 		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
@@ -189,7 +195,7 @@
 		DED48ED6185FD8C500ECA59B /* AlertViewCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewCreate.h; sourceTree = "<group>"; };
 		DED48ED8185FDEE000ECA59B /* Entity+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+init.h"; sourceTree = "<group>"; };
 		DED48ED9185FDEE000ECA59B /* Entity+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+init.m"; sourceTree = "<group>"; };
-		DEDDB63D183DBD2900D78B84 /* 물먹고 D-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "물먹고 D-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDDB63D183DBD2900D78B84 /* 물먹고 디데이.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "물먹고 디데이.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB640183DBD2900D78B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DEDDB644183DBD2900D78B84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -203,16 +209,23 @@
 		DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_DDayViewController.h; sourceTree = "<group>"; };
 		DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_DDayViewController.m; sourceTree = "<group>"; };
 		DEDDB658183DBD2900D78B84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DEDDB65E183DBD2900D78B84 /* WaterEating_DDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterEating_DDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDDB65F183DBD2900D78B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DEDDB667183DBD2900D78B84 /* WaterEating_DDayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WaterEating_DDayTests-Info.plist"; sourceTree = "<group>"; };
-		DEDDB669183DBD2900D78B84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEECA319183F34EC0068ABAD /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		DEECA31A183F34EC0068ABAD /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		DEECA31F183F36290068ABAD /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE06C6B11861780E004E28CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE06C6B51861780E004E28CD /* XCTest.framework in Frameworks */,
+				DE06C6B71861780E004E28CD /* UIKit.framework in Frameworks */,
+				DE06C6B61861780E004E28CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEDDB63A183DBD2900D78B84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,19 +237,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEDDB65B183DBD2900D78B84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEDDB660183DBD2900D78B84 /* XCTest.framework in Frameworks */,
-				DEDDB662183DBD2900D78B84 /* UIKit.framework in Frameworks */,
-				DEDDB661183DBD2900D78B84 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE06C6B81861780E004E28CD /* WE_DDay Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6C8186179A7004E28CD /* Coredata_CRUD.m */,
+				DE06C6C9186179A7004E28CD /* DateUtilsTests.m */,
+				DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */,
+				DE143117185EE153000E8937 /* DateUtilsTests.m */,
+				DE06C6B91861780E004E28CD /* Supporting Files */,
+			);
+			path = "WE_DDay Tests";
+			sourceTree = "<group>";
+		};
+		DE06C6B91861780E004E28CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6BA1861780E004E28CD /* WE_DDay Tests-Info.plist */,
+				DE06C6BB1861780E004E28CD /* InfoPlist.strings */,
+				DE06C6C01861780E004E28CD /* WE_DDay Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DE0E5549183E09B700A78CB7 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,7 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				DEDDB646183DBD2900D78B84 /* WaterEating_DDay */,
-				DEDDB665183DBD2900D78B84 /* WaterEating_DDayTests */,
+				DE06C6B81861780E004E28CD /* WE_DDay Tests */,
 				DEDDB63F183DBD2900D78B84 /* Frameworks */,
 				DEDDB63E183DBD2900D78B84 /* Products */,
 			);
@@ -453,8 +478,8 @@
 		DEDDB63E183DBD2900D78B84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DEDDB63D183DBD2900D78B84 /* 물먹고 D-Day.app */,
-				DEDDB65E183DBD2900D78B84 /* WaterEating_DDayTests.xctest */,
+				DEDDB63D183DBD2900D78B84 /* 물먹고 디데이.app */,
+				DE06C6B41861780E004E28CD /* WE_DDay Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -497,25 +522,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DEDDB665183DBD2900D78B84 /* WaterEating_DDayTests */ = {
-			isa = PBXGroup;
-			children = (
-				DEDDB666183DBD2900D78B84 /* Supporting Files */,
-				DE80E31F184FFF1200B2E9F9 /* Coredata_CRUD.m */,
-				DE143117185EE153000E8937 /* DateUtilsTests.m */,
-			);
-			path = WaterEating_DDayTests;
-			sourceTree = "<group>";
-		};
-		DEDDB666183DBD2900D78B84 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DEDDB667183DBD2900D78B84 /* WaterEating_DDayTests-Info.plist */,
-				DEDDB668183DBD2900D78B84 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		DEECA31C183F34F80068ABAD /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +556,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE06C6B31861780E004E28CD /* WE_DDay Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE06C6C31861780E004E28CD /* Build configuration list for PBXNativeTarget "WE_DDay Tests" */;
+			buildPhases = (
+				DE06C6B01861780E004E28CD /* Sources */,
+				DE06C6B11861780E004E28CD /* Frameworks */,
+				DE06C6B21861780E004E28CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE06C6C21861780E004E28CD /* PBXTargetDependency */,
+			);
+			name = "WE_DDay Tests";
+			productName = "WE_DDay Tests";
+			productReference = DE06C6B41861780E004E28CD /* WE_DDay Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DEDDB63C183DBD2900D78B84 /* WaterEating_DDay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEDDB66F183DBD2900D78B84 /* Build configuration list for PBXNativeTarget "WaterEating_DDay" */;
@@ -564,26 +588,8 @@
 			);
 			name = WaterEating_DDay;
 			productName = WaterEating_DDay;
-			productReference = DEDDB63D183DBD2900D78B84 /* 물먹고 D-Day.app */;
+			productReference = DEDDB63D183DBD2900D78B84 /* 물먹고 디데이.app */;
 			productType = "com.apple.product-type.application";
-		};
-		DEDDB65D183DBD2900D78B84 /* WaterEating_DDayTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DEDDB672183DBD2900D78B84 /* Build configuration list for PBXNativeTarget "WaterEating_DDayTests" */;
-			buildPhases = (
-				DEDDB65A183DBD2900D78B84 /* Sources */,
-				DEDDB65B183DBD2900D78B84 /* Frameworks */,
-				DEDDB65C183DBD2900D78B84 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DEDDB664183DBD2900D78B84 /* PBXTargetDependency */,
-			);
-			name = WaterEating_DDayTests;
-			productName = WaterEating_DDayTests;
-			productReference = DEDDB65E183DBD2900D78B84 /* WaterEating_DDayTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -595,15 +601,15 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = KimJiWook;
 				TargetAttributes = {
+					DE06C6B31861780E004E28CD = {
+						TestTargetID = DEDDB63C183DBD2900D78B84;
+					};
 					DEDDB63C183DBD2900D78B84 = {
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
 						};
-					};
-					DEDDB65D183DBD2900D78B84 = {
-						TestTargetID = DEDDB63C183DBD2900D78B84;
 					};
 				};
 			};
@@ -621,12 +627,20 @@
 			projectRoot = "";
 			targets = (
 				DEDDB63C183DBD2900D78B84 /* WaterEating_DDay */,
-				DEDDB65D183DBD2900D78B84 /* WaterEating_DDayTests */,
+				DE06C6B31861780E004E28CD /* WE_DDay Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DE06C6B21861780E004E28CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE06C6BD1861780E004E28CD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEDDB63B183DBD2900D78B84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,17 +673,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEDDB65C183DBD2900D78B84 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEDDB66A183DBD2900D78B84 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE06C6B01861780E004E28CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE06C6CA186179A7004E28CD /* Coredata_CRUD.m in Sources */,
+				DE06C6CB186179A7004E28CD /* DateUtilsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEDDB639183DBD2900D78B84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -716,26 +731,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEDDB65A183DBD2900D78B84 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE80E320184FFF1200B2E9F9 /* Coredata_CRUD.m in Sources */,
-				DE143118185EE153000E8937 /* DateUtilsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DEDDB664183DBD2900D78B84 /* PBXTargetDependency */ = {
+		DE06C6C21861780E004E28CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DEDDB63C183DBD2900D78B84 /* WaterEating_DDay */;
-			targetProxy = DEDDB663183DBD2900D78B84 /* PBXContainerItemProxy */;
+			targetProxy = DE06C6C11861780E004E28CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DE06C6BB1861780E004E28CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE06C6BC1861780E004E28CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DEDDB649183DBD2900D78B84 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -752,17 +766,51 @@
 			name = D_Day.storyboard;
 			sourceTree = "<group>";
 		};
-		DEDDB668183DBD2900D78B84 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEDDB669183DBD2900D78B84 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE06C6C41861780E004E28CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/물먹고 디데이.app/물먹고 디데이";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WE_DDay Tests/WE_DDay Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WE_DDay Tests/WE_DDay Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DE06C6C51861780E004E28CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/물먹고 디데이.app/물먹고 디데이";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WE_DDay Tests/WE_DDay Tests-Prefix.pch";
+				INFOPLIST_FILE = "WE_DDay Tests/WE_DDay Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		DEDDB66D183DBD2900D78B84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -843,7 +891,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
-				PRODUCT_NAME = "물먹고 D-Day";
+				PRODUCT_NAME = "물먹고 디데이";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -856,56 +904,22 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
-				PRODUCT_NAME = "물먹고 D-Day";
+				PRODUCT_NAME = "물먹고 디데이";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		DEDDB673183DBD2900D78B84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterEating_DDay.app/WaterEating_DDay";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "WaterEating_DDayTests/WaterEating_DDayTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		DEDDB674183DBD2900D78B84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterEating_DDay.app/WaterEating_DDay";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
-				INFOPLIST_FILE = "WaterEating_DDayTests/WaterEating_DDayTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE06C6C31861780E004E28CD /* Build configuration list for PBXNativeTarget "WE_DDay Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE06C6C41861780E004E28CD /* Debug */,
+				DE06C6C51861780E004E28CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DEDDB638183DBD2800D78B84 /* Build configuration list for PBXProject "WaterEating_DDay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -920,15 +934,6 @@
 			buildConfigurations = (
 				DEDDB670183DBD2900D78B84 /* Debug */,
 				DEDDB671183DBD2900D78B84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DEDDB672183DBD2900D78B84 /* Build configuration list for PBXNativeTarget "WaterEating_DDayTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DEDDB673183DBD2900D78B84 /* Debug */,
-				DEDDB674183DBD2900D78B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,4 +20,7 @@
 // Badge에 달릴 값을 만든다.
 + (NSInteger) badge;
 
+// Badge를 예약한다. (매일매일 정시에 예약한다.)
++ (void) badgeReseve;
+
 @end

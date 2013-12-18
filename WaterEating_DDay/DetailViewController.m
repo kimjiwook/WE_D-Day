@@ -75,6 +75,7 @@
             
         }else if ([alertView.message isEqualToString:MSG_NOTI_CANCEL]){
             [Entity_init badgeinit];
+            [UIApplication sharedApplication].applicationIconBadgeNumber = [Entity_init badge];
         }
         
         [self.navigationController popViewControllerAnimated:YES];

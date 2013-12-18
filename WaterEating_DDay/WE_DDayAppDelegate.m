@@ -16,25 +16,24 @@
     [MagicalRecord setupAutoMigratingCoreDataStack];
     // 시작에 앞서 MagicalRecord setup 시켜준다.
     
-    application.applicationIconBadgeNumber = 0;
-    // 뱃지 표시하기
-    
     application.applicationIconBadgeNumber = [Entity_init badge];
     // 표시할 뱃지
     
-    [self presentNotification];
+//    [self presentNotification];
     // 노티
 
     return YES;
 }
 
+// 연습용 노티
 - (void)presentNotification
 {
     NSLog(@"로컬노티 확인");
     for (int i = 1; i <= 365; i++) {
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
         localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:i];
-        localNotification.applicationIconBadgeNumber = [Entity_init badge]+i;
+        localNotification.applicationIconBadgeNumber = i;
+        localNotification.userInfo = [NSDictionary dictionaryWithObject:@"Test" forKey:@"key"];
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     }
 }
@@ -45,7 +44,7 @@
     if(application.applicationState == UIApplicationStateActive){
         
         // Foreground에서 알림 수신
-        NSLog(@"노티 짜잔");
+        NSLog(@"노티 짜잔 ");
     }
     
     if(application.applicationState == UIApplicationStateInactive){

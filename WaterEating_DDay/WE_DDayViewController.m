@@ -169,6 +169,8 @@
         // TableView Cell Delete...
         [tableData removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        
+        [UIApplication sharedApplication].applicationIconBadgeNumber = [Entity_init badge];
     }
 }
 

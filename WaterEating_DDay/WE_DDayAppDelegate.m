@@ -58,29 +58,33 @@
 // 백그라운드로 내려갈때
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    
+    NSLog(@"앱이 쉴때");
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     
+    NSLog(@"앱이 포그라운드에서 백그라운드 되었을떄");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    
+    NSLog(@"앱이 백그라운드에서 포그라운드로 바뀔때");
+    // 내려갔다가 올라왔을때 앱을 다시 실행 시키려는 이유
+    // 1. 하루가 지났을땐 무조건 다시
+//    [self applicationDidFinishLaunching:[UIApplication sharedApplication]];
 }
 
-
+// 앱이 활성화 될때 실행
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    
+    NSLog(@"앱이 활성화 될때");
 }
 
 // 앱 종료시
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-   
+    NSLog(@"앱이 죽었을때");
 }
 
 @end

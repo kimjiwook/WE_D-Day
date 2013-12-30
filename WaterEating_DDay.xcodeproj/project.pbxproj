@@ -27,6 +27,7 @@
 		DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = DE14311A185EF6D2000E8937 /* Date+Conversion.m */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
+		DE8DBB0E1871637900DA1C69 /* icon-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8DBB0D1871637900DA1C69 /* icon-menu.png */; };
 		DE91A077184C6CBD008AB9CC /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91A062184C6CBD008AB9CC /* AwesomeMenu.m */; };
 		DE91A078184C6CBD008AB9CC /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91A064184C6CBD008AB9CC /* AwesomeMenuItem.m */; };
 		DE91A079184C6CBD008AB9CC /* bg-addbutton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91A066184C6CBD008AB9CC /* bg-addbutton-highlighted.png */; };
@@ -126,6 +127,7 @@
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
 		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
+		DE8DBB0D1871637900DA1C69 /* icon-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-menu.png"; sourceTree = "<group>"; };
 		DE91A061184C6CBD008AB9CC /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
 		DE91A062184C6CBD008AB9CC /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		DE91A063184C6CBD008AB9CC /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 		DE91A065184C6CBD008AB9CC /* AwesomImages */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DBB0D1871637900DA1C69 /* icon-menu.png */,
 				DE91A066184C6CBD008AB9CC /* bg-addbutton-highlighted.png */,
 				DE91A067184C6CBD008AB9CC /* bg-addbutton-highlighted@2x.png */,
 				DE91A068184C6CBD008AB9CC /* bg-addbutton.png */,
@@ -683,6 +686,7 @@
 				DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */,
 				DE91A086184C6CBD008AB9CC /* icon-plus@2x.png in Resources */,
 				DEECA320183F36290068ABAD /* Edit.storyboard in Resources */,
+				DE8DBB0E1871637900DA1C69 /* icon-menu.png in Resources */,
 				DE06C6EA18619452004E28CD /* WE_DDay_1136.png in Resources */,
 				DE91A082184C6CBD008AB9CC /* D_puls.png in Resources */,
 				DE91A085184C6CBD008AB9CC /* icon-plus.png in Resources */,

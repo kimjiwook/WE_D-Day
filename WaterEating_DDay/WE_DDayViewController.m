@@ -69,7 +69,6 @@
     return 0.1;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.tableData count];
 }
@@ -102,16 +101,16 @@
     EditDay *editDay = [self.tableData objectAtIndex:indexPath.row];
     
     // 제목 만들기
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 180, 30)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 180, 40)];
     [title setText:editDay.title];
-    [title setFont:[UIFont systemFontOfSize:18.0f]];
+    [title setFont:[UIFont systemFontOfSize:20.0f]];
     [title setTag:1000];
     [title setBackgroundColor:[UIColor clearColor]];
     
     [cell.contentView addSubview:title];
     
     // d-Day 만들기
-    UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(190, 10, 125, 30)];
+    UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(190, 10, 125, 40)];
     // 64bit int 호환
     NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
     // plusOne 은 Boolean type으로 넘겨주어야 정상처리 됨.
@@ -120,7 +119,7 @@
     [days setText:[Date_Calendar stringResult:result]];
     [days setBackgroundColor:[UIColor clearColor]];
     [days setTextAlignment:NSTextAlignmentRight];
-    [days setFont:[UIFont systemFontOfSize:18.0f]];
+    [days setFont:[UIFont systemFontOfSize:20.0f]];
     [days setTag:2000];
     
     [cell.contentView addSubview:days];

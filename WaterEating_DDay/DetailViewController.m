@@ -112,10 +112,12 @@
     
     CGSize size = CGSizeMake(30, 30);
     UIImageView *menuImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [menuImage setImage:[UIImage imageNamed:@"icon-menu.png"]];
+//    [menuImage setImage:[UIImage imageNamed:@"icon-menu.png"]];
+    [menuImage setImage:[UIImage imageNamed:@"icon-plus.png"]];
     
     UIImageView *menuImageHilighted = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [menuImageHilighted setImage:[UIImage imageNamed:@"icon-menu-highlighted.png"]];
+//    [menuImageHilighted setImage:[UIImage imageNamed:@"icon-menu-highlighted.png"]];
+    [menuImageHilighted setImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
     
     AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]

@@ -49,26 +49,31 @@
 
 - (IBAction)daySave:(id)sender
 {
-    EditDay *editDay = [EditDay MR_createEntity]; // Entitiy 생성
-
-    NSDate *dateSelected = self.datePicker.date;
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
-    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
-    
-    // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
-    [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
-    [editDay setDate:[Date_Conversion dateToString:dateSelected]]; // 선택한 날짜
-    [editDay setTitle:[subJectTextField text]]; // 제목
-    [editDay setPlusone:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
-    [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
-    // 여기에선 Plusone 값 제대로 저장이됨
-    NSLog(@"plusOne : %d , %@",oneDayCheckSwitch.on,[NSNumber numberWithBool:oneDayCheckSwitch.on]);
-    
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
-    
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    if (!subJectTextField.text.length) {
+        NSArray *btnTitle = [[NSArray alloc] initWithObjects:BTN_OK, nil];
+        [AlertViewCreate alertTitle:TITLE_NOTI Message:MSG_NOTI_WARNING Create:btnTitle set:self];
+    }else{
+        EditDay *editDay = [EditDay MR_createEntity]; // Entitiy 생성
+        
+        NSDate *dateSelected = self.datePicker.date;
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
+        [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
+        
+        // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
+        [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
+        [editDay setDate:[Date_Conversion dateToString:dateSelected]]; // 선택한 날짜
+        [editDay setTitle:[subJectTextField text]]; // 제목
+        [editDay setPlusone:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
+        [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
+        // 여기에선 Plusone 값 제대로 저장이됨
+        NSLog(@"plusOne : %d , %@",oneDayCheckSwitch.on,[NSNumber numberWithBool:oneDayCheckSwitch.on]);
+        
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
+        
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - Table view data source
@@ -172,9 +177,9 @@
     // 64bit int 호환
     NSInteger result = [Date_Calendar stringDate:
                         [Date_Conversion dateToString: self.datePicker.date] plusOne:oneDayCheckSwitch.on];
-
+    
     self.dayLabel.text = [Date_Calendar stringResult:result];
-
+    
 }
 
 - (IBAction)onDayCheckAction:(id)sender

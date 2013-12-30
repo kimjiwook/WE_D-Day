@@ -49,7 +49,8 @@
 
 - (IBAction)daySave:(id)sender
 {
-    if (!subJectTextField.text.length) {
+    // 값이 없거나, 공백만 있는 경우도 체크한다.
+    if (!subJectTextField.text.length || [[subJectTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] isEqualToString:@""]) {
         NSArray *btnTitle = [[NSArray alloc] initWithObjects:BTN_OK, nil];
         [AlertViewCreate alertTitle:TITLE_NOTI Message:MSG_NOTI_WARNING Create:btnTitle set:self];
     }else{

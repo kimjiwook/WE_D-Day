@@ -30,6 +30,8 @@
     // TableView DataSource, Delegate Setting
     [ddayTable setBackgroundColor:[UIColor clearColor]];
     
+    // Test
+    
     self.navigationItem.title = @"D-Day";
 }
 

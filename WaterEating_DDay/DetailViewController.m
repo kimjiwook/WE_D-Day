@@ -109,10 +109,18 @@
     
     NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, nil];
     
+    
+    CGSize size = CGSizeMake(30, 30);
+    UIImageView *menuImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [menuImage setImage:[UIImage imageNamed:@"icon-menu.png"]];
+    
+    UIImageView *menuImageHilighted = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [menuImageHilighted setImage:[UIImage imageNamed:@"icon-menu-highlighted.png"]];
+    
     AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
-                                                           ContentImage:[UIImage imageNamed:@"icon-plus.png"]
-                                                highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
+                                                           ContentImage:menuImage.image
+                                                highlightedContentImage:menuImageHilighted.image];
     
     AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.frame startItem:startItem optionMenus:menus];
     menu.delegate = self;

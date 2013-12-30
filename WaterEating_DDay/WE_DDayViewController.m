@@ -30,7 +30,19 @@
     // TableView DataSource, Delegate Setting
     [ddayTable setBackgroundColor:[UIColor clearColor]];
     
-    // Test
+    UIImageView *image = [[UIImageView alloc] initWithFrame:[ddayTable frame]];
+    NSLog(@"%f",self.view.bounds.size.height);
+    if(self.view.bounds.size.height == 568){
+        image.image = [UIImage imageNamed:@"WE_DDay_1136.png"];
+    }else{
+        image.image = [UIImage imageNamed:@"WE_DDay_960.png"];
+    }
+    //    [self.view addSubview:image];
+    //    [self.view bringSubviewToFront:ddayTable];
+    
+    [ddayTable setBackgroundColor:[UIColor clearColor]];
+    
+    [ddayTable setBackgroundView:image];
     
     self.navigationItem.title = @"D-Day";
 }
@@ -53,6 +65,11 @@
     return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.1;
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.tableData count];
 }
@@ -69,10 +86,18 @@
     NSArray *viewsToRemove = [cell.contentView subviews];
     for (UIView *v in viewsToRemove)
     {
-        if (v.tag == 1000 || v.tag == 2000 || v.tag == 3000) {
+        if (v.tag == 1000 || v.tag == 1100 || v.tag == 2000 || v.tag == 3000) {
             [v removeFromSuperview];
         }
     }
+    
+    UIView *cellBackView = [[UIView alloc] initWithFrame:cell.frame];
+    [cellBackView setBackgroundColor:[UIColor whiteColor]];
+    [cellBackView setTag:1100];
+    [cellBackView setAlpha:0.8];
+    
+    [cell.contentView addSubview:cellBackView];
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     EditDay *editDay = [self.tableData objectAtIndex:indexPath.row];
     
@@ -81,8 +106,8 @@
     [title setText:editDay.title];
     [title setFont:[UIFont systemFontOfSize:18.0f]];
     [title setTag:1000];
+    [title setBackgroundColor:[UIColor clearColor]];
     
-    [cell setBackgroundColor:[UIColor clearColor]];
     [cell.contentView addSubview:title];
     
     // d-Day 만들기
@@ -98,9 +123,7 @@
     [days setFont:[UIFont systemFontOfSize:18.0f]];
     [days setTag:2000];
     
-    [cell setBackgroundColor:[UIColor clearColor]];
     [cell.contentView addSubview:days];
-    
     NSLog(@"index %@, title %@",editDay.index , editDay.title);
     
     if ((Boolean)editDay.badge) {

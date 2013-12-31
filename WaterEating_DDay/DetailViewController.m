@@ -110,7 +110,6 @@
     NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, nil];
     
     
-    CGSize size = CGSizeMake(30, 30);
     UIImageView *menuImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
 //    [menuImage setImage:[UIImage imageNamed:@"icon-menu.png"]];
     [menuImage setImage:[UIImage imageNamed:@"icon-plus.png"]];

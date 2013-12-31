@@ -59,12 +59,11 @@
 }
 
 // Badge를 예약한다. (매일매일 정시에 예약한다.)
+/*! 이것은 나의 메소드
+ \param 그딴거없음 2013년 마지막인데 코드짜고있는 기분 알아?!
+ */
 + (void) badgeReseve
 {
-    //GCD & Block 코딩 으로 메인큐에 쓰레드를 보내서 처리한다.
-    dispatch_queue_t badge = dispatch_queue_create("badge", NULL);
-    
-    dispatch_semaphore_t signal = dispatch_semaphore_create(1);
     
     NSInteger __block result = 0;
     
@@ -74,12 +73,13 @@
     EditDay *editDay = [Entity_init mainBadge]; // 뱃지인 EditDay 가져오기
     
     if (editDay != nil) {
-        for (int i = 1; i <= 30; i++) {
-//            dispatch_async(badge, ^{
-//                dispatch_semaphore_wait(signal, DISPATCH_TIME_FOREVER);
-            
-                
-                
+        WE_DDayAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+        [appDelegate.operationQueue setSuspended:YES];
+        [appDelegate.operationQueue cancelAllOperations];   // 큐를 비우고
+        [appDelegate.operationQueue setSuspended:NO];       // 큐를 시작한다.
+        
+        for (int i = 1; i <= 60; i++) {
+            [appDelegate.operationQueue addOperationWithBlock:^{
                 NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
                 [dateFormat setDateFormat:@"yyyy-MM-dd"];
                 
@@ -107,23 +107,16 @@
                 result = [[calendar components:NSDayCalendarUnit fromDate:stringToDate toDate:daysDate options:0] day];
                 
                 if (editDay.plusone) { result += 1; }
-//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 
-                    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-                    localNotification.fireDate = daysDate;
-                    localNotification.applicationIconBadgeNumber = result;
-                    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-                    
-                    NSLog(@"푸시 알림 예약 값 등록완료 : %ld",(long)result);
-                    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:result];
-                    
-//                    dispatch_semaphore_signal(signal);
-//                });
-//            });
-//            // 여기까지 GCD & Block 코딩
+                UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+                localNotification.fireDate = daysDate;
+                localNotification.applicationIconBadgeNumber = result;
+                [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+                NSLog(@"푸시 알림 예약 값 등록완료 : %ld",(long)result);
+            }];
         }
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:result];
     }
-    
 }
 
 @end

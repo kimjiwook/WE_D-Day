@@ -37,21 +37,26 @@
     }else{
         image.image = [UIImage imageNamed:@"WE_DDay_960.png"];
     }
-    //    [self.view addSubview:image];
-    //    [self.view bringSubviewToFront:ddayTable];
+
     
     [ddayTable setBackgroundColor:[UIColor clearColor]];
     
     [ddayTable setBackgroundView:image];
     
     self.navigationItem.title = @"D-Day";
+    
+//    [ddayTable reloadData];
+// Table 을 재시작 안하면 뱃지 변경시 안됨
+    // 재시작시에는 반투명 처리된것이 안그려짐
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self viewDidLoad];
-    [ddayTable reloadData];
+// 반투명 처리가 해결이 안됨
+    [self.ddayTable reloadData];
+    NSLog(@"ViewWillAppear");
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,7 +95,7 @@
         }
     }
     
-    UIView *cellBackView = [[UIView alloc] initWithFrame:cell.frame];
+    UIView *cellBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
     [cellBackView setBackgroundColor:[UIColor whiteColor]];
     [cellBackView setTag:1100];
     [cellBackView setAlpha:0.8];

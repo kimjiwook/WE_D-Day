@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EditDay.h"
+#import "WE_DDayAppDelegate.h"
 
 @interface Entity_init : NSObject
 

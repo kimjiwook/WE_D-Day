@@ -11,5 +11,6 @@
 @interface WE_DDayAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end

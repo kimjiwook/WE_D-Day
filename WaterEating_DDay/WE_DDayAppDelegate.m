@@ -10,17 +10,23 @@
 #import "EditDay.h"
 
 @implementation WE_DDayAppDelegate
+@synthesize operationQueue;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [MagicalRecord setupAutoMigratingCoreDataStack];
     // 시작에 앞서 MagicalRecord setup 시켜준다.
     
+    operationQueue = [[NSOperationQueue alloc]init];
+    [operationQueue setMaxConcurrentOperationCount:1]; // 큐에서 도는 쓰레드는 1개
+    [operationQueue setSuspended:YES];      // 큐를 멈추고
+    [operationQueue cancelAllOperations];   // 큐를 비우고
+    [operationQueue setSuspended:NO];       // 큐를 시작한다.
+    // Queue의 생성과 하나씩 실행되게 설정
+    // 설정후 큐의 작업을 모두 취소 시킨다.
+    
     application.applicationIconBadgeNumber = [Entity_init badge];
     // 표시할 뱃지
-    
-//    [self presentNotification];
-    // 노티
 
     return YES;
 }

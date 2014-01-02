@@ -39,6 +39,11 @@
 }
 
 // Badge에 달릴 값을 만든다.
+/*! text..
+ \param param1 text..
+ \param param2 text..
+ \retusns result
+ */
 + (NSInteger) badge
 {
     EditDay *editDay = [Entity_init mainBadge];
@@ -57,10 +62,16 @@
         return 0;
     }
 }
+/*! text..
+ \param param1 text..
+ \param param2 text..
+ \retusns result
+ */
 
 // Badge를 예약한다. (매일매일 정시에 예약한다.)
 /*! 이것은 나의 메소드
  \param 그딴거없음 2013년 마지막인데 코드짜고있는 기분 알아?!
+ \returns 몰라 ㅋㅋㅋ
  */
 + (void) badgeReseve
 {
@@ -85,7 +96,7 @@
                 
                 // Today (yyyy-MM-dd)
                 NSDate *dateNow = [dateFormat dateFromString:[dateFormat stringFromDate:[NSDate date]]];
-                
+        
                 // 하루를 더해서 내일 날짜 구하기 + i 하루씩 계속~~
                 NSDateComponents *components = [[NSDateComponents alloc] init];
                 

@@ -15,6 +15,7 @@
 @implementation DetailViewController
 @synthesize editDay;
 @synthesize detailTable;
+@synthesize jcMenu;
 
 - (void)setting : (EditDay *) editDayCopy
 {
@@ -41,6 +42,11 @@
     
     [self.view addSubview:detailTable];
     [self awesomeMenuCreate];
+    
+    jcMenu = [[MenuController alloc] init];
+    [self.view addSubview:jcMenu.view];
+    
+    [jcMenu open];
 }
 
 - (void)didReceiveMemoryWarning
@@ -152,6 +158,8 @@
 - (void)awesomeMenuDidFinishAnimationOpen:(AwesomeMenu *)menu {
     NSLog(@"Menu is open!");
 }
+
+
 
 #pragma mark - Table view data source
 

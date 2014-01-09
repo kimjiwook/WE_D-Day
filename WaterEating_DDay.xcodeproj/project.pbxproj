@@ -70,6 +70,7 @@
 		DE91A089184C6CBD008AB9CC /* Year.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91A076184C6CBD008AB9CC /* Year.png */; };
 		DE933B12186036A7006E0B1B /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B10186036A6006E0B1B /* alarm.png */; };
 		DE933B13186036A7006E0B1B /* noti.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B11186036A6006E0B1B /* noti.png */; };
+		DE9F6363187D4AB100011CD8 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9F6362187D4AB100011CD8 /* MenuController.m */; };
 		DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */; };
 		DEA3CBA41847381600034A4D /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */; };
 		DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6E1847381600034A4D /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -200,6 +201,8 @@
 		DE91A076184C6CBD008AB9CC /* Year.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Year.png; sourceTree = "<group>"; };
 		DE933B10186036A6006E0B1B /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		DE933B11186036A6006E0B1B /* noti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noti.png; sourceTree = "<group>"; };
+		DE9F6361187D4AB100011CD8 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		DE9F6362187D4AB100011CD8 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
 		DEA3CB65184735CE00034A4D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DEA3CB6B1847381600034A4D /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 				DE8136DB184C131C00C07144 /* DetailViewController.h */,
 				DE8136DC184C131C00C07144 /* DetailViewController.m */,
 				DE8136D9184C130900C07144 /* Detail.storyboard */,
+				DE9F6361187D4AB100011CD8 /* MenuController.h */,
+				DE9F6362187D4AB100011CD8 /* MenuController.m */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -906,6 +911,7 @@
 				DEA3CBBD1847381600034A4D /* MagicalRecord.m in Sources */,
 				DE90C8F9187D0890008AB905 /* JCGridMenuController.m in Sources */,
 				DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */,
+				DE9F6363187D4AB100011CD8 /* MenuController.m in Sources */,
 				DE90C8FC187D0890008AB905 /* UIView+JCUI.m in Sources */,
 				DEA3CBB31847381600034A4D /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				DEA3CBB11847381600034A4D /* NSManagedObjectContext+MagicalRecord.m in Sources */,

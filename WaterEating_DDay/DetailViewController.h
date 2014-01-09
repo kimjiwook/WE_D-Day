@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EditDay.h"
 #import "AwesomeMenu.h"
+#import "MenuController.h"
 
 @interface DetailViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, AwesomeMenuDelegate, UIAlertViewDelegate>
@@ -17,6 +18,8 @@
 }
 @property (nonatomic, readonly) EditDay *editDay;
 @property (nonatomic, strong) IBOutlet UITableView *detailTable;
+
+@property (nonatomic, strong) MenuController *jcMenu;
 
 - (void)setting : (EditDay *) editDayCopy;
 

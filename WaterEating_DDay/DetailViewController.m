@@ -43,10 +43,10 @@
     [self.view addSubview:detailTable];
     [self awesomeMenuCreate];
     
-    jcMenu = [[MenuController alloc] init];
-    [self.view addSubview:jcMenu.view];
-    
-    [jcMenu open];
+//    jcMenu = [[MenuController alloc] init];
+//    [self.view addSubview:jcMenu.view];
+//    
+//    [jcMenu open];
 }
 
 - (void)didReceiveMemoryWarning

@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A9D15A3D-7E47-431A-9D53-E4A454BAD0FD</string>
+	<string>FD2E489F-0B1D-438D-BC6D-FB598F9FE3B2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>WaterEating_DDay</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2F1C2B72-174D-407C-8E88-80C4C7BBED6D</key>
+		<key>E7F4B4F8-5AEC-4B2F-A295-A095DE08578B</key>
 		<string>https://github.com/kimjiwook/WE_D-Day.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WaterEating_DDay.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2F1C2B72-174D-407C-8E88-80C4C7BBED6D</key>
+		<key>E7F4B4F8-5AEC-4B2F-A295-A095DE08578B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2F1C2B72-174D-407C-8E88-80C4C7BBED6D</string>
+	<string>E7F4B4F8-5AEC-4B2F-A295-A095DE08578B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2F1C2B72-174D-407C-8E88-80C4C7BBED6D</string>
+			<string>E7F4B4F8-5AEC-4B2F-A295-A095DE08578B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WE_D-Day</string>
 		</dict>

@@ -45,9 +45,7 @@
     
     self.navigationItem.title = @"D-Day";
     
-//    [ddayTable reloadData];
-// Table 을 재시작 안하면 뱃지 변경시 안됨
-    // 재시작시에는 반투명 처리된것이 안그려짐
+//    self.navigationController.navigationBar.tintColor = [UIColor redColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated

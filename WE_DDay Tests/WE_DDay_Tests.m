@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Date+Conversion.h"
+#import "Date+Calendar.h"
 
 @interface WE_DDay_Tests : XCTestCase
 
@@ -28,7 +30,11 @@
 
 - (void)testExample
 {
-//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    int sample = [Date_Calendar stringDate:@"2012-10-10" plusOne:YES];
+    
+    NSLog(@"%d",sample);
+    
+    XCTAssertTrue(sample >= 0, @"오늘 날짜와 예전 날짜 비교");
 }
 
 @end

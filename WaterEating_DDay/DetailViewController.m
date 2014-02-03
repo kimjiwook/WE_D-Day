@@ -172,12 +172,13 @@
         }
     }
     
+    NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
+    
     if (indexPath.row == 0)
     {
         UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 165)];
         
-        // 64bit int 호환
-        NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
+        // 지난 날에 회색 처리 하기 위해 result 를 if 밖으로 제외
         
         [days setText:[Date_Calendar stringResult:result]];
         [days setTextAlignment:NSTextAlignmentRight];
@@ -222,10 +223,15 @@
             
             [cell.contentView addSubview:days];
             
+            if (result > indexPath.row*100) {
+                [date setTextColor:[UIColor grayColor]];
+                [days setTextColor:[UIColor grayColor]];
+            }
+            
         }else if (tableViewType == 1){
             // D- 계산법
             // Left
-            NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
+            NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
             d_minus = (d_minus)/100;
             
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];

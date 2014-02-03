@@ -82,7 +82,6 @@
 		DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */; };
 		DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB658183DBD2900D78B84 /* Images.xcassets */; };
 		DEE05F0F189F245C00FF2BDC /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE05F0E189F245C00FF2BDC /* menu.png */; };
-		DEE05F13189F25A400FF2BDC /* RNGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE05F12189F25A400FF2BDC /* RNGridMenu.m */; };
 		DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECA31A183F34EC0068ABAD /* EditViewController.m */; };
 		DEECA320183F36290068ABAD /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEECA31F183F36290068ABAD /* Edit.storyboard */; };
 /* End PBXBuildFile section */
@@ -214,8 +213,6 @@
 		DEDDB658183DBD2900D78B84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DEDDB65F183DBD2900D78B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DEE05F0E189F245C00FF2BDC /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../Icon/menu.png; sourceTree = "<group>"; };
-		DEE05F11189F25A400FF2BDC /* RNGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGridMenu.h; sourceTree = "<group>"; };
-		DEE05F12189F25A400FF2BDC /* RNGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGridMenu.m; sourceTree = "<group>"; };
 		DEECA319183F34EC0068ABAD /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		DEECA31A183F34EC0068ABAD /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		DEECA31F183F36290068ABAD /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
@@ -451,7 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				DEB13B15189F4CD900EE0568 /* MagicalRecord */,
-				DEE05F10189F25A400FF2BDC /* RNGridMenu */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -526,15 +522,6 @@
 				DEDDB64E183DBD2900D78B84 /* WaterEating_DDay-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DEE05F10189F25A400FF2BDC /* RNGridMenu */ = {
-			isa = PBXGroup;
-			children = (
-				DEE05F11189F25A400FF2BDC /* RNGridMenu.h */,
-				DEE05F12189F25A400FF2BDC /* RNGridMenu.m */,
-			);
-			path = RNGridMenu;
 			sourceTree = "<group>";
 		};
 		DEECA31C183F34F80068ABAD /* MainView */ = {
@@ -735,7 +722,6 @@
 				DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */,
 				DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */,
 				DEB13B60189F4CD900EE0568 /* NSManagedObjectContext+MagicalThreading.m in Sources */,
-				DEE05F13189F25A400FF2BDC /* RNGridMenu.m in Sources */,
 				DEB13B56189F4CD900EE0568 /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
 				DEB13B65189F4CD900EE0568 /* MagicalRecord+ErrorHandling.m in Sources */,
 				DEB13B5A189F4CD900EE0568 /* NSManagedObject+MagicalFinders.m in Sources */,

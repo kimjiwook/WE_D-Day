@@ -42,13 +42,6 @@
 		DE90C8E3187D081B008AB905 /* menu_year_alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8D6187D081B008AB905 /* menu_year_alpha.png */; };
 		DE90C8E4187D081B008AB905 /* menu_year_alpha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8D7187D081B008AB905 /* menu_year_alpha@2x.png */; };
 		DE90C8E5187D081B008AB905 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8D8187D081B008AB905 /* Thumbs.db */; };
-		DE90C8F9187D0890008AB905 /* JCGridMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90C8E9187D0890008AB905 /* JCGridMenuController.m */; };
-		DE90C8FA187D0890008AB905 /* UIButton+JCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90C8EC187D0890008AB905 /* UIButton+JCUI.m */; };
-		DE90C8FB187D0890008AB905 /* UILabel+JCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90C8EE187D0890008AB905 /* UILabel+JCUI.m */; };
-		DE90C8FC187D0890008AB905 /* UIView+JCUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90C8F0187D0890008AB905 /* UIView+JCUI.m */; };
-		DE90C8FD187D0890008AB905 /* JCGridMenuColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90C8F3187D0890008AB905 /* JCGridMenuColumn.m */; };
-		DE90C8FE187D0890008AB905 /* JCGridMenuRow.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90C8F5187D0890008AB905 /* JCGridMenuRow.m */; };
-		DE90C8FF187D0890008AB905 /* JCGridMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE90C8F8187D0890008AB905 /* JCGridMenuView.m */; };
 		DE91A077184C6CBD008AB9CC /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91A062184C6CBD008AB9CC /* AwesomeMenu.m */; };
 		DE91A078184C6CBD008AB9CC /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE91A064184C6CBD008AB9CC /* AwesomeMenuItem.m */; };
 		DE91A079184C6CBD008AB9CC /* bg-addbutton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91A066184C6CBD008AB9CC /* bg-addbutton-highlighted.png */; };
@@ -70,7 +63,6 @@
 		DE91A089184C6CBD008AB9CC /* Year.png in Resources */ = {isa = PBXBuildFile; fileRef = DE91A076184C6CBD008AB9CC /* Year.png */; };
 		DE933B12186036A7006E0B1B /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B10186036A6006E0B1B /* alarm.png */; };
 		DE933B13186036A7006E0B1B /* noti.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B11186036A6006E0B1B /* noti.png */; };
-		DE9F6363187D4AB100011CD8 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9F6362187D4AB100011CD8 /* MenuController.m */; };
 		DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */; };
 		DEA3CBA41847381600034A4D /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */; };
 		DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB6E1847381600034A4D /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -164,20 +156,6 @@
 		DE90C8D6187D081B008AB905 /* menu_year_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_year_alpha.png; sourceTree = "<group>"; };
 		DE90C8D7187D081B008AB905 /* menu_year_alpha@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_year_alpha@2x.png"; sourceTree = "<group>"; };
 		DE90C8D8187D081B008AB905 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
-		DE90C8E8187D0890008AB905 /* JCGridMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCGridMenuController.h; sourceTree = "<group>"; };
-		DE90C8E9187D0890008AB905 /* JCGridMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCGridMenuController.m; sourceTree = "<group>"; };
-		DE90C8EB187D0890008AB905 /* UIButton+JCUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JCUI.h"; sourceTree = "<group>"; };
-		DE90C8EC187D0890008AB905 /* UIButton+JCUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JCUI.m"; sourceTree = "<group>"; };
-		DE90C8ED187D0890008AB905 /* UILabel+JCUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JCUI.h"; sourceTree = "<group>"; };
-		DE90C8EE187D0890008AB905 /* UILabel+JCUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JCUI.m"; sourceTree = "<group>"; };
-		DE90C8EF187D0890008AB905 /* UIView+JCUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCUI.h"; sourceTree = "<group>"; };
-		DE90C8F0187D0890008AB905 /* UIView+JCUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCUI.m"; sourceTree = "<group>"; };
-		DE90C8F2187D0890008AB905 /* JCGridMenuColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCGridMenuColumn.h; sourceTree = "<group>"; };
-		DE90C8F3187D0890008AB905 /* JCGridMenuColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCGridMenuColumn.m; sourceTree = "<group>"; };
-		DE90C8F4187D0890008AB905 /* JCGridMenuRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCGridMenuRow.h; sourceTree = "<group>"; };
-		DE90C8F5187D0890008AB905 /* JCGridMenuRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCGridMenuRow.m; sourceTree = "<group>"; };
-		DE90C8F7187D0890008AB905 /* JCGridMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCGridMenuView.h; sourceTree = "<group>"; };
-		DE90C8F8187D0890008AB905 /* JCGridMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCGridMenuView.m; sourceTree = "<group>"; };
 		DE91A061184C6CBD008AB9CC /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
 		DE91A062184C6CBD008AB9CC /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		DE91A063184C6CBD008AB9CC /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
@@ -201,8 +179,6 @@
 		DE91A076184C6CBD008AB9CC /* Year.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Year.png; sourceTree = "<group>"; };
 		DE933B10186036A6006E0B1B /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		DE933B11186036A6006E0B1B /* noti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noti.png; sourceTree = "<group>"; };
-		DE9F6361187D4AB100011CD8 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
-		DE9F6362187D4AB100011CD8 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
 		DEA3CB65184735CE00034A4D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DEA3CB6B1847381600034A4D /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		DEA3CB6C1847381600034A4D /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
@@ -364,8 +340,6 @@
 				DE8136DB184C131C00C07144 /* DetailViewController.h */,
 				DE8136DC184C131C00C07144 /* DetailViewController.m */,
 				DE8136D9184C130900C07144 /* Detail.storyboard */,
-				DE9F6361187D4AB100011CD8 /* MenuController.h */,
-				DE9F6362187D4AB100011CD8 /* MenuController.m */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -388,59 +362,6 @@
 				DE90C8D8187D081B008AB905 /* Thumbs.db */,
 			);
 			path = menu_Icon;
-			sourceTree = "<group>";
-		};
-		DE90C8E6187D0890008AB905 /* JCGridMenu */ = {
-			isa = PBXGroup;
-			children = (
-				DE90C8E7187D0890008AB905 /* Controllers */,
-				DE90C8EA187D0890008AB905 /* Library */,
-				DE90C8F1187D0890008AB905 /* Models */,
-				DE90C8F6187D0890008AB905 /* Views */,
-			);
-			path = JCGridMenu;
-			sourceTree = "<group>";
-		};
-		DE90C8E7187D0890008AB905 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				DE90C8E8187D0890008AB905 /* JCGridMenuController.h */,
-				DE90C8E9187D0890008AB905 /* JCGridMenuController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		DE90C8EA187D0890008AB905 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				DE90C8EB187D0890008AB905 /* UIButton+JCUI.h */,
-				DE90C8EC187D0890008AB905 /* UIButton+JCUI.m */,
-				DE90C8ED187D0890008AB905 /* UILabel+JCUI.h */,
-				DE90C8EE187D0890008AB905 /* UILabel+JCUI.m */,
-				DE90C8EF187D0890008AB905 /* UIView+JCUI.h */,
-				DE90C8F0187D0890008AB905 /* UIView+JCUI.m */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		DE90C8F1187D0890008AB905 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DE90C8F2187D0890008AB905 /* JCGridMenuColumn.h */,
-				DE90C8F3187D0890008AB905 /* JCGridMenuColumn.m */,
-				DE90C8F4187D0890008AB905 /* JCGridMenuRow.h */,
-				DE90C8F5187D0890008AB905 /* JCGridMenuRow.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		DE90C8F6187D0890008AB905 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DE90C8F7187D0890008AB905 /* JCGridMenuView.h */,
-				DE90C8F8187D0890008AB905 /* JCGridMenuView.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		DE91A060184C6CBD008AB9CC /* AwesomeMenu */ = {
@@ -607,7 +528,6 @@
 		DED0BB05184846DF00F7564F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				DE90C8E6187D0890008AB905 /* JCGridMenu */,
 				DE91A060184C6CBD008AB9CC /* AwesomeMenu */,
 				DEA3CB681847381600034A4D /* MagicalRecord */,
 			);
@@ -882,16 +802,13 @@
 				DEA3CBA71847381600034A4D /* NSNumber+MagicalDataImport.m in Sources */,
 				DEA3CBA91847381600034A4D /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
 				DED48EDA185FDEE000ECA59B /* Entity+init.m in Sources */,
-				DE90C8FE187D0890008AB905 /* JCGridMenuRow.m in Sources */,
 				DEA3CBA61847381600034A4D /* NSEntityDescription+MagicalDataImport.m in Sources */,
-				DE90C8FA187D0890008AB905 /* UIButton+JCUI.m in Sources */,
 				DEA3CBAF1847381600034A4D /* NSManagedObject+MagicalRequests.m in Sources */,
 				DEA3CBAA1847381600034A4D /* NSString+MagicalDataImport.m in Sources */,
 				DEA3CBB51847381600034A4D /* NSPersistentStore+MagicalRecord.m in Sources */,
 				DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */,
 				DEA3CBAE1847381600034A4D /* NSManagedObject+MagicalRecord.m in Sources */,
 				DEA3CBB91847381600034A4D /* MagicalRecord+iCloud.m in Sources */,
-				DE90C8FB187D0890008AB905 /* UILabel+JCUI.m in Sources */,
 				DED48ED7185FD8C500ECA59B /* AlertViewCreate.m in Sources */,
 				DEA3CBB61847381600034A4D /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				DE143116185ED3E5000E8937 /* EditDay.m in Sources */,
@@ -909,10 +826,7 @@
 				DEA3CBA51847381600034A4D /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				DEA3CBB21847381600034A4D /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				DEA3CBBD1847381600034A4D /* MagicalRecord.m in Sources */,
-				DE90C8F9187D0890008AB905 /* JCGridMenuController.m in Sources */,
 				DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */,
-				DE9F6363187D4AB100011CD8 /* MenuController.m in Sources */,
-				DE90C8FC187D0890008AB905 /* UIView+JCUI.m in Sources */,
 				DEA3CBB31847381600034A4D /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				DEA3CBB11847381600034A4D /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				DEA3CBAC1847381600034A4D /* NSManagedObject+MagicalDataImport.m in Sources */,
@@ -920,10 +834,8 @@
 				DEA3CBAB1847381600034A4D /* NSManagedObject+MagicalAggregation.m in Sources */,
 				DEA3CBB41847381600034A4D /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				DEA3CBAD1847381600034A4D /* NSManagedObject+MagicalFinders.m in Sources */,
-				DE90C8FF187D0890008AB905 /* JCGridMenuView.m in Sources */,
 				DEA3CBA81847381600034A4D /* NSObject+MagicalDataImport.m in Sources */,
 				DEA3CBB71847381600034A4D /* MagicalRecord+Actions.m in Sources */,
-				DE90C8FD187D0890008AB905 /* JCGridMenuColumn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

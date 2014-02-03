@@ -43,10 +43,6 @@
     [self.view addSubview:detailTable];
     [self awesomeMenuCreate];
     
-//    jcMenu = [[MenuController alloc] init];
-//    [self.view addSubview:jcMenu.view];
-//    
-//    [jcMenu open];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +55,7 @@
 - (IBAction)badgeSetting:(id)sender
 {
     NSArray *btnTitle = [[NSArray alloc] initWithObjects:BTN_OK,BTN_CANCEL, nil];
-    if ((Boolean)editDay.badge) {
+    if ([editDay.badge boolValue]) {
         // 뱃지 등록이 되어있는경우 '취소' 함
         [AlertViewCreate alertTitle:TITLE_NOTI Message:MSG_NOTI_CANCEL Create:btnTitle set:self];
     }else{
@@ -74,7 +70,8 @@
     if (buttonIndex == 0) {
         if ([alertView.message isEqualToString:MSG_NOTI_OK]) {
             [Entity_init badgeinit];
-            editDay.badge = [NSNumber numberWithBool:TRUE];
+            [editDay setBadge:[NSNumber numberWithBool:YES]];
+            
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
             
             [UIApplication sharedApplication].applicationIconBadgeNumber = [Entity_init badge];
@@ -236,7 +233,7 @@
         
         [cell.contentView addSubview:date];
         
-        if ((Boolean)editDay.badge) {
+        if ([editDay.badge boolValue]) {
             UIImageView *badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(295, 0, 25, 25)];
             UIImage *image = [UIImage imageNamed:@"noti.png"];
             badgeImage.image = image;
@@ -249,7 +246,7 @@
             // D+ 계산법
             // Left
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-            [date setText:[NSString stringWithFormat:@"%ld 일",indexPath.row * 100]];
+            [date setText:[NSString stringWithFormat:@"%d 일",indexPath.row * 100]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
@@ -269,7 +266,7 @@
             d_minus = (d_minus)/100;
             
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-            [date setText:[NSString stringWithFormat:@"D%ld 일",(d_minus*100) + ((indexPath.row-1)*100)]];
+            [date setText:[NSString stringWithFormat:@"D%d 일",(d_minus*100) + ((indexPath.row-1)*100)]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
@@ -286,7 +283,7 @@
             // 1주년씩 계산법
             // Left
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-            [date setText:[NSString stringWithFormat:@"%ld 주년",indexPath.row]];
+            [date setText:[NSString stringWithFormat:@"%d 주년",indexPath.row]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];

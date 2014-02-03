@@ -119,7 +119,8 @@
     // 64bit int 호환
     NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
     // plusOne 은 Boolean type으로 넘겨주어야 정상처리 됨.
-    NSLog(@"DDay Bool : %hhu",(Boolean)editDay.plusone);
+    NSLog(@"DDay Bool : %d",(int)editDay.plusone.boolValue);
+    NSLog(@"DDay Bool = %s",(Boolean)editDay.plusone?"true":"false");
     
     [days setText:[Date_Calendar stringResult:result]];
     [days setBackgroundColor:[UIColor clearColor]];
@@ -129,8 +130,10 @@
     
     [cell.contentView addSubview:days];
     NSLog(@"index %@, title %@",editDay.index , editDay.title);
+    NSLog(@"badge : %d", (int)[editDay.badge boolValue]);
+    NSLog(@"badge : %s", [editDay.badge boolValue]?"true":"false");
     
-    if ((Boolean)editDay.badge) {
+    if ([editDay.badge boolValue]) {
         UIImageView *badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(295, 0, 25, 25)];
         UIImage *image = [UIImage imageNamed:@"noti.png"];
         badgeImage.image = image;

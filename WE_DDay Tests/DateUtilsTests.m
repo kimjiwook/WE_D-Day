@@ -30,7 +30,7 @@
 
 - (void)testExample
 {
-    NSLog(@"resultDate : %ld",[Date_Calendar stringDate:@"2012-05-31" plusOne:1]);
+    NSLog(@"resultDate : %d",[Date_Calendar stringDate:@"2012-05-31" plusOne:1]);
     
     NSDate *dateSelected = [NSDate date];
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];

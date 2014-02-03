@@ -89,7 +89,7 @@
         [appDelegate.operationQueue cancelAllOperations];   // 큐를 비우고
         [appDelegate.operationQueue setSuspended:NO];       // 큐를 시작한다.
         
-        for (int i = 1; i <= 60; i++) {
+        for (int i = 1; i <= 365; i++) {
             [appDelegate.operationQueue addOperationWithBlock:^{
                 NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
                 [dateFormat setDateFormat:@"yyyy-MM-dd"];

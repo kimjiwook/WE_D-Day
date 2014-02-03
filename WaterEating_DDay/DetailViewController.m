@@ -209,14 +209,14 @@
         if (tableViewType == 0) {
             // D+ 계산법
             // Left
-            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
+            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 200, 40)];
             [date setText:[NSString stringWithFormat:@"%d 일",indexPath.row * 100]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
             
             //Right
-            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
+            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(210, 5, 100, 40)];
             [days setText:[Date_Calendar stringDate:editDay.date howdays:indexPath.row*100]];
             [days setTextAlignment:NSTextAlignmentRight];
             [days setTag:3000];
@@ -234,14 +234,14 @@
             NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
             d_minus = (d_minus)/100;
             
-            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
+            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 200, 40)];
             [date setText:[NSString stringWithFormat:@"D%d 일",(d_minus*100) + ((indexPath.row-1)*100)]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
             
             //Right
-            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
+            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(210, 5, 100, 40)];
             [days setText:[Date_Calendar stringDate:editDay.date howdays:(d_minus*100) + ((indexPath.row-1)*100)]];
             [days setTextAlignment:NSTextAlignmentRight];
             [days setTag:3000];
@@ -251,19 +251,28 @@
         }else if (tableViewType == 2){
             // 1주년씩 계산법
             // Left
-            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 40)];
-            [date setText:[NSString stringWithFormat:@"%d 주년",indexPath.row]];
+            UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 200, 40)];
+            
+            NSInteger yearDate = [Date_Calendar startDate:[Date_Conversion stringToDate:editDay.date] endDate:[Date_Calendar date:editDay.date addYear:indexPath.row] plusOne:[editDay.plusone boolValue]];
+            
+            [date setText:[NSString stringWithFormat:@"%d 주년(%d일)",indexPath.row, yearDate]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
             
             //Right
-            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(110, 5, 200, 40)];
-            [days setText:[Date_Calendar stringDate:editDay.date howdays:indexPath.row*365]];
+            UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(210, 5, 100, 40)];
+            [days setText:[Date_Conversion dateToString:[Date_Calendar date:editDay.date addYear:indexPath.row]]];
             [days setTextAlignment:NSTextAlignmentRight];
             [days setTag:3000];
             
             [cell.contentView addSubview:days];
+            
+            if (result > yearDate) {
+                [date setTextColor:[UIColor grayColor]];
+                [days setTextColor:[UIColor grayColor]];
+            }
+            
         }
     }
     

@@ -61,6 +61,30 @@
 }
 
 
+// 시작일 - 끝나는일 계산방식
++ (NSInteger) startDate:(NSDate *)startDate endDate:(NSDate *)endDate plusOne:(BOOL)plusOne
+{
+    NSInteger result = 0;
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    result = [[calendar components:NSDayCalendarUnit fromDate:startDate toDate:endDate options:0] day];
+    
+    return result;
+}
+
+// 특정 일에 년도만 추가한다.
++ (NSDate *) date:(NSString *)date addYear:(int) yy
+{
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDateComponents *comp = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[Date_Conversion stringToDate:date]];
+    
+    NSString *result = [NSString stringWithFormat:@"%04d-%02d-%02d",([comp year]+yy),[comp month], [comp day]];
+    
+    return [Date_Conversion stringToDate:result];
+}
+
 
 // D+234, D-23 형식의 String 반환 작업
 + (NSString *) stringResult : (NSInteger) result

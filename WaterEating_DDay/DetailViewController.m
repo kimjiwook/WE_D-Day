@@ -15,7 +15,6 @@
 @implementation DetailViewController
 @synthesize editDay;
 @synthesize detailTable;
-@synthesize jcMenu;
 
 - (void)setting : (EditDay *) editDayCopy
 {
@@ -41,8 +40,7 @@
     [detailTable setBackgroundColor:[UIColor clearColor]];
     
     [self.view addSubview:detailTable];
-    [self awesomeMenuCreate];
-    
+    [self createRNGridMenu];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,75 +83,40 @@
     }
 }
 
-// Path button UI
-// 이걸로 DetailView 보여지는 형식 변경
-- (void)awesomeMenuCreate
+- (void)createRNGridMenu
 {
-    UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
-    UIImage *storyMenuItemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
-    
-    UIImage *d_puls = [UIImage imageNamed:@"D_puls.png"];
-    UIImage *d_minus = [UIImage imageNamed:@"D_minus.png"];
-    UIImage *year = [UIImage imageNamed:@"Year.png"];
-    
-    AwesomeMenuItem *starMenuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
-                                                           highlightedImage:storyMenuItemImagePressed
-                                                               ContentImage:d_puls
-                                                    highlightedContentImage:nil];
-    AwesomeMenuItem *starMenuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
-                                                           highlightedImage:storyMenuItemImagePressed
-                                                               ContentImage:d_minus
-                                                    highlightedContentImage:nil];
-    AwesomeMenuItem *starMenuItem3 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage
-                                                           highlightedImage:storyMenuItemImagePressed
-                                                               ContentImage:year
-                                                    highlightedContentImage:nil];
-    
-    
-    NSArray *menus = [NSArray arrayWithObjects:starMenuItem1, starMenuItem2, starMenuItem3, nil];
-    
-    
-    UIImageView *menuImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-//    [menuImage setImage:[UIImage imageNamed:@"icon-menu.png"]];
-    [menuImage setImage:[UIImage imageNamed:@"icon-plus.png"]];
-    
-    UIImageView *menuImageHilighted = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-//    [menuImageHilighted setImage:[UIImage imageNamed:@"icon-menu-highlighted.png"]];
-    [menuImageHilighted setImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
-    
-    AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-addbutton.png"]
-                                                       highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
-                                                           ContentImage:menuImage.image
-                                                highlightedContentImage:menuImageHilighted.image];
-    
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.frame startItem:startItem optionMenus:menus];
-    menu.delegate = self;
-    
-	menu.menuWholeAngle = M_PI_2;
-	menu.farRadius = 110.0f;
-	menu.endRadius = 100.0f;
-	menu.nearRadius = 90.0f;
-    menu.animationDuration = 0.3f;
-    menu.startPoint = CGPointMake(40.0, self.view.frame.size.height-40.0);
-    
-    [self.view addSubview:menu];
+    UIButton *gridMenu = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.bounds.size.height-10-55, 55, 55)];
+    [gridMenu setImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
+    [gridMenu addTarget:self action:@selector(actionRNGridMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:gridMenu];
 }
 
-/* ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ */
-/* ⬇⬇⬇⬇⬇⬇ GET RESPONSE OF MENU ⬇⬇⬇⬇⬇⬇ */
-/* ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ */
-
-- (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
+- (IBAction)actionRNGridMenu:(id)sender
 {
+    [self showList];
+}
+
+- (void)showList {
+    NSInteger numberOfOptions = 3;
+    NSArray *options = @[
+                         @"D+Day",
+                         @"D-Day",
+                         @"Year",
+                         ];
+    RNGridMenu *av = [[RNGridMenu alloc] initWithTitles:[options subarrayWithRange:NSMakeRange(0, numberOfOptions)]];
+    av.delegate = self;
+    //    av.itemTextAlignment = NSTextAlignmentLeft;
+    av.itemFont = [UIFont boldSystemFontOfSize:18];
+    av.itemSize = CGSizeMake(150, 55);
+    [av showInViewController:self center:CGPointMake(self.view.bounds.size.width/2.f, self.view.bounds.size.height/2.f)];
+}
+
+
+
+- (void)gridMenu:(RNGridMenu *)gridMenu willDismissWithSelectedItem:(RNGridMenuItem *)item atIndex:(NSInteger)itemIndex {
     // 0 = D+ //1 = D- //2 = Y (년도별 표시)
-    tableViewType = idx;
+    tableViewType = itemIndex;
     [detailTable reloadData];
-}
-- (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu {
-    NSLog(@"Menu was closed!");
-}
-- (void)awesomeMenuDidFinishAnimationOpen:(AwesomeMenu *)menu {
-    NSLog(@"Menu is open!");
 }
 
 

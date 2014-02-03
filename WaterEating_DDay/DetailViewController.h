@@ -8,18 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "EditDay.h"
-#import "AwesomeMenu.h"
-#import "MenuController.h"
+#import "RNGridMenu.h"
 
 @interface DetailViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate, AwesomeMenuDelegate, UIAlertViewDelegate>
+<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, RNGridMenuDelegate>
 {
     NSInteger tableViewType;
 }
 @property (nonatomic, readonly) EditDay *editDay;
 @property (nonatomic, strong) IBOutlet UITableView *detailTable;
-
-@property (nonatomic, strong) MenuController *jcMenu;
 
 - (void)setting : (EditDay *) editDayCopy;
 

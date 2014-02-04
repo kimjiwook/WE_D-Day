@@ -16,6 +16,7 @@
 @implementation WE_DDayViewController
 @synthesize ddayTable;
 @synthesize tableData;
+@synthesize adView;
 
 - (void)viewDidLoad
 {
@@ -46,6 +47,25 @@
     self.navigationItem.title = @"D-Day";
     
 //    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    
+    [self createAdPost];
+}
+
+- (void)createAdPost
+{
+    adView = [MobileAdView sharedMobileAdView];
+    [adView setFrame:CGRectMake(0, (self.view.frame.size.height-50), 320, 50)];
+    [adView setSuperViewController:self];
+    [adView setChannelId:@"mios_609d1408867643cbb33f3ccc006dfacd"];
+    [adView setIsTest:NO];
+    
+    adView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin
+    | UIViewAutoresizingFlexibleLeftMargin
+    | UIViewAutoresizingFlexibleWidth;
+    
+    [adView setDelegate:self];
+    
+    [self.view addSubview:adView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -54,7 +74,12 @@
     [self viewDidLoad];
 // 반투명 처리가 해결이 안됨
     [self.ddayTable reloadData];
-    NSLog(@"ViewWillAppear");
+    [adView start];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [adView stop];
 }
 
 - (void)didReceiveMemoryWarning

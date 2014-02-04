@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "EditViewController.h"
 #import "DetailViewController.h"
+#import "MobileAdView.h"
 
-@interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MobileAdViewDelegate>
 {
     EditViewController *editViewController;
     DetailViewController *detailViewController;
@@ -18,6 +19,8 @@
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
 
 @property (nonatomic, strong) NSMutableArray *tableData;
+
+@property (nonatomic, assign) MobileAdView *adView;
 
 - (IBAction)editButtonAction:(id)sender;
 - (IBAction)addButtonAction:(id)sender;

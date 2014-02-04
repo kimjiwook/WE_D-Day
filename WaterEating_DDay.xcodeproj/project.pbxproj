@@ -25,6 +25,8 @@
 		DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */ = {isa = PBXBuildFile; fileRef = DE0E554A183E09BE00A78CB7 /* background_test.png */; };
 		DE143116185ED3E5000E8937 /* EditDay.m in Sources */ = {isa = PBXBuildFile; fileRef = DE143115185ED3E5000E8937 /* EditDay.m */; };
 		DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = DE14311A185EF6D2000E8937 /* Date+Conversion.m */; };
+		DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */; };
+		DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
 		DE90C8D9187D081B008AB905 /* menu_dpuls.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8CC187D081B008AB905 /* menu_dpuls.png */; };
@@ -118,6 +120,8 @@
 		DE143115185ED3E5000E8937 /* EditDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDay.m; sourceTree = "<group>"; };
 		DE143119185EF6D2000E8937 /* Date+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Date+Conversion.h"; sourceTree = "<group>"; };
 		DE14311A185EF6D2000E8937 /* Date+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Conversion.m"; sourceTree = "<group>"; };
+		DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
 		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */,
+				DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */,
 				DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */,
 				DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */,
 				DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */,
@@ -504,6 +510,8 @@
 		DEDDB63F183DBD2900D78B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */,
+				DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */,
 				DED0BB0218482AE500F7564F /* CoreData.framework */,
 				DEDDB640183DBD2900D78B84 /* Foundation.framework */,
 				DEDDB642183DBD2900D78B84 /* CoreGraphics.framework */,

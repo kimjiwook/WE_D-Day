@@ -27,6 +27,7 @@
 		DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = DE14311A185EF6D2000E8937 /* Date+Conversion.m */; };
 		DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */; };
 		DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */; };
+		DE1E6B2918A0D23800B2C35E /* libMobileAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
 		DE90C8D9187D081B008AB905 /* menu_dpuls.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8CC187D081B008AB905 /* menu_dpuls.png */; };
@@ -122,6 +123,8 @@
 		DE14311A185EF6D2000E8937 /* Date+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Conversion.m"; sourceTree = "<group>"; };
 		DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobileAdSDK.a; sourceTree = "<group>"; };
+		DE1E6B2818A0D23800B2C35E /* MobileAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileAdView.h; sourceTree = "<group>"; };
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
 		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
@@ -243,6 +246,7 @@
 				DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */,
 				DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */,
 				DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */,
+				DE1E6B2918A0D23800B2C35E /* libMobileAdSDK.a in Frameworks */,
 				DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */,
 				DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */,
 				DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */,
@@ -299,6 +303,16 @@
 			);
 			name = images;
 			sourceTree = "<group>";
+		};
+		DE1E6B2618A0D23800B2C35E /* NaverAdpost */ = {
+			isa = PBXGroup;
+			children = (
+				DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */,
+				DE1E6B2818A0D23800B2C35E /* MobileAdView.h */,
+			);
+			name = NaverAdpost;
+			path = Lib/NaverAdpost;
+			sourceTree = SOURCE_ROOT;
 		};
 		DE8136CF184C10AC00C07144 /* DetailView */ = {
 			isa = PBXGroup;
@@ -467,6 +481,7 @@
 		DED0BB05184846DF00F7564F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				DE1E6B2618A0D23800B2C35E /* NaverAdpost */,
 				DEB13B6B189F53E300EE0568 /* MagicalRecord */,
 				DEB13BA7189F53E300EE0568 /* RNGridMenu */,
 			);
@@ -920,6 +935,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/kimjw/Documents/XcodeProjectFiles/WE_D-Day/Lib/NaverAdpost",
+				);
 				PRODUCT_NAME = "물먹고 디데이";
 				WRAPPER_EXTENSION = app;
 			};
@@ -933,6 +952,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/kimjw/Documents/XcodeProjectFiles/WE_D-Day/Lib/NaverAdpost",
+				);
 				PRODUCT_NAME = "물먹고 디데이";
 				WRAPPER_EXTENSION = app;
 			};

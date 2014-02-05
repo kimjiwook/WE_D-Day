@@ -45,6 +45,7 @@
 		DE90C8E5187D081B008AB905 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8D8187D081B008AB905 /* Thumbs.db */; };
 		DE933B12186036A7006E0B1B /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B10186036A6006E0B1B /* alarm.png */; };
 		DE933B13186036A7006E0B1B /* noti.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B11186036A6006E0B1B /* noti.png */; };
+		DE94BB9F18A2094A002D2E66 /* D_Day.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB652183DBD2900D78B84 /* D_Day.storyboard */; };
 		DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */; };
 		DEB13BAA189F53E300EE0568 /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB13B6F189F53E300EE0568 /* MagicalImportFunctions.m */; };
 		DEB13BAB189F53E300EE0568 /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB13B71189F53E300EE0568 /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -707,6 +708,7 @@
 				DE90C8DD187D081B008AB905 /* menu_minus.png in Resources */,
 				DE90C8E4187D081B008AB905 /* menu_year_alpha@2x.png in Resources */,
 				DE06C6E218619274004E28CD /* Icon-Small.png in Resources */,
+				DE94BB9F18A2094A002D2E66 /* D_Day.storyboard in Resources */,
 				DE06C6E618619274004E28CD /* Icon-Spotlight-40.png in Resources */,
 				DE933B12186036A7006E0B1B /* alarm.png in Resources */,
 				DE90C8E0187D081B008AB905 /* menu_minus_alpha@2x.png in Resources */,

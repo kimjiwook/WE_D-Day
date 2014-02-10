@@ -41,12 +41,9 @@
 
     
     [ddayTable setBackgroundColor:[UIColor clearColor]];
-    
     [ddayTable setBackgroundView:image];
     
     self.navigationItem.title = @"D-Day";
-    
-//    self.navigationController.navigationBar.tintColor = [UIColor redColor];
     
     [self createAdPost];
 }
@@ -104,57 +101,34 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
     }
     
     NSArray *viewsToRemove = [cell.contentView subviews];
     for (UIView *v in viewsToRemove)
     {
-        if (v.tag == 1000 || v.tag == 1100 || v.tag == 2000 || v.tag == 3000) {
-            [v removeFromSuperview];
-        }
+        [v removeFromSuperview];
     }
     
-    UIView *cellBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
-    [cellBackView setBackgroundColor:[UIColor whiteColor]];
-    [cellBackView setTag:1100];
-    [cellBackView setAlpha:0.8];
-    
-    [cell.contentView addSubview:cellBackView];
-    [cell setBackgroundColor:[UIColor clearColor]];
+    [cell setBackgroundColor:[UIColor colorWithWhite:1.0f alpha:0.5f]];
     
     EditDay *editDay = [self.tableData objectAtIndex:indexPath.row];
     
-    // 제목 만들기
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 180, 40)];
-    [title setText:editDay.title];
-    [title setFont:[UIFont systemFontOfSize:20.0f]];
-    [title setTag:1000];
-    [title setBackgroundColor:[UIColor clearColor]];
+    [cell.textLabel setText:editDay.title];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:20.0f]];
+    [cell.textLabel setTag:1000+indexPath.row];
+    [cell.textLabel setBackgroundColor:[UIColor clearColor]];
+
+    NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
     
-    [cell.contentView addSubview:title];
-    
-    // d-Day 만들기
-    UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(190, 10, 125, 40)];
-    // 64bit int 호환
-    NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
-    // plusOne 은 Boolean type으로 넘겨주어야 정상처리 됨.
-    NSLog(@"DDay Bool : %d",(int)editDay.plusone.boolValue);
-    NSLog(@"DDay Bool = %s",(Boolean)editDay.plusone?"true":"false");
-    
-    [days setText:[Date_Calendar stringResult:result]];
-    [days setBackgroundColor:[UIColor clearColor]];
-    [days setTextAlignment:NSTextAlignmentRight];
-    [days setFont:[UIFont systemFontOfSize:20.0f]];
-    [days setTag:2000];
-    
-    [cell.contentView addSubview:days];
-    NSLog(@"index %@, title %@",editDay.index , editDay.title);
-    NSLog(@"badge : %d", (int)[editDay.badge boolValue]);
-    NSLog(@"badge : %s", [editDay.badge boolValue]?"true":"false");
+    [cell.detailTextLabel setText:[Date_Calendar stringResult:result]];
+    [cell.detailTextLabel setBackgroundColor:[UIColor clearColor]];
+    [cell.detailTextLabel setTextAlignment:NSTextAlignmentRight];
+    [cell.detailTextLabel setFont:[UIFont systemFontOfSize:20.0f]];
+    [cell.detailTextLabel setTextColor:[UIColor blackColor]];
+    [cell.detailTextLabel setTag:2000+indexPath.row];
     
     if ([editDay.badge boolValue]) {
         UIImageView *badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(295, 0, 25, 25)];
@@ -163,13 +137,10 @@
         [badgeImage setTag:3000];
         [cell.contentView addSubview:badgeImage];
     }
-    
-    
     return cell;
 }
 
 #pragma mark - Table view delegate
-
 // Table view Cell Select Action
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

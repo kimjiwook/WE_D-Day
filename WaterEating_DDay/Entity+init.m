@@ -105,7 +105,7 @@
                 NSCalendar *calendar1 = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
                 NSDate *daysDate = [calendar1 dateByAddingComponents:components toDate:dateNow options:0];
                 
-                NSLog(@"days 오늘 다음 날짜 : %@", daysDate);
+//                NSLog(@"days 오늘 다음 날짜 : %@", daysDate);
                 
                 // Select Date (yyyy-MM-dd)
                 NSDate *stringToDate = [[NSDate alloc] init];
@@ -123,7 +123,7 @@
                 localNotification.fireDate = daysDate;
                 localNotification.applicationIconBadgeNumber = result;
                 [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-                NSLog(@"푸시 알림 예약 값 등록완료 : %ld",(long)result);
+//                NSLog(@"푸시 알림 예약 값 등록완료 : %ld",(long)result);
             }];
         }
         [[UIApplication sharedApplication] setApplicationIconBadgeNumber:result];

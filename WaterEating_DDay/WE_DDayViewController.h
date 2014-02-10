@@ -17,6 +17,7 @@
     DetailViewController *detailViewController;
 }
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
+@property (nonatomic, strong) UIImageView *badgeImage;
 
 @property (nonatomic, strong) NSMutableArray *tableData;
 

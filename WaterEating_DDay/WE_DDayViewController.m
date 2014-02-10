@@ -17,6 +17,7 @@
 @synthesize ddayTable;
 @synthesize tableData;
 @synthesize adView;
+@synthesize badgeImage;
 
 - (void)viewDidLoad
 {
@@ -131,7 +132,7 @@
     [cell.detailTextLabel setTag:2000+indexPath.row];
     
     if ([editDay.badge boolValue]) {
-        UIImageView *badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(295, 0, 25, 25)];
+        badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width-25, 0, 25, 25)];
         UIImage *image = [UIImage imageNamed:@"noti.png"];
         badgeImage.image = image;
         [badgeImage setTag:3000];
@@ -204,6 +205,11 @@
 - (IBAction)editButtonAction:(id)sender
 {
     [ddayTable setEditing:!ddayTable.editing animated:YES];
+    if (ddayTable.editing) {
+        [badgeImage setFrame:CGRectMake(self.view.bounds.size.width-25-38, 0, 25, 25)];
+    }else{
+        [badgeImage setFrame:CGRectMake(self.view.bounds.size.width-25, 0, 25, 25)];
+    }
 }
 
 // Table view add mode

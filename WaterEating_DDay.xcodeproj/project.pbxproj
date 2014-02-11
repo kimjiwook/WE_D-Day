@@ -939,7 +939,7 @@
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/kimjw/Documents/XcodeProjectFiles/WE_D-Day/Lib/NaverAdpost",
+					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
 				PRODUCT_NAME = "물먹고 디데이";
 				WRAPPER_EXTENSION = app;
@@ -956,7 +956,7 @@
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/kimjw/Documents/XcodeProjectFiles/WE_D-Day/Lib/NaverAdpost",
+					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
 				PRODUCT_NAME = "물먹고 디데이";
 				WRAPPER_EXTENSION = app;

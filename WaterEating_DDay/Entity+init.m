@@ -31,7 +31,7 @@
     NSMutableArray *array = [NSMutableArray arrayWithArray: [EditDay MR_findAllSortedBy:@"badge" ascending:YES]];
     
     for (EditDay *edit in array) {
-        if ((Boolean)edit.badge) {
+        if ([edit.badge boolValue]) {
             return edit;
         }
     }
@@ -48,7 +48,7 @@
 {
     EditDay *editDay = [Entity_init mainBadge];
     if (editDay != nil) {
-        NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
+        NSInteger result = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
         
         if (result < 0) {
             result = result * -1;

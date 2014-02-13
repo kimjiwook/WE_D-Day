@@ -130,7 +130,7 @@
     }else if (tableViewType == 1){
         // D- 일때만 제대로 계산한다.
         
-        NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:(Boolean)editDay.plusone];
+        NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
         
         if (d_minus < 0)
         {

@@ -72,7 +72,6 @@
         
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
         
-        
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -98,7 +97,6 @@
             return 175;
         }
     }
-    
     return 50;
 }
 
@@ -115,8 +113,8 @@
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     if(cell == nil)
@@ -172,7 +170,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];  // 해제
 }
 
-
 - (IBAction)dateChanged:(id)sender
 {
     // 64bit int 호환
@@ -180,7 +177,6 @@
                         [Date_Conversion dateToString: self.datePicker.date] plusOne:oneDayCheckSwitch.on];
     
     self.dayLabel.text = [Date_Calendar stringResult:result];
-    
 }
 
 - (IBAction)onDayCheckAction:(id)sender

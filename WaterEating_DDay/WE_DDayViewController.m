@@ -39,13 +39,12 @@
     }else{
         image.image = [UIImage imageNamed:@"WE_DDay_960.png"];
     }
-
     
     [ddayTable setBackgroundColor:[UIColor clearColor]];
     [ddayTable setBackgroundView:image];
     
     self.navigationItem.title = @"D-Day";
-    
+
     [self createAdPost];
 }
 
@@ -62,6 +61,7 @@
     | UIViewAutoresizingFlexibleWidth;
     
     [adView setDelegate:self];
+    [adView start];
     
     [self.view addSubview:adView];
 }
@@ -199,6 +199,11 @@
         
         [UIApplication sharedApplication].applicationIconBadgeNumber = [Entity_init badge];
     }
+}
+
+// Table Delete Button Rename...
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"삭제";
 }
 
 // Table view edit mode

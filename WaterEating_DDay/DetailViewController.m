@@ -126,7 +126,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableViewType == 0) {
-        return 51;
+        return 101;
     }else if (tableViewType == 1){
         // D- 일때만 제대로 계산한다.
         

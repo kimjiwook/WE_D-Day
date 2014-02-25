@@ -28,6 +28,8 @@
 		DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */; };
 		DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */; };
 		DE1E6B2918A0D23800B2C35E /* libMobileAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */; };
+		DE43ECAB18BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43ECA818BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m */; };
+		DE43ECAC18BC255100C88214 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43ECAA18BC255100C88214 /* UIScrollView+SVPullToRefresh.m */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
 		DE90C8D9187D081B008AB905 /* menu_dpuls.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8CC187D081B008AB905 /* menu_dpuls.png */; };
@@ -126,6 +128,11 @@
 		DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobileAdSDK.a; sourceTree = "<group>"; };
 		DE1E6B2818A0D23800B2C35E /* MobileAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileAdView.h; sourceTree = "<group>"; };
+		DE43ECA618BC255100C88214 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		DE43ECA718BC255100C88214 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		DE43ECA818BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		DE43ECA918BC255100C88214 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		DE43ECAA18BC255100C88214 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
 		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
@@ -315,6 +322,19 @@
 			path = Lib/NaverAdpost;
 			sourceTree = SOURCE_ROOT;
 		};
+		DE43ECA518BC255100C88214 /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				DE43ECA618BC255100C88214 /* SVPullToRefresh.h */,
+				DE43ECA718BC255100C88214 /* UIScrollView+SVInfiniteScrolling.h */,
+				DE43ECA818BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m */,
+				DE43ECA918BC255100C88214 /* UIScrollView+SVPullToRefresh.h */,
+				DE43ECAA18BC255100C88214 /* UIScrollView+SVPullToRefresh.m */,
+			);
+			name = SVPullToRefresh;
+			path = Lib/SVPullToRefresh;
+			sourceTree = SOURCE_ROOT;
+		};
 		DE8136CF184C10AC00C07144 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +502,7 @@
 		DED0BB05184846DF00F7564F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				DE43ECA518BC255100C88214 /* SVPullToRefresh */,
 				DE1E6B2618A0D23800B2C35E /* NaverAdpost */,
 				DEB13B6B189F53E300EE0568 /* MagicalRecord */,
 				DEB13BA7189F53E300EE0568 /* RNGridMenu */,
@@ -741,6 +762,7 @@
 				DEB13BBF189F53E300EE0568 /* MagicalRecord+iCloud.m in Sources */,
 				DEB13BC0189F53E300EE0568 /* MagicalRecord+Options.m in Sources */,
 				DEDDB64D183DBD2900D78B84 /* main.m in Sources */,
+				DE43ECAC18BC255100C88214 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				DEB13BAD189F53E300EE0568 /* NSNumber+MagicalDataImport.m in Sources */,
 				DEB13BAC189F53E300EE0568 /* NSEntityDescription+MagicalDataImport.m in Sources */,
 				DEB13BBC189F53E300EE0568 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
@@ -760,6 +782,7 @@
 				DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */,
 				DEB13BB7189F53E300EE0568 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				DEB13BBD189F53E300EE0568 /* MagicalRecord+Actions.m in Sources */,
+				DE43ECAB18BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				DEB13BAB189F53E300EE0568 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				DEB13BB6189F53E300EE0568 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				DEB13BB3189F53E300EE0568 /* NSManagedObject+MagicalFinders.m in Sources */,
@@ -945,6 +968,7 @@
 					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
 				PRODUCT_NAME = "물먹고 디데이";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -955,7 +979,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
@@ -964,6 +988,7 @@
 					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
 				PRODUCT_NAME = "물먹고 디데이";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

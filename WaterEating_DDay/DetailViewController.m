@@ -287,6 +287,12 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];  // 해제
+    if (indexPath.row == 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Edit" bundle:nil];
+        editViewController = [storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
+        //    [self presentViewController:addViewController animated:YES completion:Nil]; //ModalView
+        [self.navigationController pushViewController:editViewController animated:YES]; // PushView
+    }
 }
 
 @end

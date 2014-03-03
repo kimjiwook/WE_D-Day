@@ -211,8 +211,12 @@
 {
     [ddayTable setEditing:!ddayTable.editing animated:YES];
     if (ddayTable.editing) {
+        [self.navigationItem.leftBarButtonItem setTitle:@"완료"];
+        [self.navigationItem.rightBarButtonItem setEnabled:false];
         [badgeImage setFrame:CGRectMake(self.view.bounds.size.width-25-38, 0, 25, 25)];
     }else{
+        [self.navigationItem.leftBarButtonItem setTitle:@"편집"];
+        [self.navigationItem.rightBarButtonItem setEnabled:true];
         [badgeImage setFrame:CGRectMake(self.view.bounds.size.width-25, 0, 25, 25)];
     }
 }
@@ -222,7 +226,6 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Edit" bundle:nil];
     editViewController = [storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
-    
     //    [self presentViewController:addViewController animated:YES completion:Nil]; //ModalView
     [self.navigationController pushViewController:editViewController animated:YES]; // PushView
 }

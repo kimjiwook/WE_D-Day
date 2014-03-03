@@ -17,10 +17,9 @@
     DetailViewController *detailViewController;
 }
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;
+
 @property (nonatomic, strong) UIImageView *badgeImage;
-
 @property (nonatomic, strong) NSMutableArray *tableData;
-
 @property (nonatomic, assign) MobileAdView *adView;
 
 - (IBAction)editButtonAction:(id)sender;

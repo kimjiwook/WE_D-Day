@@ -91,6 +91,7 @@
 		DEE05F0F189F245C00FF2BDC /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE05F0E189F245C00FF2BDC /* menu.png */; };
 		DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */; };
 		DEF2FD6018C58AF5009C06F7 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */; };
+		DEF2FD6218C5AEDF009C06F7 /* detail_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF2FD6118C5AEDF009C06F7 /* detail_edit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,7 @@
 		DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddEdit.storyboard; path = WaterEating_DDay/AddEdit.storyboard; sourceTree = "<group>"; };
 		DEF2FD5D18C58AF5009C06F7 /* AddEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddEditViewController.h; path = WaterEating_DDay/AddEditViewController.h; sourceTree = "<group>"; };
 		DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddEditViewController.m; path = WaterEating_DDay/AddEditViewController.m; sourceTree = "<group>"; };
+		DEF2FD6118C5AEDF009C06F7 /* detail_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_edit.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 		DE06C6CE18618FEE004E28CD /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				DEF2FD6118C5AEDF009C06F7 /* detail_edit.png */,
 				DE06C6E718619452004E28CD /* WE_DDay_960.png */,
 				DE06C6E818619452004E28CD /* WE_DDay_1136.png */,
 				DE06C6DB18619274004E28CD /* Icon-60.png */,
@@ -720,6 +723,7 @@
 				DE90C8E3187D081B008AB905 /* menu_year_alpha.png in Resources */,
 				DE06C6EA18619452004E28CD /* WE_DDay_1136.png in Resources */,
 				DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */,
+				DEF2FD6218C5AEDF009C06F7 /* detail_edit.png in Resources */,
 				DE90C8E1187D081B008AB905 /* menu_year.png in Resources */,
 				DE90C8DC187D081B008AB905 /* menu_dpuls_alpha@2x.png in Resources */,
 				DE90C8DF187D081B008AB905 /* menu_minus_alpha.png in Resources */,

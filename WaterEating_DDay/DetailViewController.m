@@ -16,13 +16,11 @@
 @synthesize editDay;
 @synthesize detailTable;
 
-- (void)setting : (EditDay *) editDayCopy
-{
+- (void)setting : (EditDay *) editDayCopy {
     editDay = editDayCopy;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.navigationItem setTitle:editDay.title];
@@ -43,15 +41,13 @@
     [self createRNGridMenu];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 // 뱃지알림 설정
-- (IBAction)badgeSetting:(id)sender
-{
+- (IBAction)badgeSetting:(id)sender {
     NSArray *btnTitle = [[NSArray alloc] initWithObjects:BTN_OK,BTN_CANCEL, nil];
     if ([editDay.badge boolValue]) {
         // 뱃지 등록이 되어있는경우 '취소' 함
@@ -63,8 +59,7 @@
 }
 
 #pragma mark - Alert view delegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
         if ([alertView.message isEqualToString:MSG_NOTI_OK]) {
             [Entity_init badgeinit];
@@ -83,16 +78,14 @@
     }
 }
 
-- (void)createRNGridMenu
-{
+- (void)createRNGridMenu {
     UIButton *gridMenu = [[UIButton alloc] initWithFrame:CGRectMake(10, self.view.bounds.size.height-10-55, 55, 55)];
     [gridMenu setImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
     [gridMenu addTarget:self action:@selector(actionRNGridMenu:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:gridMenu];
 }
 
-- (IBAction)actionRNGridMenu:(id)sender
-{
+- (IBAction)actionRNGridMenu:(id)sender {
     [self showList];
 }
 
@@ -147,8 +140,7 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return 175;
     }
@@ -167,7 +159,7 @@
     NSArray *viewsToRemove = [cell.contentView subviews];
     for (UIView *v in viewsToRemove)
     {
-        if (v.tag == 1000 || v.tag == 1100 || v.tag == 1200 || v.tag == 2000 || v.tag == 3000) {
+        if (v.tag == 1000 || v.tag == 1100 || v.tag == 1200 || v.tag == 1300 ||v.tag == 2000 || v.tag == 3000) {
             [v removeFromSuperview];
         }
     }
@@ -179,7 +171,6 @@
         UILabel *days = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 165)];
         
         // 지난 날에 회색 처리 하기 위해 result 를 if 밖으로 제외
-        
         [days setText:[Date_Calendar stringResult:result]];
         [days setTextAlignment:NSTextAlignmentRight];
         [days setFont:[UIFont systemFontOfSize:55.0f]];
@@ -196,6 +187,12 @@
         [date setTag:1100];
         
         [cell.contentView addSubview:date];
+        
+        // ... 이미지 표시
+        UIImageView *detail_edit = [[UIImageView alloc] initWithFrame:CGRectMake(280, 160, 40, 10)];
+        [detail_edit setImage:[UIImage imageNamed:@"detail_edit.png"]];
+        [detail_edit setTag:1300];
+        [cell.contentView addSubview:detail_edit];
         
         if ([editDay.badge boolValue]) {
             UIImageView *badgeImage = [[UIImageView alloc] initWithFrame:CGRectMake(295, 0, 25, 25)];
@@ -275,7 +272,6 @@
             
         }
     }
-    
     [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
@@ -284,8 +280,7 @@
 #pragma mark - Table view delegate
 
 // Table view Cell Select Action
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];  // 해제
     if (indexPath.row == 0) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddEdit" bundle:nil];

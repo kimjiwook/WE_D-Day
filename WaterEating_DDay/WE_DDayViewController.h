@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EditViewController.h"
+#import "AddEditViewController.h"
 #import "DetailViewController.h"
 #import "MobileAdView.h"
 
 @interface WE_DDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MobileAdViewDelegate>
 {
-    EditViewController *editViewController;
+    AddEditViewController *addEditViewController;
     DetailViewController *detailViewController;
 }
 @property (nonatomic, strong) IBOutlet UITableView *ddayTable;

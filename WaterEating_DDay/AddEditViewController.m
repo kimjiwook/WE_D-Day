@@ -1,29 +1,40 @@
 //
-//  EditViewController.m
+//  AddEditViewController.m
 //  WaterEating_DDay
 //
-//  Created by JWMAC on 2013. 11. 22..
-//  Copyright (c) 2013년 KimJiWook. All rights reserved.
+//  Created by JWMAC on 2014. 3. 4..
+//  Copyright (c) 2014년 KimJiWook. All rights reserved.
 //
 
-#import "EditViewController.h"
+#import "AddEditViewController.h"
 
-@interface EditViewController ()
+@interface AddEditViewController ()
 
 @end
 
-@implementation EditViewController
+@implementation AddEditViewController
+@synthesize editDay;
 @synthesize oneDayCheckSwitch;
 @synthesize addTable;
 @synthesize datePicker;
 @synthesize dayLabel;
 @synthesize subJectTextField;
 
+- (void)setting : (EditDay *) editDayCopy
+{
+    if (editDayCopy == nil) {
+//        editDay = [EditDay MR_createEntity];
+        [self.navigationItem setTitle:@"D-Day 추가"];
+    }else{
+        editDay = editDayCopy;
+        [self.navigationItem setTitle:@"D-Day 수정"];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self.navigationItem setTitle:@"새로운 D-Day"];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] init]];
     [self.navigationItem.rightBarButtonItem setTitle:@"저장"];
     [self.navigationItem.rightBarButtonItem setAction:@selector(daySave:)];
@@ -54,25 +65,27 @@
         NSArray *btnTitle = [[NSArray alloc] initWithObjects:BTN_OK, nil];
         [AlertViewCreate alertTitle:TITLE_NOTI Message:MSG_NOTI_WARNING Create:btnTitle set:self];
     }else{
-        EditDay *editDay = [EditDay MR_createEntity]; // Entitiy 생성
-        
         NSDate *dateSelected = self.datePicker.date;
         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
         [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
+        
+        if (editDay == nil) {
+            editDay = [EditDay MR_createEntity];
+        }
         
         // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
         [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
         [editDay setDate:[Date_Conversion dateToString:dateSelected]]; // 선택한 날짜
         [editDay setTitle:[subJectTextField text]]; // 제목
         [editDay setPlusone:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
-        [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
-        // 여기에선 Plusone 값 제대로 저장이됨
-        NSLog(@"plusOne : %d , %@",oneDayCheckSwitch.on,[NSNumber numberWithBool:oneDayCheckSwitch.on]);
-        
+        if (editDay == nil) {
+            // 새로 생성될 때만
+            [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
+        }
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
         
-        [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 
@@ -107,6 +120,12 @@
     }else{
         dayLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
         dayLabel.text = @"D+0 일";
+        if (editDay != nil) {
+            NSInteger result = [Date_Calendar stringDate:
+                                [Date_Conversion dateToString: self.datePicker.date] plusOne:oneDayCheckSwitch.on];
+            
+            dayLabel.text = [Date_Calendar stringResult:result];
+        }
         [dayLabel setFont:[UIFont systemFontOfSize:20.0f]];
         [dayLabel setTextAlignment:NSTextAlignmentCenter];
         return dayLabel;
@@ -136,6 +155,9 @@
         [subJectTextField setTextAlignment:NSTextAlignmentRight];
         [subJectTextField setFont:[UIFont systemFontOfSize:18.0f]];
         [subJectTextField setPlaceholder:@"제목을 넣어주세요."];
+        if (editDay != nil) {
+            [subJectTextField setText:editDay.title];
+        }
         [cell.contentView addSubview:subJectTextField];
     }
     else if(indexPath.section == 1) {
@@ -148,6 +170,9 @@
             
             oneDayCheckSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(251, 9, 49, 31)];
             [oneDayCheckSwitch setOn:false];
+            if(editDay != nil){
+                [oneDayCheckSwitch setOn:[editDay.plusone boolValue]];
+            }
             [oneDayCheckSwitch addTarget:self action:@selector(onDayCheckAction:) forControlEvents:UIControlEventValueChanged];
             [cell.contentView addSubview:oneDayCheckSwitch];
             
@@ -156,6 +181,9 @@
             [datePicker setDatePickerMode:UIDatePickerModeDate];
             [datePicker setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"Korean"]];
             [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+            if (editDay != nil) {
+                [datePicker setDate:[Date_Conversion stringToDate:editDay.date]];
+            }
             [cell.contentView addSubview:datePicker];
         }
     }
@@ -189,5 +217,6 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 
 @end

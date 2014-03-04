@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "EditDay.h"
 #import "RNGridMenu.h"
-#import "EditViewController.h"
+#import "AddEditViewController.h"
 
 @interface DetailViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, RNGridMenuDelegate>
 {
     NSInteger tableViewType;
-    EditViewController *editViewController;
+    AddEditViewController *addEditViewController;
 }
 @property (nonatomic, readonly) EditDay *editDay;
 @property (nonatomic, strong) IBOutlet UITableView *detailTable;

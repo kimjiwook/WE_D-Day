@@ -224,10 +224,11 @@
 // Table view add mode
 - (IBAction)addButtonAction:(id)sender
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Edit" bundle:nil];
-    editViewController = [storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddEdit" bundle:nil];
+    addEditViewController = [storyboard instantiateViewControllerWithIdentifier:@"AddEditViewController"];
+    [addEditViewController setting:nil];
     //    [self presentViewController:addViewController animated:YES completion:Nil]; //ModalView
-    [self.navigationController pushViewController:editViewController animated:YES]; // PushView
+    [self.navigationController pushViewController:addEditViewController animated:YES]; // PushView
 }
 
 @end

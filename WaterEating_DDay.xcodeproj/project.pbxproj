@@ -89,8 +89,8 @@
 		DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */; };
 		DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB658183DBD2900D78B84 /* Images.xcassets */; };
 		DEE05F0F189F245C00FF2BDC /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE05F0E189F245C00FF2BDC /* menu.png */; };
-		DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEECA31A183F34EC0068ABAD /* EditViewController.m */; };
-		DEECA320183F36290068ABAD /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEECA31F183F36290068ABAD /* Edit.storyboard */; };
+		DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */; };
+		DEF2FD6018C58AF5009C06F7 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,9 +231,9 @@
 		DEDDB658183DBD2900D78B84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DEDDB65F183DBD2900D78B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DEE05F0E189F245C00FF2BDC /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../Icon/menu.png; sourceTree = "<group>"; };
-		DEECA319183F34EC0068ABAD /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
-		DEECA31A183F34EC0068ABAD /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
-		DEECA31F183F36290068ABAD /* Edit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
+		DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddEdit.storyboard; path = WaterEating_DDay/AddEdit.storyboard; sourceTree = "<group>"; };
+		DEF2FD5D18C58AF5009C06F7 /* AddEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddEditViewController.h; path = WaterEating_DDay/AddEditViewController.h; sourceTree = "<group>"; };
+		DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddEditViewController.m; path = WaterEating_DDay/AddEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,8 +491,8 @@
 		DED0BB04184846C800F7564F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DEF2FD5618C55633009C06F7 /* AddEditView */,
 				DE8136CF184C10AC00C07144 /* DetailView */,
-				DEECA31D183F350E0068ABAD /* EditView */,
 				DEECA31C183F34F80068ABAD /* MainView */,
 			);
 			name = Views;
@@ -595,17 +595,6 @@
 			path = WaterEating_DDay;
 			sourceTree = "<group>";
 		};
-		DEECA31D183F350E0068ABAD /* EditView */ = {
-			isa = PBXGroup;
-			children = (
-				DEECA319183F34EC0068ABAD /* EditViewController.h */,
-				DEECA31A183F34EC0068ABAD /* EditViewController.m */,
-				DEECA31F183F36290068ABAD /* Edit.storyboard */,
-			);
-			name = EditView;
-			path = WaterEating_DDay;
-			sourceTree = "<group>";
-		};
 		DEECA31E183F351C0068ABAD /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +602,16 @@
 				DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DEF2FD5618C55633009C06F7 /* AddEditView */ = {
+			isa = PBXGroup;
+			children = (
+				DEF2FD5D18C58AF5009C06F7 /* AddEditViewController.h */,
+				DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */,
+				DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */,
+			);
+			name = AddEditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -718,7 +717,6 @@
 				DE06C6E318619274004E28CD /* Icon-60@2x.png in Resources */,
 				DE0E554B183E09BE00A78CB7 /* background_test.png in Resources */,
 				DE90C8DA187D081B008AB905 /* menu_dpuls@2x.png in Resources */,
-				DEECA320183F36290068ABAD /* Edit.storyboard in Resources */,
 				DE90C8E3187D081B008AB905 /* menu_year_alpha.png in Resources */,
 				DE06C6EA18619452004E28CD /* WE_DDay_1136.png in Resources */,
 				DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */,
@@ -735,6 +733,7 @@
 				DE933B12186036A7006E0B1B /* alarm.png in Resources */,
 				DE90C8E0187D081B008AB905 /* menu_minus_alpha@2x.png in Resources */,
 				DE06C6E118619274004E28CD /* Icon-60.png in Resources */,
+				DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */,
 				DE06C6E418619274004E28CD /* Icon-Small@2x.png in Resources */,
 				DE8136DA184C130900C07144 /* Detail.storyboard in Resources */,
 				DE06C6E918619452004E28CD /* WE_DDay_960.png in Resources */,
@@ -766,6 +765,7 @@
 				DEB13BAD189F53E300EE0568 /* NSNumber+MagicalDataImport.m in Sources */,
 				DEB13BAC189F53E300EE0568 /* NSEntityDescription+MagicalDataImport.m in Sources */,
 				DEB13BBC189F53E300EE0568 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
+				DEF2FD6018C58AF5009C06F7 /* AddEditViewController.m in Sources */,
 				DED48EDA185FDEE000ECA59B /* Entity+init.m in Sources */,
 				DEB13BB4189F53E300EE0568 /* NSManagedObject+MagicalRecord.m in Sources */,
 				DEB13BB0189F53E300EE0568 /* NSString+MagicalDataImport.m in Sources */,
@@ -779,7 +779,6 @@
 				DED48ED7185FD8C500ECA59B /* AlertViewCreate.m in Sources */,
 				DEB13BAA189F53E300EE0568 /* MagicalImportFunctions.m in Sources */,
 				DE143116185ED3E5000E8937 /* EditDay.m in Sources */,
-				DEECA31B183F34EC0068ABAD /* EditViewController.m in Sources */,
 				DEB13BB7189F53E300EE0568 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				DEB13BBD189F53E300EE0568 /* MagicalRecord+Actions.m in Sources */,
 				DE43ECAB18BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m in Sources */,

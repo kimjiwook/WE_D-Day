@@ -70,19 +70,16 @@
         // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
         [calendar rangeOfUnit:NSDayCalendarUnit startDate:&dateSelected interval:Nil forDate:dateSelected];
         
-        if (editDay == nil) {
+        // editDay 가 nil 일시 editDay init, index, badge 기본 셋팅
+        if(editDay == nil){
             editDay = [EditDay MR_createEntity];
+            [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
+            [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
         }
-        
-        // Index 는 10 부터 시작을 하며, 10씩 증가를 한다.
-        [editDay setIndex:[NSNumber numberWithInteger:([[EditDay MR_findAll] count] * 10)]];
+
         [editDay setDate:[Date_Conversion dateToString:dateSelected]]; // 선택한 날짜
         [editDay setTitle:[subJectTextField text]]; // 제목
         [editDay setPlusone:[NSNumber numberWithBool:oneDayCheckSwitch.on]]; // 시작일 +1일
-        if (editDay == nil) {
-            // 새로 생성될 때만
-            [editDay setBadge:[NSNumber numberWithBool:NO]]; // 뱃지 생성당시는 NO
-        }
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];// 저장
         
         [self.navigationController popToRootViewControllerAnimated:YES];

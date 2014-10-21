@@ -28,6 +28,8 @@
 		DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */; };
 		DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */; };
 		DE1E6B2918A0D23800B2C35E /* libMobileAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */; };
+		DE3A504F19F647C3000AB325 /* DDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A504E19F647C3000AB325 /* DDayViewController.swift */; };
+		DE3A505319F64C4E000AB325 /* swift_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3A505219F64C4E000AB325 /* swift_Main.storyboard */; };
 		DE43ECAB18BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43ECA818BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m */; };
 		DE43ECAC18BC255100C88214 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43ECAA18BC255100C88214 /* UIScrollView+SVPullToRefresh.m */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
@@ -129,6 +131,9 @@
 		DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobileAdSDK.a; sourceTree = "<group>"; };
 		DE1E6B2818A0D23800B2C35E /* MobileAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileAdView.h; sourceTree = "<group>"; };
+		DE3A504D19F647C2000AB325 /* WaterEating_DDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaterEating_DDay-Bridging-Header.h"; sourceTree = "<group>"; };
+		DE3A504E19F647C3000AB325 /* DDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDayViewController.swift; sourceTree = "<group>"; };
+		DE3A505219F64C4E000AB325 /* swift_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = swift_Main.storyboard; sourceTree = "<group>"; };
 		DE43ECA618BC255100C88214 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
 		DE43ECA718BC255100C88214 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		DE43ECA818BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
@@ -578,6 +583,7 @@
 		DEDDB647183DBD2900D78B84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DE3A504D19F647C2000AB325 /* WaterEating_DDay-Bridging-Header.h */,
 				DE0E5549183E09B700A78CB7 /* images */,
 				DEDDB648183DBD2900D78B84 /* WaterEating_DDay-Info.plist */,
 				DEDDB649183DBD2900D78B84 /* InfoPlist.strings */,
@@ -593,6 +599,8 @@
 				DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */,
 				DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */,
 				DEDDB652183DBD2900D78B84 /* D_Day.storyboard */,
+				DE3A504E19F647C3000AB325 /* DDayViewController.swift */,
+				DE3A505219F64C4E000AB325 /* swift_Main.storyboard */,
 			);
 			name = MainView;
 			path = WaterEating_DDay;
@@ -739,6 +747,7 @@
 				DE06C6E118619274004E28CD /* Icon-60.png in Resources */,
 				DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */,
 				DE06C6E418619274004E28CD /* Icon-Small@2x.png in Resources */,
+				DE3A505319F64C4E000AB325 /* swift_Main.storyboard in Resources */,
 				DE8136DA184C130900C07144 /* Detail.storyboard in Resources */,
 				DE06C6E918619452004E28CD /* WE_DDay_960.png in Resources */,
 			);
@@ -771,6 +780,7 @@
 				DEB13BBC189F53E300EE0568 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				DEF2FD6018C58AF5009C06F7 /* AddEditViewController.m in Sources */,
 				DED48EDA185FDEE000ECA59B /* Entity+init.m in Sources */,
+				DE3A504F19F647C3000AB325 /* DDayViewController.swift in Sources */,
 				DEB13BB4189F53E300EE0568 /* NSManagedObject+MagicalRecord.m in Sources */,
 				DEB13BB0189F53E300EE0568 /* NSString+MagicalDataImport.m in Sources */,
 				DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */,
@@ -961,17 +971,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
 				PRODUCT_NAME = "물먹고 디데이";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaterEating_DDay/WaterEating_DDay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -981,17 +995,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";
 				INFOPLIST_FILE = "WaterEating_DDay/WaterEating_DDay-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
 				PRODUCT_NAME = "물먹고 디데이";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaterEating_DDay/WaterEating_DDay-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

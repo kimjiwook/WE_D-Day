@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [MagicalRecord setupAutoMigratingCoreDataStack];
+//    [MagicalRecord setupAutoMigratingCoreDataStack];
     // 시작에 앞서 MagicalRecord setup 시켜준다.
     
     operationQueue = [[NSOperationQueue alloc]init];
@@ -25,7 +25,7 @@
     // Queue의 생성과 하나씩 실행되게 설정
     // 설정후 큐의 작업을 모두 취소 시킨다.
     
-    application.applicationIconBadgeNumber = [Entity_init badge];
+//    application.applicationIconBadgeNumber = [Entity_init badge];
     // 표시할 뱃지
 
     return YES;

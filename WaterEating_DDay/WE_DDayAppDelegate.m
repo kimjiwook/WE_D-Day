@@ -25,11 +25,14 @@
     // Queue의 생성과 하나씩 실행되게 설정
     // 설정후 큐의 작업을 모두 취소 시킨다.
     
-    
-//    application.applicationIconBadgeNumber = 5;
-//    application.applicationIconBadgeNumber = [Entity_init badge];
-    // 표시할 뱃지
-    [application setApplicationIconBadgeNumber:[Entity_init badge]];
+    NSLog(@"%@",[[UIDevice currentDevice] systemVersion]);
+    if ([[UIDevice currentDevice] systemVersion].doubleValue >= 8.0) {
+        NSLog(@"8.0 이상만");
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeAlert categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    }
+//    ios 8 이상과 이하로 나누어서 퍼미션 문제를 해결해야함.
+    application.applicationIconBadgeNumber = [Entity_init badge];
 
     return YES;
 }

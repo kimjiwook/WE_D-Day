@@ -18,6 +18,7 @@
 #import "SVPullToRefresh.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
+#import "CoreData+MagicalRecord.h"
 
 #import "MobileAdView.h"
 

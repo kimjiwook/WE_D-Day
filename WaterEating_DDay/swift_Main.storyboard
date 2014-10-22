@@ -8,6 +8,7 @@
         <!--Day View Controller-->
         <scene sceneID="CCy-hw-CuJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skt-Yk-YNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DDayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZZN-Za-HcC" customClass="DDayViewController" customModule="_______________" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Dd-PI-l0h"/>
@@ -17,23 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-CR-Dnh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WE_DDay_Icon_1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2D-QZ-YKt">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="FnB-ep-XUk"/>
+                                    <constraint firstAttribute="width" constant="250" id="VPx-YP-uRc"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-Zi-Ipr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTwo" textLabel="zne-zg-lOR" detailTextLabel="a2R-sn-bvn" rowHeight="60" style="IBUITableViewCellStyleValue1" id="aPS-Zg-O7h">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTwo" textLabel="ZUU-os-pdM" detailTextLabel="Cvh-bk-E47" rowHeight="60" style="IBUITableViewCellStyleValue1" id="iMW-9H-54w">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aPS-Zg-O7h" id="UdF-lh-nhL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iMW-9H-54w" id="A2I-9q-9qG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zne-zg-lOR">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZUU-os-pdM">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a2R-sn-bvn">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cvh-bk-E47">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,29 +51,35 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="ZZN-Za-HcC" id="lsB-Ty-sI9"/>
-                                    <outlet property="delegate" destination="ZZN-Za-HcC" id="1ad-IK-kVm"/>
-                                </connections>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="jSn-CR-Dnh" secondAttribute="bottom" id="MY6-5l-Kse"/>
-                            <constraint firstItem="jSn-CR-Dnh" firstAttribute="leading" secondItem="bzc-Wg-07s" secondAttribute="leading" id="SlW-Pe-kcr"/>
-                            <constraint firstAttribute="trailing" secondItem="jSn-CR-Dnh" secondAttribute="trailing" id="khW-3Q-a3c"/>
-                            <constraint firstItem="jSn-CR-Dnh" firstAttribute="top" secondItem="bzc-Wg-07s" secondAttribute="top" id="rXB-Oy-9AX"/>
+                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="top" secondItem="4Dd-PI-l0h" secondAttribute="bottom" id="8sL-vQ-MIN"/>
+                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="leading" secondItem="bzc-Wg-07s" secondAttribute="leading" id="BjX-w2-Mnv"/>
+                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="bottom" secondItem="6CP-8M-Kbc" secondAttribute="top" id="WmE-tR-FVj"/>
+                            <constraint firstAttribute="centerY" secondItem="K2D-QZ-YKt" secondAttribute="centerY" id="a1h-MM-e0E"/>
+                            <constraint firstAttribute="centerX" secondItem="K2D-QZ-YKt" secondAttribute="centerX" id="nr5-NY-Rvj"/>
+                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="centerX" secondItem="K2D-QZ-YKt" secondAttribute="centerX" id="szM-71-3ZW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xca-Dk-GLI">
-                        <barButtonItem key="leftBarButtonItem" title="편집" id="czZ-VE-awb"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Bi-7s-vPg"/>
+                        <barButtonItem key="leftBarButtonItem" title="편집" id="czZ-VE-awb">
+                            <connections>
+                                <action selector="editButtonAction:" destination="ZZN-Za-HcC" id="K7I-7h-KMH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Bi-7s-vPg">
+                            <connections>
+                                <action selector="addButtonAction:" destination="ZZN-Za-HcC" id="Z8X-46-01h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ddayTable" destination="jSn-CR-Dnh" id="odg-sa-nnF"/>
+                        <outlet property="ddayTable" destination="gB2-Zi-Ipr" id="GVW-3h-Ghz"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="skt-Yk-YNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3651" y="575"/>
         </scene>
@@ -107,4 +121,7 @@
             <point key="canvasLocation" x="2027" y="575"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WE_DDay_Icon_1024.png" width="1024" height="1024"/>
+    </resources>
 </document>

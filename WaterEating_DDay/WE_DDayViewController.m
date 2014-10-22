@@ -110,7 +110,9 @@
     NSArray *viewsToRemove = [cell.contentView subviews];
     for (UIView *v in viewsToRemove)
     {
-        [v removeFromSuperview];
+        if(v.tag == 3000){
+            [v removeFromSuperview];
+        }
     }
     
     [cell setBackgroundColor:[UIColor colorWithWhite:1.0f alpha:0.5f]];

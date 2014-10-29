@@ -986,7 +986,7 @@
 					"$(inherited)",
 					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
-				PRODUCT_NAME = "물먹고 디데이";
+				PRODUCT_NAME = "물먹고 디데이";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WaterEating_DDay/WaterEating_DDay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1010,7 +1010,7 @@
 					"$(inherited)",
 					"${SOURCE_ROOT}/Lib/NaverAdpost",
 				);
-				PRODUCT_NAME = "물먹고 디데이";
+				PRODUCT_NAME = "물먹고 디데이";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WaterEating_DDay/WaterEating_DDay-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;

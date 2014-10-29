@@ -25,9 +25,9 @@
     // Queue의 생성과 하나씩 실행되게 설정
     // 설정후 큐의 작업을 모두 취소 시킨다.
     
-    NSLog(@"%@",[[UIDevice currentDevice] systemVersion]);
+//    NSLog(@"%@",[[UIDevice currentDevice] systemVersion]);
     if ([[UIDevice currentDevice] systemVersion].doubleValue >= 8.0) {
-        NSLog(@"8.0 이상만");
+//        NSLog(@"8.0 이상만");
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeAlert categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     }
@@ -38,17 +38,17 @@
 }
 
 // 연습용 노티
-- (void)presentNotification
-{
-    NSLog(@"로컬노티 확인");
-    for (int i = 1; i <= 365; i++) {
-        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:i];
-        localNotification.applicationIconBadgeNumber = i;
-        localNotification.userInfo = [NSDictionary dictionaryWithObject:@"Test" forKey:@"key"];
-        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-    }
-}
+//- (void)presentNotification
+//{
+//    NSLog(@"로컬노티 확인");
+//    for (int i = 1; i <= 365; i++) {
+//        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:i];
+//        localNotification.applicationIconBadgeNumber = i;
+//        localNotification.userInfo = [NSDictionary dictionaryWithObject:@"Test" forKey:@"key"];
+//        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+//    }
+//}
 
 // application delegate method
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification

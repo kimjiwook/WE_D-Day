@@ -29,11 +29,8 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func createAdpost() {
-//        NSLog("\(self.tabBarController?.tabBarItem.)")
-
-        
         adView = MobileAdView.sharedMobileAdView()
-        adView.frame = CGRectMake(0, self.view.frame.size.height-50-49, self.view.frame.size.width, 50)
+        adView.frame = CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50)
         adView.superViewController = self
         adView.channelId = "mios_609d1408867643cbb33f3ccc006dfacd"
         adView.isTest = false
@@ -66,6 +63,10 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -181,7 +182,7 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func addButtonAction(sender: AnyObject) {
         let storyboard:UIStoryboard = UIStoryboard(name: "AddEdit", bundle: nil)
         let addEditViewController:AddEditViewController = storyboard.instantiateViewControllerWithIdentifier("AddEditViewController") as AddEditViewController
-        
+        addEditViewController.setting(nil)
         self.navigationController?.pushViewController(addEditViewController, animated: true)
     }
 }

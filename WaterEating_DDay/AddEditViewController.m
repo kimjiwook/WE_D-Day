@@ -22,10 +22,8 @@
 
 - (void)setting : (EditDay *) editDayCopy
 {
-    if (editDayCopy == nil) {
-//        editDay = [EditDay MR_createEntity];
-        [self.navigationItem setTitle:@"D-Day 추가"];
-    }else{
+    [self.navigationItem setTitle:@"D-Day 추가"];
+    if (editDayCopy != nil) {
         editDay = editDayCopy;
         [self.navigationItem setTitle:@"D-Day 수정"];
     }

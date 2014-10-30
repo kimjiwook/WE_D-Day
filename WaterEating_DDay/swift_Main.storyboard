@@ -8,7 +8,7 @@
         <!--Day View Controller-->
         <scene sceneID="CCy-hw-CuJ">
             <objects>
-                <viewController storyboardIdentifier="DDayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZZN-Za-HcC" customClass="DDayViewController" customModule="_______________" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DDayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZZN-Za-HcC" customClass="DDayViewController" customModule="물먹고_디데이" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Dd-PI-l0h"/>
                         <viewControllerLayoutGuide type="bottom" id="6CP-8M-Kbc"/>
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="250" id="VPx-YP-uRc"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-Zi-Ipr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-Zi-Ipr">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>

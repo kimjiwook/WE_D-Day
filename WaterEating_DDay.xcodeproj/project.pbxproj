@@ -32,6 +32,8 @@
 		DE3A505319F64C4E000AB325 /* swift_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3A505219F64C4E000AB325 /* swift_Main.storyboard */; };
 		DE43ECAB18BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43ECA818BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m */; };
 		DE43ECAC18BC255100C88214 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43ECAA18BC255100C88214 /* UIScrollView+SVPullToRefresh.m */; };
+		DE7CDCF11A00C2F700807BCC /* AddEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7CDCF01A00C2F700807BCC /* AddEditingViewController.swift */; };
+		DE7CDCF41A00CA2800807BCC /* AddEditing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7CDCF31A00CA2800807BCC /* AddEditing.storyboard */; };
 		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
 		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
 		DE90C8D9187D081B008AB905 /* menu_dpuls.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8CC187D081B008AB905 /* menu_dpuls.png */; };
@@ -140,6 +142,8 @@
 		DE43ECA818BC255100C88214 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		DE43ECA918BC255100C88214 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		DE43ECAA18BC255100C88214 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		DE7CDCF01A00C2F700807BCC /* AddEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEditingViewController.swift; path = WaterEating_DDay/AddEditingViewController.swift; sourceTree = "<group>"; };
+		DE7CDCF31A00CA2800807BCC /* AddEditing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddEditing.storyboard; path = WaterEating_DDay/AddEditing.storyboard; sourceTree = "<group>"; };
 		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
 		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
 		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
@@ -624,6 +628,8 @@
 				DEF2FD5D18C58AF5009C06F7 /* AddEditViewController.h */,
 				DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */,
 				DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */,
+				DE7CDCF01A00C2F700807BCC /* AddEditingViewController.swift */,
+				DE7CDCF31A00CA2800807BCC /* AddEditing.storyboard */,
 			);
 			name = AddEditView;
 			sourceTree = "<group>";
@@ -748,6 +754,7 @@
 				DE06C6E618619274004E28CD /* Icon-Spotlight-40.png in Resources */,
 				DE933B12186036A7006E0B1B /* alarm.png in Resources */,
 				DE90C8E0187D081B008AB905 /* menu_minus_alpha@2x.png in Resources */,
+				DE7CDCF41A00CA2800807BCC /* AddEditing.storyboard in Resources */,
 				DE06C6E118619274004E28CD /* Icon-60.png in Resources */,
 				DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */,
 				DE06C6E418619274004E28CD /* Icon-Small@2x.png in Resources */,
@@ -811,6 +818,7 @@
 				DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */,
 				DEB13BB8189F53E300EE0568 /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				DEB13BAE189F53E300EE0568 /* NSObject+MagicalDataImport.m in Sources */,
+				DE7CDCF11A00C2F700807BCC /* AddEditingViewController.swift in Sources */,
 				DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */,
 				DEB13BB1189F53E300EE0568 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */,

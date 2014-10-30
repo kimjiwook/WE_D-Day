@@ -74,9 +74,13 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.ddayTable.dequeueReusableCellWithIdentifier("CellTwo") as UITableViewCell
+        var cell:UITableViewCell? = self.ddayTable.dequeueReusableCellWithIdentifier("CellTwo") as? UITableViewCell
+        
+        if (cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CellTwo")
+        }
      
-        var viewToRemove:NSArray! = cell.contentView.subviews
+        var viewToRemove:NSArray! = cell!.contentView.subviews
         var v:UIView?
         for v in viewToRemove {
             if v.tag == 3000 {
@@ -86,28 +90,28 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         var editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as EditDay
         
-        cell.textLabel.text = editDay.title
-        cell.textLabel.font = UIFont.systemFontOfSize(20.0)
-        cell.textLabel.tag = 1000+indexPath.row
-        cell.backgroundColor = UIColor.clearColor()
+        cell!.textLabel.text = editDay.title
+        cell!.textLabel.font = UIFont.systemFontOfSize(20.0)
+        cell!.textLabel.tag = 1000+indexPath.row
+        cell!.backgroundColor = UIColor.clearColor()
         
         var result = Date_Calendar.stringDate(editDay.date, plusOne: editDay.plusone.boolValue)
         
-        cell.detailTextLabel?.text = Date_Calendar.stringResult(result)
-        cell.detailTextLabel?.backgroundColor = UIColor.clearColor()
-        cell.detailTextLabel?.textAlignment = NSTextAlignment.Right
-        cell.detailTextLabel?.font = UIFont.systemFontOfSize(20.0)
-        cell.detailTextLabel?.textColor = UIColor.blackColor()
-        cell.detailTextLabel?.tag = 2000+indexPath.row
+        cell!.detailTextLabel?.text = Date_Calendar.stringResult(result)
+        cell!.detailTextLabel?.backgroundColor = UIColor.clearColor()
+        cell!.detailTextLabel?.textAlignment = NSTextAlignment.Right
+        cell!.detailTextLabel?.font = UIFont.systemFontOfSize(20.0)
+        cell!.detailTextLabel?.textColor = UIColor.blackColor()
+        cell!.detailTextLabel?.tag = 2000+indexPath.row
         
         if (editDay.badge.boolValue) {
             badgeImage = UIImageView(frame: CGRectMake(self.view.bounds.size.width-25, 0, 25, 25))
             var image:UIImage = UIImage(named: "noti.png")!
             badgeImage?.image = image
             badgeImage?.tag = 3000
-            cell.contentView.addSubview(badgeImage!)
+            cell!.contentView.addSubview(badgeImage!)
         }
-        return cell
+        return cell!
     }
     
 // Table view delegate
@@ -180,9 +184,14 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // Table view add mode
     @IBAction func addButtonAction(sender: AnyObject) {
-        let storyboard:UIStoryboard = UIStoryboard(name: "AddEdit", bundle: nil)
-        let addEditViewController:AddEditViewController = storyboard.instantiateViewControllerWithIdentifier("AddEditViewController") as AddEditViewController
-        addEditViewController.setting(nil)
-        self.navigationController?.pushViewController(addEditViewController, animated: true)
+//        let storyboard:UIStoryboard = UIStoryboard(name: "AddEdit", bundle: nil)
+//        let addEditViewController:AddEditViewController = storyboard.instantiateViewControllerWithIdentifier("AddEditViewController") as AddEditViewController
+//        addEditViewController.setting(nil)
+//        self.navigationController?.pushViewController(addEditViewController, animated: true)
+        
+        let storyboard:UIStoryboard = UIStoryboard(name: "AddEditing", bundle: nil)
+        let addEditingViewController:AddEditingViewContoller = storyboard.instantiateViewControllerWithIdentifier("AddEditingViewContoller") as AddEditingViewContoller
+        addEditingViewController.setting(nil)
+        self.navigationController?.pushViewController(addEditingViewController, animated: true)
     }
 }

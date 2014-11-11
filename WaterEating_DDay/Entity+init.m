@@ -89,7 +89,8 @@
         [appDelegate.operationQueue cancelAllOperations];   // 큐를 비우고
         [appDelegate.operationQueue setSuspended:NO];       // 큐를 시작한다.
         
-        for (int i = 1; i <= 365; i++) {
+        // 로컬노티 최대 등록 제한이 64개
+        for (int i = 1; i <= 64; i++) {
             [appDelegate.operationQueue addOperationWithBlock:^{
                 NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
                 [dateFormat setDateFormat:@"yyyy-MM-dd"];
@@ -121,6 +122,10 @@
                 
                 UILocalNotification *localNotification = [[UILocalNotification alloc] init];
                 localNotification.fireDate = daysDate;
+                if (i%20==0) {
+                    localNotification.alertBody = @"디데이 접속해 날짜를 최신화 해주세요.";
+                    localNotification.soundName = UILocalNotificationDefaultSoundName;
+                }
                 localNotification.applicationIconBadgeNumber = result;
                 [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 //                NSLog(@"푸시 알림 예약 값 등록완료 : %ld",(long)result);

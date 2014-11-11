@@ -5,7 +5,9 @@
 //  Created by kimjiwook on 2014. 10. 29..
 //  Copyright (c) 2014년 KimJiWook. All rights reserved.
 //
-
+// 2014년 11월 11일 오류 내용 확인 결과
+// iOS 7 에서 네비게이션 부분 오류
+// iOS 8 에서 textfield 오류
 import Foundation
 import UIKit
 

@@ -4,7 +4,7 @@
 //
 //  Created by kimjiwook on 2014. 10. 21..
 //  Copyright (c) 2014년 KimJiWook. All rights reserved.
-//
+// 2014년 11월 11일 기본 페이지만 오류 내역 변경
 
 import Foundation
 
@@ -184,14 +184,17 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // Table view add mode
     @IBAction func addButtonAction(sender: AnyObject) {
-//        let storyboard:UIStoryboard = UIStoryboard(name: "AddEdit", bundle: nil)
-//        let addEditViewController:AddEditViewController = storyboard.instantiateViewControllerWithIdentifier("AddEditViewController") as AddEditViewController
-//        addEditViewController.setting(nil)
-//        self.navigationController?.pushViewController(addEditViewController, animated: true)
+        let storyboard:UIStoryboard = UIStoryboard(name: "AddEdit", bundle: nil)
+        let addEditViewController:AddEditViewController = storyboard.instantiateViewControllerWithIdentifier("AddEditViewController") as AddEditViewController
+        addEditViewController.setting(nil)
+        self.navigationController?.pushViewController(addEditViewController, animated: true)
         
-        let storyboard:UIStoryboard = UIStoryboard(name: "AddEditing", bundle: nil)
-        let addEditingViewController:AddEditingViewContoller = storyboard.instantiateViewControllerWithIdentifier("AddEditingViewContoller") as AddEditingViewContoller
-        addEditingViewController.setting(nil)
-        self.navigationController?.pushViewController(addEditingViewController, animated: true)
+        // 아래 Swift 작성된 페이지에서 오류 발견 급하게 업로드를 위하여
+        // 첫 페이지만 작성후 진행
+        
+//        let storyboard:UIStoryboard = UIStoryboard(name: "AddEditing", bundle: nil)
+//        let addEditingViewController:AddEditingViewContoller = storyboard.instantiateViewControllerWithIdentifier("AddEditingViewContoller") as AddEditingViewContoller
+//        addEditingViewController.setting(nil)
+//        self.navigationController?.pushViewController(addEditingViewController, animated: true)
     }
 }

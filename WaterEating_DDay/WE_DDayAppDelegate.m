@@ -24,16 +24,14 @@
     [operationQueue setSuspended:NO];       // 큐를 시작한다.
     // Queue의 생성과 하나씩 실행되게 설정
     // 설정후 큐의 작업을 모두 취소 시킨다.
-    
-//    NSLog(@"%@",[[UIDevice currentDevice] systemVersion]);
+
+    //    ios 8 이상과 이하로 나누어서 퍼미션 문제를 해결해야함.
     if ([[UIDevice currentDevice] systemVersion].doubleValue >= 8.0) {
-//        NSLog(@"8.0 이상만");
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeAlert categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     }
-//    ios 8 이상과 이하로 나누어서 퍼미션 문제를 해결해야함.
     application.applicationIconBadgeNumber = [Entity_init badge];
-
+    
     return YES;
 }
 
@@ -41,10 +39,13 @@
 //- (void)presentNotification
 //{
 //    NSLog(@"로컬노티 확인");
-//    for (int i = 1; i <= 365; i++) {
+//    for (int i = 1; i <= 3; i++) {
 //        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
 //        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:i];
 //        localNotification.applicationIconBadgeNumber = i;
+//        localNotification.alertBody = @"디데이 접속해 날짜를 최신화 해주세요.";
+//        localNotification.soundName = UILocalNotificationDefaultSoundName;
+//        localNotification.alertAction = @"액션";
 //        localNotification.userInfo = [NSDictionary dictionaryWithObject:@"Test" forKey:@"key"];
 //        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 //    }

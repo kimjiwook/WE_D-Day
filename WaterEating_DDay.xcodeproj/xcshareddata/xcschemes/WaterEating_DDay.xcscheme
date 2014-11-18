@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-               BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
+               BuildableName = "&#x1106;&#x116e;&#x11af;&#x1106;&#x1165;&#x11a8;&#x1100;&#x1169; &#x1103;&#x1175;&#x1103;&#x1166;&#x110b;&#x1175;.app"
                BlueprintName = "WaterEating_DDay"
                ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-            BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
+            BuildableName = "&#x1106;&#x116e;&#x11af;&#x1106;&#x1165;&#x11a8;&#x1100;&#x1169; &#x1103;&#x1175;&#x1103;&#x1166;&#x110b;&#x1175;.app"
             BlueprintName = "WaterEating_DDay"
             ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
          </BuildableReference>
@@ -62,12 +62,13 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      allowLocationSimulation = "YES">
+      allowLocationSimulation = "YES"
+      region = "KR">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-            BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
+            BuildableName = "&#x1106;&#x116e;&#x11af;&#x1106;&#x1165;&#x11a8;&#x1100;&#x1169; &#x1103;&#x1175;&#x1103;&#x1166;&#x110b;&#x1175;.app"
             BlueprintName = "WaterEating_DDay"
             ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
          </BuildableReference>
@@ -85,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEDDB63C183DBD2900D78B84"
-            BuildableName = "&#4358;&#4462;&#4527;&#4358;&#4453;&#4520;&#4352;&#4457; &#4355;&#4469;&#4355;&#4454;&#4363;&#4469;.app"
+            BuildableName = "&#x1106;&#x116e;&#x11af;&#x1106;&#x1165;&#x11a8;&#x1100;&#x1169; &#x1103;&#x1175;&#x1103;&#x1166;&#x110b;&#x1175;.app"
             BlueprintName = "WaterEating_DDay"
             ReferencedContainer = "container:WaterEating_DDay.xcodeproj">
          </BuildableReference>

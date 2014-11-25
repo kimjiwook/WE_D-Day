@@ -121,14 +121,17 @@
                 if (editDay.plusone) { result += 1; }
                 
                 UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//                [NSDate dateWithTimeIntervalSinceNow:i*5];
+//                초당 확인용 코드
                 localNotification.fireDate = daysDate;
                 if (i%20==0) {
                     localNotification.alertBody = @"디데이 접속해 날짜를 최신화 해주세요.";
                     localNotification.soundName = UILocalNotificationDefaultSoundName;
                 }
-                localNotification.applicationIconBadgeNumber = result;
+                localNotification.applicationIconBadgeNumber = fabs(result);
                 [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-//                NSLog(@"푸시 알림 예약 값 등록완료 : %ld",(long)result);
+                NSLog(@"등록된 날짜 %@", daysDate);
+                NSLog(@"푸시 알림 예약 값 등록완료 : %f",fabs((long)result));
             }];
         }
         [[UIApplication sharedApplication] setApplicationIconBadgeNumber:result];

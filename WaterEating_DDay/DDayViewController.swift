@@ -88,11 +88,11 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
         
-        var editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as EditDay
+        var editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as! EditDay
         
-        cell!.textLabel.text = editDay.title
-        cell!.textLabel.font = UIFont.systemFontOfSize(20.0)
-        cell!.textLabel.tag = 1000+indexPath.row
+        cell!.textLabel!.text = editDay.title
+        cell!.textLabel!.font = UIFont.systemFontOfSize(20.0)
+        cell!.textLabel!.tag = 1000+indexPath.row
         cell!.backgroundColor = UIColor.clearColor()
         
         var result = Date_Calendar.stringDate(editDay.date, plusOne: editDay.plusone.boolValue)
@@ -120,10 +120,10 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
         
-        var editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as EditDay
+        var editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as! EditDay
         
         let storyboard:UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
-        let detailViewController:DetailViewController = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        let detailViewController:DetailViewController = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
         detailViewController.setting(editDay)
         
@@ -135,13 +135,13 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var fromRow = sourceIndexPath.row
         var toRow = destinationIndexPath.row
         
-        var object:NSObject = self.tableData?.objectAtIndex(fromRow) as NSObject
+        var object:NSObject = self.tableData?.objectAtIndex(fromRow) as! NSObject
         
         self.tableData?.removeObjectAtIndex(fromRow)
         self.tableData?.insertObject(object, atIndex: toRow)
         
         for (var i = 0; i < self.tableData?.count; i++){
-            var editDay:EditDay = self.tableData?.objectAtIndex(i) as EditDay
+            var editDay:EditDay = self.tableData?.objectAtIndex(i) as! EditDay
             editDay.index = NSNumber(integer: i * 10)
         }
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
@@ -151,13 +151,13 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
             // CoreData row Delete...
-            var editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as EditDay
+            var editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as! EditDay
             editDay.MR_deleteEntity()
             NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
             
             // TableView Cell Delete...
             self.tableData?.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths(NSArray(object: indexPath), withRowAnimation: UITableViewRowAnimation.Left)
+            tableView.deleteRowsAtIndexPaths(NSArray(object: indexPath) as [AnyObject], withRowAnimation: UITableViewRowAnimation.Left)
             
             UIApplication.sharedApplication().applicationIconBadgeNumber = Entity_init.badge()
         }
@@ -185,7 +185,7 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Table view add mode
     @IBAction func addButtonAction(sender: AnyObject) {
         let storyboard:UIStoryboard = UIStoryboard(name: "AddEdit", bundle: nil)
-        let addEditViewController:AddEditViewController = storyboard.instantiateViewControllerWithIdentifier("AddEditViewController") as AddEditViewController
+        let addEditViewController:AddEditViewController = storyboard.instantiateViewControllerWithIdentifier("AddEditViewController") as! AddEditViewController
         addEditViewController.setting(nil)
         self.navigationController?.pushViewController(addEditViewController, animated: true)
         

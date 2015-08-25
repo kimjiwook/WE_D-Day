@@ -45,11 +45,12 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
     
     @IBAction func daySave() {
         // 값이 없거나, 공백만 있는 경우도 체크한다.
-        var length = countElements(subJectTextField.text)
+        var length = count(subJectTextField.text)
         // 길이가 0 이거나 문자열 공백인 경우
         if (length == 0 || subJectTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) == "") {
             var btnTitle:NSArray? = NSArray(objects: BTN_OK)
-            AlertViewCreate.alertTitle(TITLE_NOTI, message: MSG_NOTI_WARNING, create: btnTitle, set: self)
+//            AlertViewCreate.alertTitle(TITLE_NOTI, message: MSG_NOTI_WARNING, create: btnTitle, set: self)
+            var alert:UIAlertView! = UIAlertView(title: TITLE_NOTI, message: MSG_NOTI_WARNING, delegate: self, cancelButtonTitle: BTN_OK)
         } else {
             var dateSelected:NSDate? = self.datePicker.date
             var calendar:NSCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!

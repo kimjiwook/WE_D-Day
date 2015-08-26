@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5ur-d0-Au4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5ur-d0-Au4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Day View Controller-->
@@ -24,8 +24,8 @@
                                     <constraint firstAttribute="width" constant="250" id="VPx-YP-uRc"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-Zi-Ipr">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="gB2-Zi-Ipr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTwo" textLabel="ZUU-os-pdM" detailTextLabel="Cvh-bk-E47" rowHeight="60" style="IBUITableViewCellStyleValue1" id="iMW-9H-54w">
@@ -52,16 +52,44 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68O-vG-zPf" userLabel="Line View">
+                                <rect key="frame" x="0.0" y="549" width="600" height="1"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tRn-xR-yof"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB7-HC-VRl" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AEY-u2-HRd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="top" secondItem="4Dd-PI-l0h" secondAttribute="bottom" id="8sL-vQ-MIN"/>
-                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="leading" secondItem="bzc-Wg-07s" secondAttribute="leading" id="BjX-w2-Mnv"/>
-                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="bottom" secondItem="6CP-8M-Kbc" secondAttribute="top" id="WmE-tR-FVj"/>
+                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="leading" secondItem="bzc-Wg-07s" secondAttribute="leading" id="3k0-Sq-HkU"/>
+                            <constraint firstItem="68O-vG-zPf" firstAttribute="top" secondItem="gB2-Zi-Ipr" secondAttribute="bottom" constant="-1" id="4bL-6X-3Al"/>
+                            <constraint firstItem="eB7-HC-VRl" firstAttribute="width" secondItem="68O-vG-zPf" secondAttribute="width" id="4ui-rH-91N"/>
+                            <constraint firstAttribute="trailing" secondItem="gB2-Zi-Ipr" secondAttribute="trailing" id="FeN-Zz-jsh"/>
+                            <constraint firstAttribute="trailing" secondItem="eB7-HC-VRl" secondAttribute="trailing" id="G2I-BK-NYp"/>
+                            <constraint firstItem="eB7-HC-VRl" firstAttribute="top" secondItem="gB2-Zi-Ipr" secondAttribute="bottom" id="OtH-IW-Yvv"/>
+                            <constraint firstItem="6CP-8M-Kbc" firstAttribute="top" secondItem="gB2-Zi-Ipr" secondAttribute="bottom" constant="50" id="PKk-Jr-8li"/>
+                            <constraint firstItem="6CP-8M-Kbc" firstAttribute="top" secondItem="eB7-HC-VRl" secondAttribute="bottom" id="Sxd-pP-izY"/>
+                            <constraint firstItem="68O-vG-zPf" firstAttribute="leading" secondItem="bzc-Wg-07s" secondAttribute="leading" id="Txg-SQ-8Q2"/>
+                            <constraint firstItem="eB7-HC-VRl" firstAttribute="leading" secondItem="bzc-Wg-07s" secondAttribute="leading" id="XPr-df-tg7"/>
+                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="top" secondItem="4Dd-PI-l0h" secondAttribute="bottom" id="XS5-bO-76s"/>
                             <constraint firstAttribute="centerY" secondItem="K2D-QZ-YKt" secondAttribute="centerY" id="a1h-MM-e0E"/>
+                            <constraint firstAttribute="trailing" secondItem="68O-vG-zPf" secondAttribute="trailing" id="bKj-Uh-WTL"/>
                             <constraint firstAttribute="centerX" secondItem="K2D-QZ-YKt" secondAttribute="centerX" id="nr5-NY-Rvj"/>
-                            <constraint firstItem="gB2-Zi-Ipr" firstAttribute="centerX" secondItem="K2D-QZ-YKt" secondAttribute="centerX" id="szM-71-3ZW"/>
+                            <constraint firstItem="eB7-HC-VRl" firstAttribute="top" secondItem="68O-vG-zPf" secondAttribute="bottom" id="pvH-sd-15h"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pvH-sd-15h"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="xca-Dk-GLI">
                         <barButtonItem key="leftBarButtonItem" title="편집" id="czZ-VE-awb">
@@ -76,6 +104,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bannerView" destination="eB7-HC-VRl" id="H9B-fE-N3P"/>
                         <outlet property="ddayTable" destination="gB2-Zi-Ipr" id="GVW-3h-Ghz"/>
                     </connections>
                 </viewController>

@@ -6,11 +6,13 @@
 //  Copyright (c) 2014년 KimJiWook. All rights reserved.
 // 2014년 11월 11일 기본 페이지만 오류 내역 변경
 
-import Foundation
+import UIKit
+import GoogleMobileAds
 
 class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MobileAdViewDelegate {
     
     @IBOutlet var ddayTable: UITableView!
+    @IBOutlet var bannerView: GADBannerView!
     var tableData:NSMutableArray?
     var badgeImage:UIImageView?
     var adView:MobileAdView!
@@ -25,9 +27,32 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.navigationItem.title = "D-Day"
         
-        self.createAdpost()
+//        self.createAdpost()
+        self.getAdMob()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.viewDidLoad()
+        self.ddayTable.reloadData()
+//        adView.start()
+        self.getAdMob()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+//        adView.stop()
+    }
+    // MARK: Google get AdMob
+    func getAdMob() {
+
+        self.bannerView.adUnitID = "ca-app-pub-9328601818114664/7165501839"
+        self.bannerView.rootViewController = self
+        var request:GADRequest = GADRequest()
+        request.testDevices = ["Simulator"]
+        self.bannerView.loadRequest(request)
+    }
+    
+    // MARK: Naver Adpost (과거꺼임...)
     func createAdpost() {
         adView = MobileAdView.sharedMobileAdView()
         adView.frame = CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50)
@@ -36,8 +61,8 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         adView.isTest = false
         
         adView.autoresizingMask = UIViewAutoresizing.FlexibleTopMargin
-        | UIViewAutoresizing.FlexibleLeftMargin
-        | UIViewAutoresizing.FlexibleWidth
+            | UIViewAutoresizing.FlexibleLeftMargin
+            | UIViewAutoresizing.FlexibleWidth
         
         adView.delegate = self
         adView.start()
@@ -45,18 +70,7 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.view.addSubview(adView)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.viewDidLoad()
-        self.ddayTable.reloadData()
-        adView.start()
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        adView.stop()
-    }
-    
-// TableView
+    // MARK: TableView Delegate And DataSource..
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

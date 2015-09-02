@@ -153,8 +153,8 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Detail" bundle:nil];
     detailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
-    
-    [detailViewController setting:editDay]; // 값 복사하기
+    // DetailView 전환하기 앞서 데이터값 넘겨주기.
+    [detailViewController setting:editDay];
     
     [self.navigationController pushViewController:detailViewController animated:YES]; // PushView
 }

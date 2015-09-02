@@ -16,32 +16,32 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var tableData:NSMutableArray?
     var badgeImage:UIImageView?
     var adView:MobileAdView!
-    
-    override func viewDidLoad() {
-        
+
+    // MARK: initData 데이터 초기화 및 시작함수
+    func initData() {
+        // Table Data. (CoreData 에서 FindAll, orderBy index 를 통해서 Array 형식으로 가져옴.)
         tableData = NSMutableArray(array: EditDay.MR_findAllSortedBy("index", ascending:true))
         
         ddayTable.dataSource = self
         ddayTable.delegate = self
         ddayTable.backgroundColor = UIColor.clearColor()
+        self.ddayTable.reloadData()
         
         self.navigationItem.title = "D-Day"
-        
-//        self.createAdpost()
+        // AdMob 시작.
         self.getAdMob()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.initData()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.viewDidLoad()
-        self.ddayTable.reloadData()
-//        adView.start()
-        self.getAdMob()
+        self.initData()
     }
     
-    override func viewWillDisappear(animated: Bool) {
-//        adView.stop()
-    }
     // MARK: Google get AdMob
     func getAdMob() {
 

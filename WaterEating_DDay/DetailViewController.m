@@ -16,6 +16,7 @@
 @synthesize editDay;
 @synthesize detailTable;
 
+// ViewDidLoad 이전에 시작됨.
 - (void)setting : (EditDay *) editDayCopy {
     editDay = editDayCopy;
 }
@@ -29,6 +30,8 @@
     [self.navigationItem.rightBarButtonItem setAction:@selector(badgeSetting:)];
     [self.navigationItem.rightBarButtonItem setTarget:self];
     // 이유는 잘 모르겠는데. addTarget: action 메소드가 없어서 두가지를 붙여놓음
+    
+    totalRowCount = 30;
     
     detailTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,self.view.bounds.size.height) style:UITableViewStylePlain];
     
@@ -89,6 +92,7 @@
     [self showList];
 }
 
+#pragma mark - GridMenu DataSource
 - (void)showList {
     NSInteger numberOfOptions = 3;
     NSArray *options = @[
@@ -104,8 +108,7 @@
     [av showInViewController:self center:CGPointMake(self.view.bounds.size.width/2.f, self.view.bounds.size.height/2.f)];
 }
 
-
-
+#pragma mark - GridMenu에서 선택된 값에 따라 Type 변경 및 TableView Reload
 - (void)gridMenu:(RNGridMenu *)gridMenu willDismissWithSelectedItem:(RNGridMenuItem *)item atIndex:(NSInteger)itemIndex {
     // 0 = D+ //1 = D- //2 = Y (년도별 표시)
     tableViewType = itemIndex;
@@ -115,27 +118,31 @@
 
 
 #pragma mark - Table view data source
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableViewType == 0) {
-        return 101;
-    }else if (tableViewType == 1){
-        // D- 일때만 제대로 계산한다.
-        
-        NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
-        
-        if (d_minus < 0)
-        {
-            d_minus = (d_minus*-1)/100;
-            NSLog(@"값은 : %ld",(long)d_minus);
-        }
-        
-        return d_minus+1;
-        
-    }else if (tableViewType == 2){
-        return 31;
-    }else{
+//    if (tableViewType == 0) {
+//        return 101;
+//    }else if (tableViewType == 1){
+//        // D- 일때만 제대로 계산한다.
+//        
+//        NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
+//        
+//        if (d_minus < 0)
+//        {
+//            d_minus = (d_minus*-1)/100;
+//            NSLog(@"값은 : %ld",(long)d_minus);
+//        }
+//        
+//        return d_minus+1;
+//        
+//    }else if (tableViewType == 2){
+//        return 31;
+//    }else{
+//        return 1;
+//    }
+    
+    if (tableViewType == 0 || tableViewType == 1 || tableViewType == 2) {
+        return totalRowCount;
+    } else {
         return 1;
     }
 }
@@ -207,7 +214,7 @@
             // D+ 계산법
             // Left
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 200, 40)];
-            [date setText:[NSString stringWithFormat:@"%d 일",indexPath.row * 100]];
+            [date setText:[NSString stringWithFormat:@"%ld 일",indexPath.row * 100]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
@@ -232,7 +239,7 @@
             d_minus = (d_minus)/100;
             
             UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 200, 40)];
-            [date setText:[NSString stringWithFormat:@"D%d 일",(d_minus*100) + ((indexPath.row-1)*100)]];
+            [date setText:[NSString stringWithFormat:@"D%ld 일",(d_minus*100) + ((indexPath.row-1)*100)]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
@@ -252,7 +259,7 @@
             
             NSInteger yearDate = [Date_Calendar startDate:[Date_Conversion stringToDate:editDay.date] endDate:[Date_Calendar date:editDay.date addYear:indexPath.row] plusOne:[editDay.plusone boolValue]];
             
-            [date setText:[NSString stringWithFormat:@"%d 주년(%d일)",indexPath.row, yearDate]];
+            [date setText:[NSString stringWithFormat:@"%ld 주년(%ld일)",(long)indexPath.row, (long)yearDate]];
             [date setTag:2000];
             
             [cell.contentView addSubview:date];
@@ -275,6 +282,14 @@
     [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (totalRowCount == indexPath.row+1) {
+        // 페이지 10개씩 추가해 주기.
+        totalRowCount += 20;
+        [self.detailTable reloadData];
+    }
 }
 
 #pragma mark - Table view delegate

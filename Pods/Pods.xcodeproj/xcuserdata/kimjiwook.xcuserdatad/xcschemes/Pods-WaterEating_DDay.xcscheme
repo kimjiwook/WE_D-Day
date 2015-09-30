@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1568B3CC939E6E2913E4D571"
+               BlueprintIdentifier = "D082E00881420C3FDA54AB63"
                BuildableName = "libPods-WaterEating_DDay.a"
                BlueprintName = "Pods-WaterEating_DDay"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -44,9 +44,9 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
     
     @IBAction func daySave() {
         // 값이 없거나, 공백만 있는 경우도 체크한다.
-        var length = count(subJectTextField.text)
+        var length = subJectTextField.text!.characters.count
         // 길이가 0 이거나 문자열 공백인 경우
-        if (length == 0 || subJectTextField.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) == "") {
+        if (length == 0 || subJectTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) == "") {
             var btnTitle:NSArray? = NSArray(objects: BTN_OK)
 //            AlertViewCreate.alertTitle(TITLE_NOTI, message: MSG_NOTI_WARNING, create: btnTitle, set: self)
             var alert:UIAlertView! = UIAlertView(title: TITLE_NOTI, message: MSG_NOTI_WARNING, delegate: self, cancelButtonTitle: BTN_OK)
@@ -57,7 +57,7 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
             // 정확한 날 수를 계산하기 위해 날짜정보에서 시간정보를 0시 0분 0초로 설정
             // Extra argument 'interval' in call
             
-            calendar.rangeOfUnit(NSCalendarUnit.DayCalendarUnit, startDate: &dateSelected, interval: &interval, forDate: dateSelected!)
+            calendar.rangeOfUnit(NSCalendarUnit.NSDayCalendarUnit, startDate: &dateSelected, interval: &interval, forDate: dateSelected!)
             
             if editDay == nil {
                 editDay = EditDay.MR_createEntity() as? EditDay
@@ -103,7 +103,7 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
             dayLabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, 30))
             dayLabel.text = "D+0 일"
             if editDay != nil {
-                var result = Date_Calendar.stringDate(Date_Conversion.dateToString(self.datePicker.date), plusOne: onDayCheckSwithch.on)
+                let result = Date_Calendar.stringDate(Date_Conversion.dateToString(self.datePicker.date), plusOne: onDayCheckSwithch.on)
                 dayLabel.text = Date_Calendar.stringResult(result)
             }
             dayLabel.font = UIFont.systemFontOfSize(20)
@@ -114,18 +114,15 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("Cell") as? UITableViewCell
+        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell")!
 
-        if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        }
         
         if indexPath.section == 0 {
-            var subJectLabel:UILabel! = UILabel(frame: CGRectMake(10, 5, 50, 40))
+            let subJectLabel:UILabel! = UILabel(frame: CGRectMake(10, 5, 50, 40))
             subJectLabel.font = UIFont.systemFontOfSize(18)
             subJectLabel.textAlignment = NSTextAlignment.Left
             subJectLabel.text = "제목"
-            cell?.contentView.addSubview(subJectLabel)
+            cell.contentView.addSubview(subJectLabel)
             
             subJectTextField = UITextField(frame: CGRectMake(70, 5, self.view.bounds.size.width-70, 40))
             subJectTextField.delegate = self
@@ -135,15 +132,15 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
             if editDay != nil {
                 subJectTextField.text = editDay?.title
             }
-            cell?.contentView.addSubview(subJectTextField)
+            cell.contentView.addSubview(subJectTextField)
             
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
-                var startCheckLabel:UILabel = UILabel(frame: CGRectMake(10, 5, 200, 40))
+                let startCheckLabel:UILabel = UILabel(frame: CGRectMake(10, 5, 200, 40))
                 startCheckLabel.font = UIFont.systemFontOfSize(18)
                 startCheckLabel.textAlignment = NSTextAlignment.Left
                 startCheckLabel.text = "시작일로부터 1일"
-                cell?.contentView.addSubview(startCheckLabel)
+                cell.contentView.addSubview(startCheckLabel)
                 
                 onDayCheckSwithch = UISwitch(frame: CGRectMake(self.view.bounds.size.width-49-20, 9, 49, 31))
                 onDayCheckSwithch.on = false
@@ -151,7 +148,7 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
                 if editDay != nil {
                     onDayCheckSwithch.on = editDay!.plusone.boolValue
                 }
-                cell?.contentView.addSubview(onDayCheckSwithch)
+                cell.contentView.addSubview(onDayCheckSwithch)
                 
             } else if indexPath.row == 1 {
                 datePicker = UIDatePicker(frame: CGRectMake(0, 0, self.view.bounds.width, 162))
@@ -161,11 +158,11 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
                 if editDay != nil {
                     datePicker.date = Date_Conversion.stringToDate(editDay?.date)
                 }
-                cell?.contentView.addSubview(datePicker)
+                cell.contentView.addSubview(datePicker)
             }
         }
         
-        return cell!
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -178,7 +175,7 @@ class AddEditingViewContoller : UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func dateChanged() {
-        var result = Date_Calendar.stringDate(Date_Conversion.dateToString(self.datePicker.date), plusOne: onDayCheckSwithch.on)
+        let result = Date_Calendar.stringDate(Date_Conversion.dateToString(self.datePicker.date), plusOne: onDayCheckSwithch.on)
         self.dayLabel.text = Date_Calendar.stringResult(result)
     }
     

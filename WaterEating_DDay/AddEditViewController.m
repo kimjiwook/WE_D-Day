@@ -49,6 +49,8 @@
     [addTable setBackgroundColor:[UIColor clearColor]];
     
     [self.view addSubview:addTable];
+    
+    self.subJectTextField.returnKeyType = UIReturnKeyDone;
 }
 
 - (void)didReceiveMemoryWarning

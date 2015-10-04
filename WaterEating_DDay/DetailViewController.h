@@ -20,7 +20,6 @@
 }
 @property (nonatomic, readonly) EditDay *editDay;
 @property (nonatomic, strong) IBOutlet UITableView *detailTable;
-@property (nonatomic, strong) UITableViewController *sample;
 
 - (void)setting : (EditDay *) editDayCopy;
 

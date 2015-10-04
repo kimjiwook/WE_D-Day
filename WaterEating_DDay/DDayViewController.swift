@@ -127,15 +127,20 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Table view Cell Select Action
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated:true)
+
+        // Object-c 코드
+//        let editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as! EditDay
+//        let storyboard:UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+//        let detailViewController:DetailViewController = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+//        detailViewController.setting(editDay)
+//        self.navigationController?.pushViewController(detailViewController, animated: true)
         
+        // Swift 변경
         let editDay:EditDay = self.tableData?.objectAtIndex(indexPath.row) as! EditDay
-        
-        let storyboard:UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
-        let detailViewController:DetailViewController = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
-        
-        detailViewController.setting(editDay)
-        
-        self.navigationController?.pushViewController(detailViewController, animated: true)
+        let storyboard:UIStoryboard = UIStoryboard(name: "DDay_Detail_Storyboard", bundle: nil)
+        let dday_Detail_ViewController:DDay_Detail_ViewController = storyboard.instantiateViewControllerWithIdentifier("DDay_Detail_ViewController") as! DDay_Detail_ViewController
+        dday_Detail_ViewController.setting(editDay)
+        self.navigationController?.pushViewController(dday_Detail_ViewController, animated: true);
     }
     
     // Table view edit Cell move Action

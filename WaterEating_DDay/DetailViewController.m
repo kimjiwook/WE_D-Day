@@ -119,27 +119,6 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    if (tableViewType == 0) {
-//        return 101;
-//    }else if (tableViewType == 1){
-//        // D- 일때만 제대로 계산한다.
-//        
-//        NSInteger d_minus = [Date_Calendar stringDate:editDay.date plusOne:[editDay.plusone boolValue]];
-//        
-//        if (d_minus < 0)
-//        {
-//            d_minus = (d_minus*-1)/100;
-//            NSLog(@"값은 : %ld",(long)d_minus);
-//        }
-//        
-//        return d_minus+1;
-//        
-//    }else if (tableViewType == 2){
-//        return 31;
-//    }else{
-//        return 1;
-//    }
-    
     if (tableViewType == 0 || tableViewType == 1 || tableViewType == 2) {
         return totalRowCount;
     } else {

@@ -96,6 +96,10 @@
 		EA5F496D1B8C4F85007AA0A2 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F494F1B8C4F85007AA0A2 /* MagicalRecord+Setup.m */; };
 		EA5F496E1B8C4F85007AA0A2 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F49511B8C4F85007AA0A2 /* MagicalRecord+ShorthandSupport.m */; };
 		EA5F496F1B8C4F85007AA0A2 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F49531B8C4F85007AA0A2 /* MagicalRecord.m */; };
+		EA69F5EE1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA69F5ED1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EA69F5F01BBBB7E7009D814B /* DDay_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69F5EF1BBBB7E7009D814B /* DDay_Detail_ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EA972A7E1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA972A7D1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		EADCF6A01BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCF69F1BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +248,10 @@
 		EA5F49531B8C4F85007AA0A2 /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		EA5F49541B8C4F85007AA0A2 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		EA5F49551B8C4F85007AA0A2 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
+		EA69F5ED1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DDay_Detail_Storyboard.storyboard; sourceTree = "<group>"; };
+		EA69F5EF1BBBB7E7009D814B /* DDay_Detail_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDay_Detail_ViewController.swift; path = WaterEating_DDay/DDay_Detail_ViewController.swift; sourceTree = "<group>"; };
+		EA972A7D1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Detail_TopInfo_TableViewCell.swift; path = WaterEating_DDay/Detail_TopInfo_TableViewCell.swift; sourceTree = "<group>"; };
+		EADCF69F1BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Detail_RowInfo_TableViewCell.swift; path = WaterEating_DDay/Detail_RowInfo_TableViewCell.swift; sourceTree = "<group>"; };
 		F85C5B6FB906DF692C1B9519 /* Pods-WaterEating_DDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterEating_DDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaterEating_DDay/Pods-WaterEating_DDay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -395,6 +403,10 @@
 				DEF2FD5618C55633009C06F7 /* AddEditView */,
 				DE8136CF184C10AC00C07144 /* DetailView */,
 				DEECA31C183F34F80068ABAD /* MainView */,
+				EA69F5ED1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard */,
+				EA69F5EF1BBBB7E7009D814B /* DDay_Detail_ViewController.swift */,
+				EA972A7D1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift */,
+				EADCF69F1BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -749,6 +761,7 @@
 				DE06C6E618619274004E28CD /* Icon-Spotlight-40.png in Resources */,
 				DE933B12186036A7006E0B1B /* alarm.png in Resources */,
 				DE90C8E0187D081B008AB905 /* menu_minus_alpha@2x.png in Resources */,
+				EA69F5EE1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard in Resources */,
 				DE7CDCF41A00CA2800807BCC /* AddEditing.storyboard in Resources */,
 				DE06C6E118619274004E28CD /* Icon-60.png in Resources */,
 				DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */,
@@ -841,6 +854,8 @@
 			files = (
 				DEDDB651183DBD2900D78B84 /* WE_DDayAppDelegate.m in Sources */,
 				DEDDB64D183DBD2900D78B84 /* main.m in Sources */,
+				EA972A7E1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift in Sources */,
+				EADCF6A01BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift in Sources */,
 				EA5F496C1B8C4F85007AA0A2 /* MagicalRecord+Options.m in Sources */,
 				EA5F49681B8C4F85007AA0A2 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				EA5F49581B8C4F85007AA0A2 /* NSEntityDescription+MagicalDataImport.m in Sources */,
@@ -873,6 +888,7 @@
 				DE7CDCF11A00C2F700807BCC /* AddEditingViewController.swift in Sources */,
 				EA5F495D1B8C4F85007AA0A2 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				EA5F49561B8C4F85007AA0A2 /* MagicalImportFunctions.m in Sources */,
+				EA69F5F01BBBB7E7009D814B /* DDay_Detail_ViewController.swift in Sources */,
 				EA5F49571B8C4F85007AA0A2 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				EA5F495B1B8C4F85007AA0A2 /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
 				EA5F49631B8C4F85007AA0A2 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
@@ -993,7 +1009,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1025,7 +1041,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

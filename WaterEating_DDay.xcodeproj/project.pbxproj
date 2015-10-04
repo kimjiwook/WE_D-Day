@@ -29,13 +29,8 @@
 		DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = DE14311A185EF6D2000E8937 /* Date+Conversion.m */; };
 		DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */; };
 		DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */; };
-		DE1E6B2918A0D23800B2C35E /* libMobileAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */; };
 		DE3A504F19F647C3000AB325 /* DDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A504E19F647C3000AB325 /* DDayViewController.swift */; };
 		DE3A505319F64C4E000AB325 /* swift_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3A505219F64C4E000AB325 /* swift_Main.storyboard */; };
-		DE7CDCF11A00C2F700807BCC /* AddEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7CDCF01A00C2F700807BCC /* AddEditingViewController.swift */; };
-		DE7CDCF41A00CA2800807BCC /* AddEditing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7CDCF31A00CA2800807BCC /* AddEditing.storyboard */; };
-		DE8136DA184C130900C07144 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8136D9184C130900C07144 /* Detail.storyboard */; };
-		DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8136DC184C131C00C07144 /* DetailViewController.m */; };
 		DE90C8D9187D081B008AB905 /* menu_dpuls.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8CC187D081B008AB905 /* menu_dpuls.png */; };
 		DE90C8DA187D081B008AB905 /* menu_dpuls@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8CD187D081B008AB905 /* menu_dpuls@2x.png */; };
 		DE90C8DB187D081B008AB905 /* menu_dpuls_alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8CE187D081B008AB905 /* menu_dpuls_alpha.png */; };
@@ -51,7 +46,6 @@
 		DE90C8E5187D081B008AB905 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = DE90C8D8187D081B008AB905 /* Thumbs.db */; };
 		DE933B12186036A7006E0B1B /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B10186036A6006E0B1B /* alarm.png */; };
 		DE933B13186036A7006E0B1B /* noti.png in Resources */ = {isa = PBXBuildFile; fileRef = DE933B11186036A6006E0B1B /* noti.png */; };
-		DE94BB9F18A2094A002D2E66 /* D_Day.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB652183DBD2900D78B84 /* D_Day.storyboard */; };
 		DEA3CB66184735CE00034A4D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEA3CB64184735CE00034A4D /* Model.xcdatamodeld */; };
 		DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED0BB0218482AE500F7564F /* CoreData.framework */; };
 		DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DED0BB08184848A400F7564F /* Date+Calendar.m */; };
@@ -63,7 +57,6 @@
 		DEDDB64B183DBD2900D78B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB649183DBD2900D78B84 /* InfoPlist.strings */; };
 		DEDDB64D183DBD2900D78B84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB64C183DBD2900D78B84 /* main.m */; };
 		DEDDB651183DBD2900D78B84 /* WE_DDayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */; };
-		DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */; };
 		DEDDB659183DBD2900D78B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDDB658183DBD2900D78B84 /* Images.xcassets */; };
 		DEE05F0F189F245C00FF2BDC /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE05F0E189F245C00FF2BDC /* menu.png */; };
 		DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */; };
@@ -139,16 +132,9 @@
 		DE14311A185EF6D2000E8937 /* Date+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Date+Conversion.m"; sourceTree = "<group>"; };
 		DE1E6B2218A0D16000B2C35E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DE1E6B2418A0D16500B2C35E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobileAdSDK.a; sourceTree = "<group>"; };
-		DE1E6B2818A0D23800B2C35E /* MobileAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileAdView.h; sourceTree = "<group>"; };
 		DE3A504D19F647C2000AB325 /* WaterEating_DDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaterEating_DDay-Bridging-Header.h"; sourceTree = "<group>"; };
-		DE3A504E19F647C3000AB325 /* DDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDayViewController.swift; sourceTree = "<group>"; };
-		DE3A505219F64C4E000AB325 /* swift_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = swift_Main.storyboard; sourceTree = "<group>"; };
-		DE7CDCF01A00C2F700807BCC /* AddEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEditingViewController.swift; path = WaterEating_DDay/AddEditingViewController.swift; sourceTree = "<group>"; };
-		DE7CDCF31A00CA2800807BCC /* AddEditing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddEditing.storyboard; path = WaterEating_DDay/AddEditing.storyboard; sourceTree = "<group>"; };
-		DE8136D9184C130900C07144 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Detail.storyboard; path = WaterEating_DDay/Detail.storyboard; sourceTree = "<group>"; };
-		DE8136DB184C131C00C07144 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = WaterEating_DDay/DetailViewController.h; sourceTree = "<group>"; };
-		DE8136DC184C131C00C07144 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = WaterEating_DDay/DetailViewController.m; sourceTree = "<group>"; };
+		DE3A504E19F647C3000AB325 /* DDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DDayViewController.swift; path = WaterEating_DDay/DDayViewController.swift; sourceTree = "<group>"; };
+		DE3A505219F64C4E000AB325 /* swift_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = swift_Main.storyboard; path = WaterEating_DDay/swift_Main.storyboard; sourceTree = "<group>"; };
 		DE90C8CC187D081B008AB905 /* menu_dpuls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dpuls.png; sourceTree = "<group>"; };
 		DE90C8CD187D081B008AB905 /* menu_dpuls@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_dpuls@2x.png"; sourceTree = "<group>"; };
 		DE90C8CE187D081B008AB905 /* menu_dpuls_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dpuls_alpha.png; sourceTree = "<group>"; };
@@ -182,9 +168,6 @@
 		DEDDB64E183DBD2900D78B84 /* WaterEating_DDay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaterEating_DDay-Prefix.pch"; sourceTree = "<group>"; };
 		DEDDB64F183DBD2900D78B84 /* WE_DDayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_DDayAppDelegate.h; sourceTree = "<group>"; };
 		DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_DDayAppDelegate.m; sourceTree = "<group>"; };
-		DEDDB653183DBD2900D78B84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/D_Day.storyboard; sourceTree = "<group>"; };
-		DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WE_DDayViewController.h; sourceTree = "<group>"; };
-		DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WE_DDayViewController.m; sourceTree = "<group>"; };
 		DEDDB658183DBD2900D78B84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DEDDB65F183DBD2900D78B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DEE05F0E189F245C00FF2BDC /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../Icon/menu.png; sourceTree = "<group>"; };
@@ -274,7 +257,6 @@
 				DE1E6B2518A0D16500B2C35E /* CoreTelephony.framework in Frameworks */,
 				DE1E6B2318A0D16000B2C35E /* SystemConfiguration.framework in Frameworks */,
 				DED0BB0318482AE500F7564F /* CoreData.framework in Frameworks */,
-				DE1E6B2918A0D23800B2C35E /* libMobileAdSDK.a in Frameworks */,
 				DEDDB643183DBD2900D78B84 /* CoreGraphics.framework in Frameworks */,
 				DEDDB645183DBD2900D78B84 /* UIKit.framework in Frameworks */,
 				DEDDB641183DBD2900D78B84 /* Foundation.framework in Frameworks */,
@@ -346,26 +328,6 @@
 			name = images;
 			sourceTree = "<group>";
 		};
-		DE1E6B2618A0D23800B2C35E /* NaverAdpost */ = {
-			isa = PBXGroup;
-			children = (
-				DE1E6B2718A0D23800B2C35E /* libMobileAdSDK.a */,
-				DE1E6B2818A0D23800B2C35E /* MobileAdView.h */,
-			);
-			name = NaverAdpost;
-			path = Lib/NaverAdpost;
-			sourceTree = SOURCE_ROOT;
-		};
-		DE8136CF184C10AC00C07144 /* DetailView */ = {
-			isa = PBXGroup;
-			children = (
-				DE8136DB184C131C00C07144 /* DetailViewController.h */,
-				DE8136DC184C131C00C07144 /* DetailViewController.m */,
-				DE8136D9184C130900C07144 /* Detail.storyboard */,
-			);
-			name = DetailView;
-			sourceTree = "<group>";
-		};
 		DE90C8CB187D081B008AB905 /* menu_Icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,13 +362,15 @@
 		DED0BB04184846C800F7564F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DEF2FD5618C55633009C06F7 /* AddEditView */,
-				DE8136CF184C10AC00C07144 /* DetailView */,
-				DEECA31C183F34F80068ABAD /* MainView */,
-				EA69F5ED1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard */,
+				DE3A504E19F647C3000AB325 /* DDayViewController.swift */,
 				EA69F5EF1BBBB7E7009D814B /* DDay_Detail_ViewController.swift */,
 				EA972A7D1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift */,
 				EADCF69F1BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift */,
+				DEF2FD5D18C58AF5009C06F7 /* AddEditViewController.h */,
+				DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */,
+				DE3A505219F64C4E000AB325 /* swift_Main.storyboard */,
+				EA69F5ED1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard */,
+				DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */,
 			);
 			name = Views;
 			path = ..;
@@ -416,7 +380,6 @@
 			isa = PBXGroup;
 			children = (
 				EA5F491A1B8C4F85007AA0A2 /* MagicalRecord */,
-				DE1E6B2618A0D23800B2C35E /* NaverAdpost */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -499,19 +462,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DEECA31C183F34F80068ABAD /* MainView */ = {
-			isa = PBXGroup;
-			children = (
-				DEDDB655183DBD2900D78B84 /* WE_DDayViewController.h */,
-				DEDDB656183DBD2900D78B84 /* WE_DDayViewController.m */,
-				DEDDB652183DBD2900D78B84 /* D_Day.storyboard */,
-				DE3A504E19F647C3000AB325 /* DDayViewController.swift */,
-				DE3A505219F64C4E000AB325 /* swift_Main.storyboard */,
-			);
-			name = MainView;
-			path = WaterEating_DDay;
-			sourceTree = "<group>";
-		};
 		DEECA31E183F351C0068ABAD /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,18 +469,6 @@
 				DEDDB650183DBD2900D78B84 /* WE_DDayAppDelegate.m */,
 			);
 			name = AppDelegate;
-			sourceTree = "<group>";
-		};
-		DEF2FD5618C55633009C06F7 /* AddEditView */ = {
-			isa = PBXGroup;
-			children = (
-				DEF2FD5D18C58AF5009C06F7 /* AddEditViewController.h */,
-				DEF2FD5E18C58AF5009C06F7 /* AddEditViewController.m */,
-				DEF2FD5C18C58AF5009C06F7 /* AddEdit.storyboard */,
-				DE7CDCF01A00C2F700807BCC /* AddEditingViewController.swift */,
-				DE7CDCF31A00CA2800807BCC /* AddEditing.storyboard */,
-			);
-			name = AddEditView;
 			sourceTree = "<group>";
 		};
 		EA5F491A1B8C4F85007AA0A2 /* MagicalRecord */ = {
@@ -757,17 +695,14 @@
 				DE90C8DD187D081B008AB905 /* menu_minus.png in Resources */,
 				DE90C8E4187D081B008AB905 /* menu_year_alpha@2x.png in Resources */,
 				DE06C6E218619274004E28CD /* Icon-Small.png in Resources */,
-				DE94BB9F18A2094A002D2E66 /* D_Day.storyboard in Resources */,
 				DE06C6E618619274004E28CD /* Icon-Spotlight-40.png in Resources */,
 				DE933B12186036A7006E0B1B /* alarm.png in Resources */,
 				DE90C8E0187D081B008AB905 /* menu_minus_alpha@2x.png in Resources */,
 				EA69F5EE1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard in Resources */,
-				DE7CDCF41A00CA2800807BCC /* AddEditing.storyboard in Resources */,
 				DE06C6E118619274004E28CD /* Icon-60.png in Resources */,
 				DEF2FD5F18C58AF5009C06F7 /* AddEdit.storyboard in Resources */,
 				DE06C6E418619274004E28CD /* Icon-Small@2x.png in Resources */,
 				DE3A505319F64C4E000AB325 /* swift_Main.storyboard in Resources */,
-				DE8136DA184C130900C07144 /* Detail.storyboard in Resources */,
 				DE06C6E918619452004E28CD /* WE_DDay_960.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -874,7 +809,6 @@
 				DE143116185ED3E5000E8937 /* EditDay.m in Sources */,
 				EA5F49651B8C4F85007AA0A2 /* NSManagedObjectContext+MagicalThreading.m in Sources */,
 				EA5F49691B8C4F85007AA0A2 /* MagicalRecord+Actions.m in Sources */,
-				DEDDB657183DBD2900D78B84 /* WE_DDayViewController.m in Sources */,
 				EA5F496E1B8C4F85007AA0A2 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				EA5F49661B8C4F85007AA0A2 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				DED0BB09184848A400F7564F /* Date+Calendar.m in Sources */,
@@ -885,14 +819,12 @@
 				EA5F49591B8C4F85007AA0A2 /* NSNumber+MagicalDataImport.m in Sources */,
 				EA5F49621B8C4F85007AA0A2 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				EA5F496B1B8C4F85007AA0A2 /* MagicalRecord+iCloud.m in Sources */,
-				DE7CDCF11A00C2F700807BCC /* AddEditingViewController.swift in Sources */,
 				EA5F495D1B8C4F85007AA0A2 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				EA5F49561B8C4F85007AA0A2 /* MagicalImportFunctions.m in Sources */,
 				EA69F5F01BBBB7E7009D814B /* DDay_Detail_ViewController.swift in Sources */,
 				EA5F49571B8C4F85007AA0A2 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				EA5F495B1B8C4F85007AA0A2 /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
 				EA5F49631B8C4F85007AA0A2 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
-				DE8136DD184C131C00C07144 /* DetailViewController.m in Sources */,
 				DE14311B185EF6D2000E8937 /* Date+Conversion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -922,14 +854,6 @@
 				DEDDB64A183DBD2900D78B84 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DEDDB652183DBD2900D78B84 /* D_Day.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEDDB653183DBD2900D78B84 /* Base */,
-			);
-			name = D_Day.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

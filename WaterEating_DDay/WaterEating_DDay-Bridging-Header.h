@@ -16,13 +16,10 @@
 
 // Lib
 #import "CoreData+MagicalRecord.h"
-#import "MobileAdView.h"
 #import "RNGridMenu.h"
 
 // Views
 #import "AddEditViewController.h"
-#import "DetailViewController.h"
-#import "WE_DDayViewController.h"
 
 // Text...
 #define TITLE_NOTI                      @"알림"

@@ -9,13 +9,12 @@
 import UIKit
 import GoogleMobileAds
 
-class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MobileAdViewDelegate {
+class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var ddayTable: UITableView!
     @IBOutlet var bannerView: GADBannerView!
     var tableData:NSMutableArray?
     var badgeImage:UIImageView?
-    var adView:MobileAdView!
 
     // MARK: initData 데이터 초기화 및 시작함수
     func initData() {
@@ -50,22 +49,6 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let request:GADRequest = GADRequest()
         request.testDevices = ["Simulator"]
         self.bannerView.loadRequest(request)
-    }
-    
-    // MARK: Naver Adpost (과거꺼임...)
-    func createAdpost() {
-        adView = MobileAdView.sharedMobileAdView()
-        adView.frame = CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50)
-        adView.superViewController = self
-        adView.channelId = "mios_609d1408867643cbb33f3ccc006dfacd"
-        adView.isTest = false
-        
-        adView.autoresizingMask = [UIViewAutoresizing.FlexibleTopMargin, UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleWidth]
-        
-        adView.delegate = self
-        adView.start()
-        
-        self.view.addSubview(adView)
     }
     
     // MARK: TableView Delegate And DataSource..

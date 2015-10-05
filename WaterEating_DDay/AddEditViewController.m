@@ -49,8 +49,6 @@
     [addTable setBackgroundColor:[UIColor clearColor]];
     
     [self.view addSubview:addTable];
-    
-    self.subJectTextField.returnKeyType = UIReturnKeyDone;
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,7 +144,7 @@
         [cell.contentView addSubview:subJectLabel];
         
         subJectTextField = [[UITextField alloc] initWithFrame:CGRectMake(70, 5, 240, 40)];
-        
+        subJectTextField.returnKeyType = UIReturnKeyDone;
         [subJectTextField setDelegate:self];
         
         [subJectTextField setTextAlignment:NSTextAlignmentRight];

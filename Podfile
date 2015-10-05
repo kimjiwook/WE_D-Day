@@ -1,9 +1,8 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+# platform :ios, '8.0'
 
 target 'WaterEating_DDay' do
 pod 'RNGridMenu', '~> 0.1.2'
-#pod 'MagicalRecord', :git => 'https://github.com/magicalpanda/MagicalRecord.git', :tag => 'v2.3.0-beta.5', :tag => 'release/3.0'
 pod 'Google-Mobile-Ads-SDK'
 end
 

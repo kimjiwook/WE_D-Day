@@ -180,6 +180,8 @@ class DDay_Detail_ViewController: UIViewController
         }
     }
 
+    
+    // 임시 TEST
     /**
      * WillDisPlayCell
      * 셀을 새로 그릴때 전체 카운트를 증가시켜 Cell 정보의 갯수를 늘려준다.

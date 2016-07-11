@@ -89,10 +89,10 @@
 		EA5F496D1B8C4F85007AA0A2 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F494F1B8C4F85007AA0A2 /* MagicalRecord+Setup.m */; };
 		EA5F496E1B8C4F85007AA0A2 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F49511B8C4F85007AA0A2 /* MagicalRecord+ShorthandSupport.m */; };
 		EA5F496F1B8C4F85007AA0A2 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F49531B8C4F85007AA0A2 /* MagicalRecord.m */; };
-		EA69F5EE1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA69F5ED1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard */; settings = {ASSET_TAGS = (); }; };
-		EA69F5F01BBBB7E7009D814B /* DDay_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69F5EF1BBBB7E7009D814B /* DDay_Detail_ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		EA972A7E1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA972A7D1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		EADCF6A01BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCF69F1BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		EA69F5EE1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA69F5ED1BBBB7B8009D814B /* DDay_Detail_Storyboard.storyboard */; };
+		EA69F5F01BBBB7E7009D814B /* DDay_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69F5EF1BBBB7E7009D814B /* DDay_Detail_ViewController.swift */; };
+		EA972A7E1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA972A7D1BBEE0DF00BB5559 /* Detail_TopInfo_TableViewCell.swift */; };
+		EADCF6A01BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADCF69F1BBEE40800A8382B /* Detail_RowInfo_TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -585,6 +585,7 @@
 				DE06C6B11861780E004E28CD /* Frameworks */,
 				DE06C6B21861780E004E28CD /* Resources */,
 				F107724564C11FECDD331692 /* Copy Pods Resources */,
+				B45028F2DE79943A8D583EC9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -605,6 +606,7 @@
 				DEDDB63A183DBD2900D78B84 /* Frameworks */,
 				DEDDB63B183DBD2900D78B84 /* Resources */,
 				100024C6DE173459F22FC699 /* Copy Pods Resources */,
+				4163F87A368502997CD217AF /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -738,6 +740,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaterEating_DDay/Pods-WaterEating_DDay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4163F87A368502997CD217AF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaterEating_DDay/Pods-WaterEating_DDay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B45028F2DE79943A8D583EC9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WE_DDay Tests/Pods-WE_DDay Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBC35F00CED5BB1528D6DCE1 /* Check Pods Manifest.lock */ = {
@@ -1005,7 +1037,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WaterEating_DDay/WaterEating_DDay-Prefix.pch";

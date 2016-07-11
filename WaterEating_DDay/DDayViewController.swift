@@ -7,12 +7,12 @@
 // 2014년 11월 11일 기본 페이지만 오류 내역 변경
 
 import UIKit
-import GoogleMobileAds
+//import GoogleMobileAds
 
 class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var ddayTable: UITableView!
-    @IBOutlet var bannerView: GADBannerView!
+//    @IBOutlet var bannerView: GADBannerView!
     var tableData:NSMutableArray?
     var badgeImage:UIImageView?
 
@@ -28,7 +28,7 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.navigationItem.title = "D-Day"
         // AdMob 시작.
-        self.getAdMob()
+//        self.getAdMob()
     }
     
     override func viewDidLoad() {
@@ -42,14 +42,14 @@ class DDayViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // MARK: Google get AdMob
-    func getAdMob() {
-
-        self.bannerView.adUnitID = "ca-app-pub-9328601818114664/7165501839"
-        self.bannerView.rootViewController = self
-        let request:GADRequest = GADRequest()
-        request.testDevices = ["Simulator"]
-        self.bannerView.loadRequest(request)
-    }
+//    func getAdMob() {
+//
+//        self.bannerView.adUnitID = "ca-app-pub-9328601818114664/7165501839"
+//        self.bannerView.rootViewController = self
+//        let request:GADRequest = GADRequest()
+//        request.testDevices = ["Simulator"]
+//        self.bannerView.loadRequest(request)
+//    }
     
     // MARK: TableView Delegate And DataSource..
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

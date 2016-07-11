@@ -3,7 +3,7 @@
 
 target 'WaterEating_DDay' do
 pod 'RNGridMenu', '~> 0.1.2'
-pod 'Google-Mobile-Ads-SDK'
+# pod 'Google-Mobile-Ads-SDK'
 end
 
 target 'WE_DDay Tests' do

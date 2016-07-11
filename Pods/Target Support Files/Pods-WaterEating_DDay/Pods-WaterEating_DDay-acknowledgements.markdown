@@ -1,10 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## Google-Mobile-Ads-SDK
-
-Copyright 2011 Google Inc. All Rights Reserved.
-
 ## RNGridMenu
 
 Copyright (c) 2013 Ryan Nystrom (http://whoisryannystrom.com)

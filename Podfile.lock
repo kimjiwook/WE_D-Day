@@ -1,19 +1,16 @@
 PODS:
-  - Google-Mobile-Ads-SDK (7.5.1)
-  - OCHamcrest (4.2.0)
+  - OCHamcrest (4.3.0)
   - OCMockito (1.4.0):
     - OCHamcrest (~> 4.0)
   - RNGridMenu (0.1.3)
 
 DEPENDENCIES:
-  - Google-Mobile-Ads-SDK
   - OCMockito (~> 1.0)
   - RNGridMenu (~> 0.1.2)
 
 SPEC CHECKSUMS:
-  Google-Mobile-Ads-SDK: 37315a38a1c6ed738da43a938afb2425099e6759
-  OCHamcrest: c14c0b3f4c4e99363e5b87d97bae38c4438b6d5d
+  OCHamcrest: cd63d27f48a266d4412c0b295b01b8f0940efa81
   OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2
   RNGridMenu: c58db81f87b5473936bb1b675dc3e947c409b51d
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
